@@ -23,16 +23,16 @@
     
       <customTask
             category="Data Protection"
-            description="A Data Protection Task describes the process performed by a human user. The task is managed by the Data protection annotations Engine and provides properties which are describing the status of this task inside the Workflow Engine."
+            description="A Data Protection Task describes the process performed by a human user. The task is managed by the Data protection annotations Engine and provides properties which are describing the status of this task inside the Data Protection Engine."
             featureContainer="lu.uni.bpmn.DataProtectionFeatureContainerTask"
             icon="dataprotection.png"
             id="lu.uni.dataprotection.bpmn.ProcessEntityTask"
             name="Data Protection Task"
-            propertyTabs="lu.uni.dataprotection.bpmn.propertytab.task.workflow"
+            propertyTabs="lu.uni.dataprotection.bpmn.propertytab.task.dataprotection"
             runtimeId="lu.uni.dataprotection.bpmn.runtime"
             type="Task">
          <property
-               description="Workflow Process ID"
+               description="Data Protection Process ID"
                label="ID"
                name="processid"
                type="EInt"
@@ -63,7 +63,7 @@
       <!-- Process Tabs -->
       <propertyTab
             class="lu.uni.bpmn.ui.dataprotection.ProcessDataProtectionPropertySection"
-            id="lu.uni.dataprotection.bpmn.propertytab.task.workflow"
+            id="lu.uni.dataprotection.bpmn.propertytab.task.dataprotection"
             label="Data Protection"
             runtimeId="lu.uni.dataprotection.bpmn.runtime"
             type="org.eclipse.bpmn2.Task">
@@ -71,8 +71,8 @@
      	
 		<modelEnablement
 				runtimeId="lu.uni.dataprotection.bpmn.runtime"
-				id="lu.uni.dataprotection.bpmn.profile.workflow"
-				profile="Workflow"
+				id="lu.uni.dataprotection.bpmn.profile.dataprotection"
+				profile="Data Protection"
 				
 				description="Data Protection Process Modeling">
 				

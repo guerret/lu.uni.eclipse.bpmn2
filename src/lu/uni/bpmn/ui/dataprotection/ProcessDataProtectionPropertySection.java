@@ -37,26 +37,11 @@ public class ProcessDataProtectionPropertySection extends AbstractProcessPropert
 
 		@Override
 		public void createBindings(EObject be) {
-			setTitle("Workflow");
+			setTitle("Data Protection");
 
 			// ProcessID
 			this.bindAttribute(attributesComposite, be, "processid");
 
-			/*
-			 * // Summary Value itemValue =
-			 * DataProtectionBPMNPlugin.getItemValueByName((BaseElement) be,
-			 * "txtworkflowsummary", null, ""); TextObjectEditor valueEditor =
-			 * new TextObjectEditor(this, itemValue,
-			 * DataProtectionBPMNPlugin.DATAPROTECTION_ITEMVALUE);
-			 * valueEditor.createControl(attributesComposite, "Summary");
-			 * 
-			 * // Abstract itemValue =
-			 * DataProtectionBPMNPlugin.getItemValueByName((BaseElement) be,
-			 * "txtworkflowabstract", "CDATA", ""); valueEditor = new
-			 * TextObjectEditor(this, itemValue,
-			 * DataProtectionBPMNPlugin.DATAPROTECTION_ITEMVALUE); valueEditor.setMultiLine(true);
-			 * valueEditor.createControl(attributesComposite, "Abstract");
-			 */
 			// Roles
 			Item item = DataProtectionBPMNPlugin.getItemByName((BaseElement) be, "$readaccess", null);
 			OWLListEditor pluginEditor = new OWLListEditor(this, item);
