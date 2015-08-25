@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension
+         point="org.eclipse.bpmn2.modeler.runtime">
+      <runtime
+            class="lu.uni.bpmn.DataProtectionRuntimeExtension"
+            description="Data protection BPMN Runtime Extension"
+            id="lu.uni.dataprotection.bpmn.runtime"
+            name="Data protection annotations">
+      </runtime>
+      <model
+            resourceFactory="lu.uni.bpmn.model.util.ModelResourceFactoryImpl"
+            runtimeId="lu.uni.dataprotection.bpmn.runtime"
+            uri="http://www.uni.lu/bpmn2">
+      </model>
+      
+    
+      <customTask
+            category="Data Protection"
+            description="A Data Protection Task describes the process performed by a human user. The task is managed by the Data protection annotations Engine and provides properties which are describing the status of this task inside the Workflow Engine."
+            featureContainer="lu.uni.bpmn.DataProtectionFeatureContainerTask"
+            icon="dataprotection.png"
+            id="lu.uni.dataprotection.bpmn.ProcessEntityTask"
+            name="Data Protection Task"
+            propertyTabs="lu.uni.dataprotection.bpmn.propertytab.task.workflow"
+            runtimeId="lu.uni.dataprotection.bpmn.runtime"
+            type="Task">
+         <property
+               description="Workflow Process ID"
+               label="ID"
+               name="processid"
+               type="EInt"
+               value="0">
+         </property>
+      </customTask>
+     
+     
+      
+      
+      
+        
+      
+      
+      <!-- Activity Tabs 
+             
+      -->
+      
+
+      
+      
+         
+      
+      
+      
+
+      
+      <!-- Process Tabs -->
+      <propertyTab
+            class="lu.uni.bpmn.ui.dataprotection.ProcessDataProtectionPropertySection"
+            id="lu.uni.dataprotection.bpmn.propertytab.task.workflow"
+            label="Data Protection"
+            runtimeId="lu.uni.dataprotection.bpmn.runtime"
+            type="org.eclipse.bpmn2.Task">
+      </propertyTab>
+     	
+		<modelEnablement
+				runtimeId="lu.uni.dataprotection.bpmn.runtime"
+				id="lu.uni.dataprotection.bpmn.profile.workflow"
+				profile="Workflow"
+				
+				description="Data Protection Process Modeling">
+				
+			<enable object="Collaboration"/>
+			<enable object="Process"/>
+			<enable object="Correlation"/>
+			<enable object="CorrelationProperty"/>
+			<enable object="CorrelationPropertyBinding"/>
+			<enable object="CorrelationPropertyRetrievalExpression"/>
+			<enable object="CorrelationSubsciption"/>
+			<enable object="Process"/>
+			<enable object="Participant" feature="name"/>
+			<enable object="Participant" feature="processRef"/>
+			<enable object="Lane" feature="name"/>
+			<enable object="SequenceFlow" feature="name"/>
+			<enable object="MessageFlow" feature="name"/>
+			<enable object="ExclusiveGateway" feature="name"/>
+			<enable object="ParallelGateway" feature="name"/>
+			<enable object="Task" feature="name"/>
+			<enable object="UserTask" feature="name"/>
+			<enable object="ServiceTask" feature="name"/>
+			
+
+			<enable object="TextAnnotation" feature="text"/>
+			<enable object="Association" feature="name"/>
+			<enable object="Association" feature="associationDirection"/>
+			<enable object="DataInputAssociation"/>
+			<enable object="DataOutputAssociation"/>
+			<enable object="StartEvent" feature="name"/>
+			<enable object="EndEvent" feature="name"/>
+			<enable object="MessageEventDefinition"/>
+			<enable object="TimerEventDefinition"/>
+			<enable object="Documentation"/>
+			<enable object="Group"/>
+			<enable object="Message"/>
+			
+			<enable object="SequenceFlow" feature="conditionExpression"/>
+			<enable object="ExclusiveGateway" feature="default"/>
+			<enable object="InclusiveGateway" feature="name"/>
+			<enable object="InclusiveGateway" feature="default"/>
+			<enable object="InclusiveGateway" feature="eventGatewayType"/>
+			<enable object="EventBasedGateway" feature="name"/>
+			<enable object="EventBasedGateway" feature="eventGatewayType"/>
+			<enable object="SendTask" feature="name"/>
+			<enable object="ReceiveTask" feature="name"/>
+			<enable object="StandardLoopCharacteristics"/>
+			<enable object="MultiInstanceLoopCharacteristics"/>
+			<enable object="SignalEventDefinition"/>
+			<enable object="Signal"/>
+			<enable object="EscalationEventDefinition"/>
+			<enable object="Escalation"/>
+			<enable object="ErrorEventDefinition"/>
+			<enable object="Error"/>
+			<enable object="ConditionalEventDefinition"/>
+			<enable object="IntermediateCatchEvent"/>
+			<enable object="IntermediateThrowEvent"/>
+		
+		</modelEnablement>
+		
+    
+
+		
+		<!-- -->
+	
+   
+   		<modelEnablement
+      		    runtimeId="lu.uni.dataprotection.bpmn.runtime"
+				id="lu.uni.dataprotection.bpmn.profile.Full"
+				profile="Full"
+				description="All BPMN2 elements and attributes">
+			<enable object="all"/>
+		</modelEnablement>
+		
+	
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.uni.lu/bpmn2"
+            class="lu.uni.bpmn.model.ModelPackage"
+            genModel="model/dataprotection.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="bpmn"
+            class="lu.uni.bpmn.model.util.ModelResourceFactoryImpl"/>
+   </extension>
+</plugin>

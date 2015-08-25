@@ -1,0 +1,1838 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Ontology rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_077c98dc_e4f1_4fa4_82f1_4d5d6bac1a11 -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_077c98dc_e4f1_4fa4_82f1_4d5d6bac1a11">
+        <rdfs:label xml:lang="en">requiredByPublicInterest</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f0877852_cd4f_4338_bd33_7a11b7f3677d"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_0fda3859_5206_4e3d_89a7_cf4efbc8804f -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_0fda3859_5206_4e3d_89a7_cf4efbc8804f">
+        <rdfs:label xml:lang="en">transferProperty</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_eba91113_47e1_4806_8b83_bd8ba94c2002"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_1001ed7a_4f36_4975_8879_de174ef82e70 -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_1001ed7a_4f36_4975_8879_de174ef82e70">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:label xml:lang="en">mustProvide</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_413e4c1b_7d3b_4fc1_98c0_b782b533aae8"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_4a286d0b_f129_4976_be2b_9c7ab71beb24"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_16ef80bb_336f_4678_b647_aa3ce5c02e49 -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_16ef80bb_336f_4678_b647_aa3ce5c02e49">
+        <rdfs:label xml:lang="en">appoints</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_413e4c1b_7d3b_4fc1_98c0_b782b533aae8"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_b3ce5053_8b0c_41d5_81ba_36f3ccbd5642"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_1c8dcaa8_9f93_4cbb_9523_b4884a29a9b8 -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_1c8dcaa8_9f93_4cbb_9523_b4884a29a9b8">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">processingAppliesTo</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_ed8bdd2f_f171_49c2_9386_576fe410d791"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_217a5aab_f37f_4e80_868a_6d8b6f059fa4 -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_217a5aab_f37f_4e80_868a_6d8b6f059fa4">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:label xml:lang="en">hasPersonalData</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7dbfca33_2127_4aeb_b4f3_4b4f6cda9508"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_ed8bdd2f_f171_49c2_9386_576fe410d791"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_26abc84c_8c4c_458c_8605_2ffbd1590d0d -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_26abc84c_8c4c_458c_8605_2ffbd1590d0d">
+        <rdfs:label xml:lang="en">requiredByVitalInterest</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_0b2f9b8c_8e60_4b1a_9471_9ce55bf73ae4"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_2a714588_010a_4833_ae08_09b32aa6295c -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_2a714588_010a_4833_ae08_09b32aa6295c">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:label xml:lang="en">objectTo</rdfs:label>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7dbfca33_2127_4aeb_b4f3_4b4f6cda9508"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_332f288f_09e9_4743_bac9_6b65ac57f10e -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_332f288f_09e9_4743_bac9_6b65ac57f10e">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">accessData</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_573ba052_e830_419f_9c33_bee5251b8043"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_ed8bdd2f_f171_49c2_9386_576fe410d791"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_33c92211_3b91_4b7c_8cfd_9165c3d7629c -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_33c92211_3b91_4b7c_8cfd_9165c3d7629c">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:label xml:lang="en">issueFine</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_dd11ad3d_8e96_4fd6_9646_b1fa4799b296"/>
+        <rdfs:range>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <Class>
+                        <intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_eba91113_47e1_4806_8b83_bd8ba94c2002"/>
+                            <Class>
+                                <complementOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_336f5c83_c4cc_4889_8cbc_2c07562155a2"/>
+                            </Class>
+                        </intersectionOf>
+                    </Class>
+                    <Class>
+                        <complementOf>
+                            <Restriction>
+                                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
+                                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_59851879_88be_4cf3_bd27_3b185fc2046a"/>
+                            </Restriction>
+                        </complementOf>
+                    </Class>
+                </unionOf>
+            </Class>
+        </rdfs:range>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d">
+        <rdfs:label xml:lang="en">processingProperty</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_4233322f_cb80_4ee7_bed2_213d920c59c3 -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_4233322f_cb80_4ee7_bed2_213d920c59c3">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">isObjected</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7bb468f6_ab61_4585_a9cb_522371c20b9d"/>
+        <inverseOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_2a714588_010a_4833_ae08_09b32aa6295c"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_43a932bd_d72f_4cd9_8aef_a2b60603224f -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_43a932bd_d72f_4cd9_8aef_a2b60603224f">
+        <rdfs:label xml:lang="en">hasParties</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_2023c585_fdec_4229_8951_24f6d4639634"/>
+        <rdfs:range>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_413e4c1b_7d3b_4fc1_98c0_b782b533aae8"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7dbfca33_2127_4aeb_b4f3_4b4f6cda9508"/>
+                </unionOf>
+            </Class>
+        </rdfs:range>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_4ae39feb_b852_4059_b66a_758628b01402 -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_4ae39feb_b852_4059_b66a_758628b01402">
+        <rdfs:label xml:lang="en">transferContent</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_eba91113_47e1_4806_8b83_bd8ba94c2002"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_ed8bdd2f_f171_49c2_9386_576fe410d791"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_0fda3859_5206_4e3d_89a7_cf4efbc8804f"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_50f8f0ef_9504_4ceb_b566_8fcb583ab045 -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_50f8f0ef_9504_4ceb_b566_8fcb583ab045">
+        <rdfs:label xml:lang="en">requiredByObligation</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_e7e707fc_dc05_4f59_973d_771a0e393117"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52 -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:label xml:lang="en">processingHasRequirement</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_c750844c_48fa_4fbd_8619_b8b9b1e967db"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_5d457280_4325_44df_8083_ad7b53c0dfca -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_5d457280_4325_44df_8083_ad7b53c0dfca">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:label xml:lang="en">processingPerformedBy</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d"/>
+        <rdfs:range>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_3c5113eb_0923_4946_86cf_f5a83de7f9bb"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_413e4c1b_7d3b_4fc1_98c0_b782b533aae8"/>
+                </unionOf>
+            </Class>
+        </rdfs:range>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_6076aa11_7396_4b3b_815b_b83cab7df069 -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_6076aa11_7396_4b3b_815b_b83cab7df069">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:label xml:lang="en">hasObligation</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_413e4c1b_7d3b_4fc1_98c0_b782b533aae8"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_e7e707fc_dc05_4f59_973d_771a0e393117"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_6eaca250_d77d_4df4_b978_8dcbb84e6a50 -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_6eaca250_d77d_4df4_b978_8dcbb84e6a50">
+        <rdfs:label xml:lang="en">requiredByLegitimateInterest</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_a42fde83_5051_4cc3_b86c_b1981b6b6500"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769 -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769">
+        <rdfs:label xml:lang="en">dataSubjectProperty</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7dbfca33_2127_4aeb_b4f3_4b4f6cda9508"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_72c09d42_4524_4808_95c4_0c9f280e3f98 -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_72c09d42_4524_4808_95c4_0c9f280e3f98">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">usesProcessingMode</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_847950cb_b447_4f15_bb85_ed45f878d760"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_7ac248aa_2d24_4e6a_912a_6f9519c698c1 -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_7ac248aa_2d24_4e6a_912a_6f9519c698c1">
+        <rdfs:label xml:lang="en">hasParent</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_801beed0_2387_4a31_a5f1_6636c3558cb7"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_91a1bac2_859c_446e_86c7_0f32f12470ac"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_86442676_0100_49b3_991c_504d7c89a49a -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_86442676_0100_49b3_991c_504d7c89a49a">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">specialConsentAppliesTo</rdfs:label>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_a2ccd29b_a341_4659_919a_977a6a81d4d1"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_bcd48dd9_79f1_4a6c_98ba_fdd5748312dc"/>
+        <rdfs:range>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_1c8dcaa8_9f93_4cbb_9523_b4884a29a9b8"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f234596c_9040_4f87_bd51_49ec017fd3d5"/>
+            </Restriction>
+        </rdfs:range>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_86608510_836e_4b41_a785_adb447d6ddd0 -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_86608510_836e_4b41_a785_adb447d6ddd0">
+        <rdfs:label xml:lang="en">cooperateWith</rdfs:label>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_dd11ad3d_8e96_4fd6_9646_b1fa4799b296"/>
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_3c5113eb_0923_4946_86cf_f5a83de7f9bb"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_413e4c1b_7d3b_4fc1_98c0_b782b533aae8"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_8c1f0a3c_b12c_4025_9307_7de3b0086671 -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_8c1f0a3c_b12c_4025_9307_7de3b0086671">
+        <rdfs:label xml:lang="en">dataWasBreached</rdfs:label>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_c544c98a_ea80_4638_94c2_47fe7985c5b9"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_ed8bdd2f_f171_49c2_9386_576fe410d791"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_963fc55c_8a6d_48eb_a7b5_0d111603003a -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_963fc55c_8a6d_48eb_a7b5_0d111603003a">
+        <rdfs:label xml:lang="en">hasRecipient</rdfs:label>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_bf972a40_26a4_451a_b104_ea993da94716"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_eba91113_47e1_4806_8b83_bd8ba94c2002"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_0fda3859_5206_4e3d_89a7_cf4efbc8804f"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_9886111f_f601_4189_81bd_41bc65f13d4c -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_9886111f_f601_4189_81bd_41bc65f13d4c">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:label xml:lang="en">hasVitalInterest</rdfs:label>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_0b2f9b8c_8e60_4b1a_9471_9ce55bf73ae4"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7dbfca33_2127_4aeb_b4f3_4b4f6cda9508"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_a13cf5b7_2210_434a_9dd1_fc46e2f85f5c -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_a13cf5b7_2210_434a_9dd1_fc46e2f85f5c">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:label xml:lang="en">hasGrantedConsent</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7dbfca33_2127_4aeb_b4f3_4b4f6cda9508"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_a2ccd29b_a341_4659_919a_977a6a81d4d1"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769"/>
+        <inverseOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_d6b379ea_fc70_4e52_8990_4b2579886200"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_b4a56142_242b_44f5_80de_209a573b750e -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_b4a56142_242b_44f5_80de_209a573b750e">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:label xml:lang="en">hasLegitimateInterest</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_413e4c1b_7d3b_4fc1_98c0_b782b533aae8"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_a42fde83_5051_4cc3_b86c_b1981b6b6500"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_b8c0f954_156f_427f_80e3_0cd915a259e3 -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_b8c0f954_156f_427f_80e3_0cd915a259e3">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">onBehalfOf</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_3c5113eb_0923_4946_86cf_f5a83de7f9bb"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_413e4c1b_7d3b_4fc1_98c0_b782b533aae8"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_bcd48dd9_79f1_4a6c_98ba_fdd5748312dc -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_bcd48dd9_79f1_4a6c_98ba_fdd5748312dc">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">consentAppliesTo</rdfs:label>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_a2ccd29b_a341_4659_919a_977a6a81d4d1"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_d279ae3c_1c63_4a0c_8f33_f6f347fb911a"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_c2d389de_7681_40df_b3e8_00982e1ae1f2 -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_c2d389de_7681_40df_b3e8_00982e1ae1f2">
+        <rdfs:label xml:lang="en">processingGrantsRight</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_8fd1b241_6e73_4771_9cf7_4a995dd8311b"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_c898c3d2_b288_427c_a535_32052cc6978e -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_c898c3d2_b288_427c_a535_32052cc6978e">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:label xml:lang="en">notifyBreach</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_413e4c1b_7d3b_4fc1_98c0_b782b533aae8"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_c544c98a_ea80_4638_94c2_47fe7985c5b9"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_cb6a55ce_5777_4d29_b15d_6be3845259a3 -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_cb6a55ce_5777_4d29_b15d_6be3845259a3">
+        <rdfs:label xml:lang="en">requiredForContract</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_2023c585_fdec_4229_8951_24f6d4639634"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_d279ae3c_1c63_4a0c_8f33_f6f347fb911a -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_d279ae3c_1c63_4a0c_8f33_f6f347fb911a">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">requirementAppliesTo</rdfs:label>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_c750844c_48fa_4fbd_8619_b8b9b1e967db"/>
+        <inverseOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_d6b379ea_fc70_4e52_8990_4b2579886200 -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_d6b379ea_fc70_4e52_8990_4b2579886200">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">consentGrantedBy</rdfs:label>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7dbfca33_2127_4aeb_b4f3_4b4f6cda9508"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_a2ccd29b_a341_4659_919a_977a6a81d4d1"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_e4459726_050d_4ba9_a9e7_56bff2354021 -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_e4459726_050d_4ba9_a9e7_56bff2354021">
+        <rdfs:label xml:lang="en">breachNotifiedTo</rdfs:label>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7dbfca33_2127_4aeb_b4f3_4b4f6cda9508"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_c544c98a_ea80_4638_94c2_47fe7985c5b9"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_e9b85247_b390_4b60_9d03_627a9bcc0a7f -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_e9b85247_b390_4b60_9d03_627a9bcc0a7f">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">pertainsTo</rdfs:label>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7dbfca33_2127_4aeb_b4f3_4b4f6cda9508"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_ed8bdd2f_f171_49c2_9386_576fe410d791"/>
+        <inverseOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_217a5aab_f37f_4e80_868a_6d8b6f059fa4"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_ede6ce89_417f_48c1_a76e_4df8ff1ad55a -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_ede6ce89_417f_48c1_a76e_4df8ff1ad55a">
+        <rdfs:label xml:lang="en">transferHasRequirement</rdfs:label>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_06a52543_55ee_4037_8370_dd56a165fe70"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_eba91113_47e1_4806_8b83_bd8ba94c2002"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_0fda3859_5206_4e3d_89a7_cf4efbc8804f"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_ef5ed911_8458_4e79_9db4_fda0ed917c05 -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_ef5ed911_8458_4e79_9db4_fda0ed917c05">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label xml:lang="en">hasRecipient</rdfs:label>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_bf972a40_26a4_451a_b104_ea993da94716"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_eba91113_47e1_4806_8b83_bd8ba94c2002"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_f90cb5d0_29a1_41ef_a947_aa86cb69cc14 -->
+
+    <ObjectProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_f90cb5d0_29a1_41ef_a947_aa86cb69cc14">
+        <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
+        <rdfs:label xml:lang="en">performAccess</rdfs:label>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_12f8d2e4_932c_44b2_a152_7fb6fe4d7e7c"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7dbfca33_2127_4aeb_b4f3_4b4f6cda9508"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769"/>
+    </ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLDataProperty_4644d2f7_3262_4cc1_84ff_06605a549316 -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLDataProperty_4644d2f7_3262_4cc1_84ff_06605a549316">
+        <rdfs:label xml:lang="en">dataName</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_ed8bdd2f_f171_49c2_9386_576fe410d791"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLDataProperty_6fb5e412_2c48_4308_94b9_2b02c71b8004 -->
+
+    <DatatypeProperty rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLDataProperty_6fb5e412_2c48_4308_94b9_2b02c71b8004">
+        <rdfs:label xml:lang="en">dataSubjectId</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7dbfca33_2127_4aeb_b4f3_4b4f6cda9508"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_02b07422_386e_4a70_8c4a_c2534b513fb5 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_02b07422_386e_4a70_8c4a_c2534b513fb5">
+        <rdfs:label xml:lang="en">ContractualProcessing</rdfs:label>
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_cb6a55ce_5777_4d29_b15d_6be3845259a3"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_2023c585_fdec_4229_8951_24f6d4639634"/>
+            </Restriction>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f91e368a_9e61_4616_85d2_d24ff9c08ab2"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_059044e8_58f0_4cd8_8014_8c5babe12c7d -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_059044e8_58f0_4cd8_8014_8c5babe12c7d">
+        <rdfs:label xml:lang="en">Profiling</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f9140510_7d3e_441d_a8cf_a67da4fb19c4"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_06a52543_55ee_4037_8370_dd56a165fe70 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_06a52543_55ee_4037_8370_dd56a165fe70">
+        <rdfs:label xml:lang="en">TransferRule</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_af4ae221_0c41_4b82_8ff9_7561e9d9c6cd"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b">
+        <rdfs:label xml:lang="en">DataProcessing</rdfs:label>
+        <disjointWith rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_99a373a5_bae0_4769_a675_7bf1a8467f00"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_ed8bdd2f_f171_49c2_9386_576fe410d791"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_0b2f9b8c_8e60_4b1a_9471_9ce55bf73ae4 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_0b2f9b8c_8e60_4b1a_9471_9ce55bf73ae4">
+        <rdfs:label xml:lang="en">VitalInterest</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f993be7a_344f_4fee_9a35_75f1e3b367c5"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_12ed2171_63ca_4d47_afcd_b6721ac351a9 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_12ed2171_63ca_4d47_afcd_b6721ac351a9">
+        <rdfs:label xml:lang="en">NonEURecipient</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_bf972a40_26a4_451a_b104_ea993da94716"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_624c0561_eda6_4035_9f2a_47d4b8de3ee9"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_12f8d2e4_932c_44b2_a152_7fb6fe4d7e7c -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_12f8d2e4_932c_44b2_a152_7fb6fe4d7e7c">
+        <rdfs:label xml:lang="en">Access</rdfs:label>
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_332f288f_09e9_4743_bac9_6b65ac57f10e"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_ed8bdd2f_f171_49c2_9386_576fe410d791"/>
+            </Restriction>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_573ba052_e830_419f_9c33_bee5251b8043"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_15f536e2_2946_4aca_b996_2615e37e729a -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_15f536e2_2946_4aca_b996_2615e37e729a">
+        <rdfs:label xml:lang="en">Trust</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_eccd3a99_0368_4293_a3d1_e344dc5bd0a1"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_1d2f3df4_e138_45ec_8434_0705d94b1c18 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_1d2f3df4_e138_45ec_8434_0705d94b1c18">
+        <rdfs:label xml:lang="en">Erasure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_931c3eee_c583_4adb_9af9_e0891ea43f2b"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_1dcad2a0_486a_4f14_8b0e_1b9e521f738e -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_1dcad2a0_486a_4f14_8b0e_1b9e521f738e">
+        <rdfs:label xml:lang="en">VitalProcessing</rdfs:label>
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_26abc84c_8c4c_458c_8605_2ffbd1590d0d"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_0b2f9b8c_8e60_4b1a_9471_9ce55bf73ae4"/>
+            </Restriction>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f91e368a_9e61_4616_85d2_d24ff9c08ab2"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_2023c585_fdec_4229_8951_24f6d4639634 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_2023c585_fdec_4229_8951_24f6d4639634">
+        <rdfs:label xml:lang="en">Contract</rdfs:label>
+        <equivalentClass>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_43a932bd_d72f_4cd9_8aef_a2b60603224f"/>
+                        <onClass rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_413e4c1b_7d3b_4fc1_98c0_b782b533aae8"/>
+                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                    </Restriction>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_43a932bd_d72f_4cd9_8aef_a2b60603224f"/>
+                        <onClass rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7dbfca33_2127_4aeb_b4f3_4b4f6cda9508"/>
+                        <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f993be7a_344f_4fee_9a35_75f1e3b367c5"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_21b029c0_43d8_4ee4_aa3f_c8b91b33974f -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_21b029c0_43d8_4ee4_aa3f_c8b91b33974f">
+        <rdfs:label xml:lang="en">Relevancy</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_38c37e49_92a4_4bbc_9780_9eed89158298"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_b841fd2e_162d_4f1a_8c2c_05dc948e63a0"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_25b9b478_c602_4073_a790_6374ba384b42 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_25b9b478_c602_4073_a790_6374ba384b42">
+        <rdfs:label xml:lang="en">ProcessingScope</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_b491c951_2363_4eab_a32f_0fc922d48adc"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_ba7850fa_6664_4b14_91d4_b8307ae8481d"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_27535d61_8d2c_4e2c_96bd_cabd05c9149a -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_27535d61_8d2c_4e2c_96bd_cabd05c9149a">
+        <rdfs:label xml:lang="en">Representative</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_99a373a5_bae0_4769_a675_7bf1a8467f00"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_28125d88_ca58_40fb_bedf_8b05cc85a4ec -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_28125d88_ca58_40fb_bedf_8b05cc85a4ec">
+        <rdfs:label xml:lang="en">OrganisationalMeasures</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_37cc24cc_e8cc_4ac2_8594_7aa5cc97f129"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_29c82d22_60ee_4d6c_a0a3_791432cc5481 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_29c82d22_60ee_4d6c_a0a3_791432cc5481">
+        <rdfs:label xml:lang="en">ObligatedProcessing</rdfs:label>
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_50f8f0ef_9504_4ceb_b566_8fcb583ab045"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_e7e707fc_dc05_4f59_973d_771a0e393117"/>
+            </Restriction>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f91e368a_9e61_4616_85d2_d24ff9c08ab2"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_2da92369_af57_4fc1_b84a_a35658cb88cf -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_2da92369_af57_4fc1_b84a_a35658cb88cf">
+        <rdfs:label xml:lang="en">RightToObject</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_15f536e2_2946_4aca_b996_2615e37e729a"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_8fd1b241_6e73_4771_9cf7_4a995dd8311b"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_301e1bec_ae1a_4601_9bea_a35fe79e4ea3 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_301e1bec_ae1a_4601_9bea_a35fe79e4ea3">
+        <rdfs:label xml:lang="en">RequiredProcessing</rdfs:label>
+        <equivalentClass>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_02b07422_386e_4a70_8c4a_c2534b513fb5"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_1dcad2a0_486a_4f14_8b0e_1b9e521f738e"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_29c82d22_60ee_4d6c_a0a3_791432cc5481"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_57b79a8d_ad1a_4ace_9892_affeb548ba0d"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_df7e7536_7235_4e30_b042_4e8a8b5852a5"/>
+                </unionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f91e368a_9e61_4616_85d2_d24ff9c08ab2"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_31ba96e6_a8e7_4d61_9af2_25280e70bb8f -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_31ba96e6_a8e7_4d61_9af2_25280e70bb8f">
+        <rdfs:label xml:lang="en">Security</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7e0df94b_e1c3_4a97_b19d_d9320b921f84"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_c750844c_48fa_4fbd_8619_b8b9b1e967db"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_336f5c83_c4cc_4889_8cbc_2c07562155a2 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_336f5c83_c4cc_4889_8cbc_2c07562155a2">
+        <rdfs:label xml:lang="en">LawfulTransfer</rdfs:label>
+        <equivalentClass>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <Class>
+                        <intersectionOf rdf:parseType="Collection">
+                            <Restriction>
+                                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_963fc55c_8a6d_48eb_a7b5_0d111603003a"/>
+                                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_12ed2171_63ca_4d47_afcd_b6721ac351a9"/>
+                            </Restriction>
+                            <Restriction>
+                                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_ede6ce89_417f_48c1_a76e_4df8ff1ad55a"/>
+                                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_06a52543_55ee_4037_8370_dd56a165fe70"/>
+                            </Restriction>
+                        </intersectionOf>
+                    </Class>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_963fc55c_8a6d_48eb_a7b5_0d111603003a"/>
+                        <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_624c0561_eda6_4035_9f2a_47d4b8de3ee9"/>
+                    </Restriction>
+                </unionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_eba91113_47e1_4806_8b83_bd8ba94c2002"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_37cc24cc_e8cc_4ac2_8594_7aa5cc97f129 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_37cc24cc_e8cc_4ac2_8594_7aa5cc97f129">
+        <rdfs:label xml:lang="en">Measures</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_31ba96e6_a8e7_4d61_9af2_25280e70bb8f"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_38c37e49_92a4_4bbc_9780_9eed89158298 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_38c37e49_92a4_4bbc_9780_9eed89158298">
+        <rdfs:label xml:lang="en">DataMinimization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_b491c951_2363_4eab_a32f_0fc922d48adc"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_3c5113eb_0923_4946_86cf_f5a83de7f9bb -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_3c5113eb_0923_4946_86cf_f5a83de7f9bb">
+        <rdfs:label xml:lang="en">Processor</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_99a373a5_bae0_4769_a675_7bf1a8467f00"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_3c993f72_4546_4509_b66b_425999f0118d -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_3c993f72_4546_4509_b66b_425999f0118d">
+        <rdfs:label xml:lang="en">AppropriateSafeguards</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_06a52543_55ee_4037_8370_dd56a165fe70"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_411a42e7_c0a2_483e_b2ce_ebc85160fe33 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_411a42e7_c0a2_483e_b2ce_ebc85160fe33">
+        <rdfs:label xml:lang="en">TechnicalMeasures</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_37cc24cc_e8cc_4ac2_8594_7aa5cc97f129"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_413e4c1b_7d3b_4fc1_98c0_b782b533aae8 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_413e4c1b_7d3b_4fc1_98c0_b782b533aae8">
+        <rdfs:label xml:lang="en">Controller</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_99a373a5_bae0_4769_a675_7bf1a8467f00"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_43574c52_adab_4ef9_807a_68f850c65a04 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_43574c52_adab_4ef9_807a_68f850c65a04">
+        <rdfs:label xml:lang="en">RightToRectification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_8fd1b241_6e73_4771_9cf7_4a995dd8311b"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_fdf49ad5_3967_4c7f_b6dc_e8de56c976b2"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_48029399_9b67_4460_9eec_db9c7f55752c -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_48029399_9b67_4460_9eec_db9c7f55752c">
+        <rdfs:label xml:lang="en">Retention</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_38c37e49_92a4_4bbc_9780_9eed89158298"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_b841fd2e_162d_4f1a_8c2c_05dc948e63a0"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_49185c12_e790_4177_ba61_944b1fc3b8ce -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_49185c12_e790_4177_ba61_944b1fc3b8ce">
+        <rdfs:label xml:lang="en">Certification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_15f536e2_2946_4aca_b996_2615e37e729a"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_4a286d0b_f129_4976_be2b_9c7ab71beb24 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_4a286d0b_f129_4976_be2b_9c7ab71beb24">
+        <rdfs:label xml:lang="en">TransparentInformation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_15f536e2_2946_4aca_b996_2615e37e729a"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_a6bd38e0_dcde_48be_812b_8c785619187b"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_c750844c_48fa_4fbd_8619_b8b9b1e967db"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_52a03e03_fa27_4f76_8af1_059dd1af4f90 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_52a03e03_fa27_4f76_8af1_059dd1af4f90">
+        <rdfs:label xml:lang="en">PrivacyByDesign</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_15f536e2_2946_4aca_b996_2615e37e729a"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_31ba96e6_a8e7_4d61_9af2_25280e70bb8f"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_5522084d_074e_4658_94a6_b2c730a3ddf4 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_5522084d_074e_4658_94a6_b2c730a3ddf4">
+        <rdfs:label xml:lang="en">Principle</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_573ba052_e830_419f_9c33_bee5251b8043 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_573ba052_e830_419f_9c33_bee5251b8043">
+        <rdfs:label xml:lang="en">RightOfAccess</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_83eaae05_ab01_4df1_b8ed_a203cfec5a08"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_8fd1b241_6e73_4771_9cf7_4a995dd8311b"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_57b79a8d_ad1a_4ace_9892_affeb548ba0d -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_57b79a8d_ad1a_4ace_9892_affeb548ba0d">
+        <rdfs:label xml:lang="en">PublicInterestProcessing</rdfs:label>
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_077c98dc_e4f1_4fa4_82f1_4d5d6bac1a11"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f0877852_cd4f_4338_bd33_7a11b7f3677d"/>
+            </Restriction>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f91e368a_9e61_4616_85d2_d24ff9c08ab2"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_583cd6c2_76ad_4b1c_b11b_60373af28e5b -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_583cd6c2_76ad_4b1c_b11b_60373af28e5b">
+        <rdfs:label xml:lang="en">CodeOfConduct</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_59851879_88be_4cf3_bd27_3b185fc2046a"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_59851879_88be_4cf3_bd27_3b185fc2046a -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_59851879_88be_4cf3_bd27_3b185fc2046a">
+        <rdfs:label xml:lang="en">Compliance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7e0df94b_e1c3_4a97_b19d_d9320b921f84"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_c750844c_48fa_4fbd_8619_b8b9b1e967db"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_624c0561_eda6_4035_9f2a_47d4b8de3ee9 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_624c0561_eda6_4035_9f2a_47d4b8de3ee9">
+        <rdfs:label xml:lang="en">EURecipient</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_bf972a40_26a4_451a_b104_ea993da94716"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_69062b9e_235e_4977_877f_0021effc2dfc -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_69062b9e_235e_4977_877f_0021effc2dfc">
+        <rdfs:label xml:lang="en">ParentConsent</rdfs:label>
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_d6b379ea_fc70_4e52_8990_4b2579886200"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_91a1bac2_859c_446e_86c7_0f32f12470ac"/>
+            </Restriction>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_fccddccc_e1c5_425a_9e67_99ea9c2dfa55"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_70533b01_01ad_4c16_92d7_d37ff183d561 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_70533b01_01ad_4c16_92d7_d37ff183d561">
+        <rdfs:label xml:lang="en">BindingCorporateRules</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_06a52543_55ee_4037_8370_dd56a165fe70"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_75dd7417_421b_47d5_b6cd_daf3b328ca3b -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_75dd7417_421b_47d5_b6cd_daf3b328ca3b">
+        <rdfs:label xml:lang="en">ManualProcessing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_847950cb_b447_4f15_bb85_ed45f878d760"/>
+        <disjointWith rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f9140510_7d3e_441d_a8cf_a67da4fb19c4"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_771335d1_185e_465d_b779_165e6f384353 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_771335d1_185e_465d_b779_165e6f384353">
+        <rdfs:label xml:lang="en">PrivacyByDefault</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_31ba96e6_a8e7_4d61_9af2_25280e70bb8f"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7b7dbebc_426b_4198_868e_2b0dcd598cf3 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7b7dbebc_426b_4198_868e_2b0dcd598cf3">
+        <rdfs:label xml:lang="en">ProcessingActivity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7bb468f6_ab61_4585_a9cb_522371c20b9d -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7bb468f6_ab61_4585_a9cb_522371c20b9d">
+        <rdfs:label xml:lang="en">Objection</rdfs:label>
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_2a714588_010a_4833_ae08_09b32aa6295c"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+            </Restriction>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_2da92369_af57_4fc1_b84a_a35658cb88cf"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7dbfca33_2127_4aeb_b4f3_4b4f6cda9508 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7dbfca33_2127_4aeb_b4f3_4b4f6cda9508">
+        <rdfs:label xml:lang="en">DataSubject</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_99a373a5_bae0_4769_a675_7bf1a8467f00"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7e0df94b_e1c3_4a97_b19d_d9320b921f84 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7e0df94b_e1c3_4a97_b19d_d9320b921f84">
+        <rdfs:label xml:lang="en">Accountability</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_5522084d_074e_4658_94a6_b2c730a3ddf4"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7ef6aaee_8d1b_4e22_bee2_f64f4332c477 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7ef6aaee_8d1b_4e22_bee2_f64f4332c477">
+        <rdfs:label xml:lang="en">Lawfulness_Rule</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_b937960f_e255_4bcf_aff6_f362c905a8b8"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_c750844c_48fa_4fbd_8619_b8b9b1e967db"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_801beed0_2387_4a31_a5f1_6636c3558cb7 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_801beed0_2387_4a31_a5f1_6636c3558cb7">
+        <rdfs:label xml:lang="en">ChildDataSubject</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7dbfca33_2127_4aeb_b4f3_4b4f6cda9508"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_83eaae05_ab01_4df1_b8ed_a203cfec5a08 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_83eaae05_ab01_4df1_b8ed_a203cfec5a08">
+        <rdfs:label xml:lang="en">Transparency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_eccd3a99_0368_4293_a3d1_e344dc5bd0a1"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_847950cb_b447_4f15_bb85_ed45f878d760 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_847950cb_b447_4f15_bb85_ed45f878d760">
+        <rdfs:label xml:lang="en">ProcessingMode</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_8fd1b241_6e73_4771_9cf7_4a995dd8311b -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_8fd1b241_6e73_4771_9cf7_4a995dd8311b">
+        <rdfs:label xml:lang="en">DataSubjectRight</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_91a1bac2_859c_446e_86c7_0f32f12470ac -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_91a1bac2_859c_446e_86c7_0f32f12470ac">
+        <rdfs:label xml:lang="en">Parent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_99a373a5_bae0_4769_a675_7bf1a8467f00"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_931c3eee_c583_4adb_9af9_e0891ea43f2b -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_931c3eee_c583_4adb_9af9_e0891ea43f2b">
+        <rdfs:label xml:lang="en">RightToErasure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_48029399_9b67_4460_9eec_db9c7f55752c"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_8fd1b241_6e73_4771_9cf7_4a995dd8311b"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_99a373a5_bae0_4769_a675_7bf1a8467f00 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_99a373a5_bae0_4769_a675_7bf1a8467f00">
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+        <disjointWith rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_ed8bdd2f_f171_49c2_9386_576fe410d791"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_a2ccd29b_a341_4659_919a_977a6a81d4d1 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_a2ccd29b_a341_4659_919a_977a6a81d4d1">
+        <rdfs:label xml:lang="en">Consent</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_15f536e2_2946_4aca_b996_2615e37e729a"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f993be7a_344f_4fee_9a35_75f1e3b367c5"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_a42fde83_5051_4cc3_b86c_b1981b6b6500 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_a42fde83_5051_4cc3_b86c_b1981b6b6500">
+        <rdfs:label xml:lang="en">LegitimateInterest</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f993be7a_344f_4fee_9a35_75f1e3b367c5"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_a6bd38e0_dcde_48be_812b_8c785619187b -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_a6bd38e0_dcde_48be_812b_8c785619187b">
+        <rdfs:label xml:lang="en">RightToInformation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_83eaae05_ab01_4df1_b8ed_a203cfec5a08"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_8fd1b241_6e73_4771_9cf7_4a995dd8311b"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_af4ae221_0c41_4b82_8ff9_7561e9d9c6cd -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_af4ae221_0c41_4b82_8ff9_7561e9d9c6cd">
+        <rdfs:label xml:lang="en">Rule</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_b3ce5053_8b0c_41d5_81ba_36f3ccbd5642 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_b3ce5053_8b0c_41d5_81ba_36f3ccbd5642">
+        <rdfs:label xml:lang="en">DataProtectionOfficer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_59851879_88be_4cf3_bd27_3b185fc2046a"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_99a373a5_bae0_4769_a675_7bf1a8467f00"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_b491c951_2363_4eab_a32f_0fc922d48adc -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_b491c951_2363_4eab_a32f_0fc922d48adc">
+        <rdfs:label xml:lang="en">Purpose</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_5522084d_074e_4658_94a6_b2c730a3ddf4"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_b628f28a_bd8c_471e_9c61_9548ff8cfd58 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_b628f28a_bd8c_471e_9c61_9548ff8cfd58">
+        <rdfs:label xml:lang="en">RightToNoProfiling</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_8fd1b241_6e73_4771_9cf7_4a995dd8311b"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_b491c951_2363_4eab_a32f_0fc922d48adc"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_b841fd2e_162d_4f1a_8c2c_05dc948e63a0 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_b841fd2e_162d_4f1a_8c2c_05dc948e63a0">
+        <rdfs:label xml:lang="en">DataQuality</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_5522084d_074e_4658_94a6_b2c730a3ddf4"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_b937960f_e255_4bcf_aff6_f362c905a8b8 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_b937960f_e255_4bcf_aff6_f362c905a8b8">
+        <rdfs:label xml:lang="en">Lawfulness_Principle</rdfs:label>
+        <equivalentClass>
+            <Class>
+                <oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_d54a634e_1259_4078_928b_3a630491f3c3"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_9383a976_2f15_4a41_8d61_e43b5694658f"/>
+                </oneOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_5522084d_074e_4658_94a6_b2c730a3ddf4"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_ba7850fa_6664_4b14_91d4_b8307ae8481d -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_ba7850fa_6664_4b14_91d4_b8307ae8481d">
+        <rdfs:label xml:lang="en">Justification</rdfs:label>
+        <disjointWith rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_ed8bdd2f_f171_49c2_9386_576fe410d791"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_bf972a40_26a4_451a_b104_ea993da94716 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_bf972a40_26a4_451a_b104_ea993da94716">
+        <rdfs:label xml:lang="en">Recipient</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_413e4c1b_7d3b_4fc1_98c0_b782b533aae8"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_bfbcc9ac_862a_454f_8a67_a52f688d75ca -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_bfbcc9ac_862a_454f_8a67_a52f688d75ca">
+        <rdfs:label xml:lang="en">AdequacyDecision</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_06a52543_55ee_4037_8370_dd56a165fe70"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_c37e1def_c49d_4171_94ca_7d6912ef2acf -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_c37e1def_c49d_4171_94ca_7d6912ef2acf">
+        <rdfs:label xml:lang="en">ConsensualProcessing</rdfs:label>
+        <equivalentClass>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <Class>
+                        <intersectionOf rdf:parseType="Collection">
+                            <Class>
+                                <complementOf>
+                                    <Restriction>
+                                        <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_1c8dcaa8_9f93_4cbb_9523_b4884a29a9b8"/>
+                                        <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_ea967b60_4d4f_41e0_97fe_8d7dd514619c"/>
+                                    </Restriction>
+                                </complementOf>
+                            </Class>
+                            <Restriction>
+                                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_1c8dcaa8_9f93_4cbb_9523_b4884a29a9b8"/>
+                                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f234596c_9040_4f87_bd51_49ec017fd3d5"/>
+                            </Restriction>
+                            <Restriction>
+                                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
+                                <onClass rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_fccddccc_e1c5_425a_9e67_99ea9c2dfa55"/>
+                                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                            </Restriction>
+                        </intersectionOf>
+                    </Class>
+                    <Class>
+                        <intersectionOf rdf:parseType="Collection">
+                            <Class>
+                                <complementOf>
+                                    <Restriction>
+                                        <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_1c8dcaa8_9f93_4cbb_9523_b4884a29a9b8"/>
+                                        <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f234596c_9040_4f87_bd51_49ec017fd3d5"/>
+                                    </Restriction>
+                                </complementOf>
+                            </Class>
+                            <Restriction>
+                                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
+                                <onClass rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_a2ccd29b_a341_4659_919a_977a6a81d4d1"/>
+                                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                            </Restriction>
+                        </intersectionOf>
+                    </Class>
+                    <Class>
+                        <intersectionOf rdf:parseType="Collection">
+                            <Restriction>
+                                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_1c8dcaa8_9f93_4cbb_9523_b4884a29a9b8"/>
+                                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_ea967b60_4d4f_41e0_97fe_8d7dd514619c"/>
+                            </Restriction>
+                            <Restriction>
+                                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
+                                <onClass rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_69062b9e_235e_4977_877f_0021effc2dfc"/>
+                                <qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</qualifiedCardinality>
+                            </Restriction>
+                        </intersectionOf>
+                    </Class>
+                </unionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f91e368a_9e61_4616_85d2_d24ff9c08ab2"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_c544c98a_ea80_4638_94c2_47fe7985c5b9 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_c544c98a_ea80_4638_94c2_47fe7985c5b9">
+        <rdfs:label xml:lang="en">DataBreach</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_15f536e2_2946_4aca_b996_2615e37e729a"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_c61c5125_09a3_46f0_9369_2288f8f41a1b -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_c61c5125_09a3_46f0_9369_2288f8f41a1b">
+        <rdfs:label xml:lang="en">Documentation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_83eaae05_ab01_4df1_b8ed_a203cfec5a08"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_c750844c_48fa_4fbd_8619_b8b9b1e967db"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_c750844c_48fa_4fbd_8619_b8b9b1e967db -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_c750844c_48fa_4fbd_8619_b8b9b1e967db">
+        <rdfs:label xml:lang="en">ProcessingRule</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_af4ae221_0c41_4b82_8ff9_7561e9d9c6cd"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_cd736f6b_2897_46b3_af1e_89e318585b0a -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_cd736f6b_2897_46b3_af1e_89e318585b0a">
+        <rdfs:label xml:lang="en">ImpactAssessment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7e0df94b_e1c3_4a97_b19d_d9320b921f84"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_c750844c_48fa_4fbd_8619_b8b9b1e967db"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_d6d8fedc_ca29_4852_bc9d_fe4abf2707e0 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_d6d8fedc_ca29_4852_bc9d_fe4abf2707e0">
+        <rdfs:label xml:lang="en">Rectification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_43574c52_adab_4ef9_807a_68f850c65a04"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_dd11ad3d_8e96_4fd6_9646_b1fa4799b296 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_dd11ad3d_8e96_4fd6_9646_b1fa4799b296">
+        <rdfs:label xml:lang="en">Authority</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_99a373a5_bae0_4769_a675_7bf1a8467f00"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_df7e7536_7235_4e30_b042_4e8a8b5852a5 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_df7e7536_7235_4e30_b042_4e8a8b5852a5">
+        <rdfs:label xml:lang="en">LegitimateInterestProcessing</rdfs:label>
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_6eaca250_d77d_4df4_b978_8dcbb84e6a50"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_a42fde83_5051_4cc3_b86c_b1981b6b6500"/>
+            </Restriction>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f91e368a_9e61_4616_85d2_d24ff9c08ab2"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_e7e707fc_dc05_4f59_973d_771a0e393117 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_e7e707fc_dc05_4f59_973d_771a0e393117">
+        <rdfs:label xml:lang="en">LegalObligation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f993be7a_344f_4fee_9a35_75f1e3b367c5"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_ea967b60_4d4f_41e0_97fe_8d7dd514619c -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_ea967b60_4d4f_41e0_97fe_8d7dd514619c">
+        <rdfs:label xml:lang="en">ChildData</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f234596c_9040_4f87_bd51_49ec017fd3d5"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_eba91113_47e1_4806_8b83_bd8ba94c2002 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_eba91113_47e1_4806_8b83_bd8ba94c2002">
+        <rdfs:label xml:lang="en">DataTransfer</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7b7dbebc_426b_4198_868e_2b0dcd598cf3"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_eccd3a99_0368_4293_a3d1_e344dc5bd0a1 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_eccd3a99_0368_4293_a3d1_e344dc5bd0a1">
+        <rdfs:label xml:lang="en">Fairness</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_5522084d_074e_4658_94a6_b2c730a3ddf4"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_ed8bdd2f_f171_49c2_9386_576fe410d791 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_ed8bdd2f_f171_49c2_9386_576fe410d791">
+        <rdfs:label xml:lang="en">PersonalData</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_efdc2be7_211a_4933_bdef_2fed334f2858 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_efdc2be7_211a_4933_bdef_2fed334f2858">
+        <rdfs:label xml:lang="en">BreachNotification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_31ba96e6_a8e7_4d61_9af2_25280e70bb8f"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f0877852_cd4f_4338_bd33_7a11b7f3677d -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f0877852_cd4f_4338_bd33_7a11b7f3677d">
+        <rdfs:label xml:lang="en">PublicInterest</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f993be7a_344f_4fee_9a35_75f1e3b367c5"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f234596c_9040_4f87_bd51_49ec017fd3d5 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f234596c_9040_4f87_bd51_49ec017fd3d5">
+        <rdfs:label xml:lang="en">SensitiveData</rdfs:label>
+        <equivalentClass>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_ea967b60_4d4f_41e0_97fe_8d7dd514619c"/>
+                    <Class>
+                        <oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_e572ffb6_feda_492a_83c1_2ab982d3af11"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_f7438c24_0ad0_44ee_a402_760d6d3aaa99"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_f39efa62_7202_46d8_9736_7be3966f2ee4"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_2f06aa66_4ab7_41c6_9b94_c2cb13e9691f"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_a91304fc_bb35_41cd_a8f0_8cf07c096e4a"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_55e57984_3d3c_4ba0_8321_6c74aaf17d36"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_8de904ed_c312_4b94_8936_21ff4dc59afc"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_80f23d4a_5825_4858_af79_1c67c5289684"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_ad6121f2_bdc0_4ea7_a67e_372f70b08f9a"/>
+                        </oneOf>
+                    </Class>
+                </unionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_ed8bdd2f_f171_49c2_9386_576fe410d791"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f9140510_7d3e_441d_a8cf_a67da4fb19c4 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f9140510_7d3e_441d_a8cf_a67da4fb19c4">
+        <rdfs:label xml:lang="en">AutomatedProcessing</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_847950cb_b447_4f15_bb85_ed45f878d760"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f91e368a_9e61_4616_85d2_d24ff9c08ab2 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f91e368a_9e61_4616_85d2_d24ff9c08ab2">
+        <rdfs:label xml:lang="en">LawfulProcessing</rdfs:label>
+        <equivalentClass>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_02b07422_386e_4a70_8c4a_c2534b513fb5"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_301e1bec_ae1a_4601_9bea_a35fe79e4ea3"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_c37e1def_c49d_4171_94ca_7d6912ef2acf"/>
+                </unionOf>
+            </Class>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_59851879_88be_4cf3_bd27_3b185fc2046a"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_c61c5125_09a3_46f0_9369_2288f8f41a1b"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_c2d389de_7681_40df_b3e8_00982e1ae1f2"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_931c3eee_c583_4adb_9af9_e0891ea43f2b"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f993be7a_344f_4fee_9a35_75f1e3b367c5"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_c2d389de_7681_40df_b3e8_00982e1ae1f2"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_b628f28a_bd8c_471e_9c61_9548ff8cfd58"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_c2d389de_7681_40df_b3e8_00982e1ae1f2"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_2da92369_af57_4fc1_b84a_a35658cb88cf"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_4a286d0b_f129_4976_be2b_9c7ab71beb24"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_c2d389de_7681_40df_b3e8_00982e1ae1f2"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_12f8d2e4_932c_44b2_a152_7fb6fe4d7e7c"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_cd736f6b_2897_46b3_af1e_89e318585b0a"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_c2d389de_7681_40df_b3e8_00982e1ae1f2"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_43574c52_adab_4ef9_807a_68f850c65a04"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_c2d389de_7681_40df_b3e8_00982e1ae1f2"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_fa3d54a9_5ad4_4240_b021_815d980dcda6"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Class>
+                <complementOf>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_4233322f_cb80_4ee7_bed2_213d920c59c3"/>
+                        <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7bb468f6_ab61_4585_a9cb_522371c20b9d"/>
+                    </Restriction>
+                </complementOf>
+            </Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_31ba96e6_a8e7_4d61_9af2_25280e70bb8f"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f993be7a_344f_4fee_9a35_75f1e3b367c5 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f993be7a_344f_4fee_9a35_75f1e3b367c5">
+        <rdfs:label xml:lang="en">LegalJustification</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_7ef6aaee_8d1b_4e22_bee2_f64f4332c477"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_ba7850fa_6664_4b14_91d4_b8307ae8481d"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_fa3d54a9_5ad4_4240_b021_815d980dcda6 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_fa3d54a9_5ad4_4240_b021_815d980dcda6">
+        <rdfs:label xml:lang="en">RightToPortability</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_15f536e2_2946_4aca_b996_2615e37e729a"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_8fd1b241_6e73_4771_9cf7_4a995dd8311b"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_fccddccc_e1c5_425a_9e67_99ea9c2dfa55 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_fccddccc_e1c5_425a_9e67_99ea9c2dfa55">
+        <rdfs:label xml:lang="en">SpecialConsent</rdfs:label>
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLObjectProperty_86442676_0100_49b3_991c_504d7c89a49a"/>
+                <someValuesFrom rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+            </Restriction>
+        </equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_a2ccd29b_a341_4659_919a_977a6a81d4d1"/>
+    </Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_fdf49ad5_3967_4c7f_b6dc_e8de56c976b2 -->
+
+    <Class rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_fdf49ad5_3967_4c7f_b6dc_e8de56c976b2">
+        <rdfs:label xml:lang="en">Accuracy</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_b841fd2e_162d_4f1a_8c2c_05dc948e63a0"/>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_2f06aa66_4ab7_41c6_9b94_c2cb13e9691f -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_2f06aa66_4ab7_41c6_9b94_c2cb13e9691f">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f234596c_9040_4f87_bd51_49ec017fd3d5"/>
+        <rdfs:label xml:lang="en">ReligionData</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_3b3179d7_ab20_45eb_842b_39318f5149a1 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_3b3179d7_ab20_45eb_842b_39318f5149a1">
+        <rdfs:label xml:lang="en">EUTransfer</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_55e57984_3d3c_4ba0_8321_6c74aaf17d36 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_55e57984_3d3c_4ba0_8321_6c74aaf17d36">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f234596c_9040_4f87_bd51_49ec017fd3d5"/>
+        <rdfs:label xml:lang="en">TradeUnionData</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_6ae3b678_a2b2_4193_8f9a_2ccf21a4c8a4 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_6ae3b678_a2b2_4193_8f9a_2ccf21a4c8a4">
+        <rdfs:label xml:lang="en">EURecipient</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_80f23d4a_5825_4858_af79_1c67c5289684 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_80f23d4a_5825_4858_af79_1c67c5289684">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f234596c_9040_4f87_bd51_49ec017fd3d5"/>
+        <rdfs:label xml:lang="en">RacialData</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_8c8d297c_3ff0_46f8_a478_d30c921d18b7 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_8c8d297c_3ff0_46f8_a478_d30c921d18b7">
+        <rdfs:label xml:lang="en">NonEURecipient</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_8de904ed_c312_4b94_8936_21ff4dc59afc -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_8de904ed_c312_4b94_8936_21ff4dc59afc">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f234596c_9040_4f87_bd51_49ec017fd3d5"/>
+        <rdfs:label xml:lang="en">SexualData</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_9383a976_2f15_4a41_8d61_e43b5694658f -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_9383a976_2f15_4a41_8d61_e43b5694658f">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_b937960f_e255_4bcf_aff6_f362c905a8b8"/>
+        <rdfs:label xml:lang="en">ECHRLawfulness</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_9acbc5cb_d89e_4fff_8f42_8992774fd62e -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_9acbc5cb_d89e_4fff_8f42_8992774fd62e">
+        <rdfs:label xml:lang="en">NonEUTransfer</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_a91304fc_bb35_41cd_a8f0_8cf07c096e4a -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_a91304fc_bb35_41cd_a8f0_8cf07c096e4a">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f234596c_9040_4f87_bd51_49ec017fd3d5"/>
+        <rdfs:label xml:lang="en">HealthcareData</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_ad6121f2_bdc0_4ea7_a67e_372f70b08f9a -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_ad6121f2_bdc0_4ea7_a67e_372f70b08f9a">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f234596c_9040_4f87_bd51_49ec017fd3d5"/>
+        <rdfs:label xml:lang="en">BeliefData</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_d54a634e_1259_4078_928b_3a630491f3c3 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_d54a634e_1259_4078_928b_3a630491f3c3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_b937960f_e255_4bcf_aff6_f362c905a8b8"/>
+        <rdfs:label xml:lang="en">CharterLawfulness</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_e572ffb6_feda_492a_83c1_2ab982d3af11 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_e572ffb6_feda_492a_83c1_2ab982d3af11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f234596c_9040_4f87_bd51_49ec017fd3d5"/>
+        <rdfs:label xml:lang="en">GeneticData</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_f39efa62_7202_46d8_9736_7be3966f2ee4 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_f39efa62_7202_46d8_9736_7be3966f2ee4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f234596c_9040_4f87_bd51_49ec017fd3d5"/>
+        <rdfs:label xml:lang="en">PoliticalData</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_f7438c24_0ad0_44ee_a402_760d6d3aaa99 -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_f7438c24_0ad0_44ee_a402_760d6d3aaa99">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f234596c_9040_4f87_bd51_49ec017fd3d5"/>
+        <rdfs:label xml:lang="en">CriminalData</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_f7d3f3e2_c07d_4ef0_a56b_a99a5af25e6b -->
+
+    <NamedIndividual rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLNamedIndividual_f7d3f3e2_c07d_4ef0_a56b_a99a5af25e6b">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_f234596c_9040_4f87_bd51_49ec017fd3d5"/>
+        <rdfs:label xml:lang="en">BiometricData</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_3c993f72_4546_4509_b66b_425999f0118d"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_70533b01_01ad_4c16_92d7_d37ff183d561"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15#OWLClass_bfbcc9ac_862a_454f_8a67_a52f688d75ca"/>
+        </members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
