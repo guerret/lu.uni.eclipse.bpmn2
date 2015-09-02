@@ -10,21 +10,18 @@
 
 
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15"
+     xml:base="http://www.uni.lu/dataprotection"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://www.semanticweb.org/cesare.bartolini/ontologies/2015/6/untitled-ontology-15">
+     ontologyIRI="http://www.uni.lu/dataprotection">
     <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="skos" IRI="http://www.w3.org/TR/skos-reference#"/>
-    <Declaration>
-        <Class IRI="#DataSubject"/>
-    </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_02b07422_386e_4a70_8c4a_c2534b513fb5"/>
     </Declaration>
@@ -131,10 +128,16 @@
         <Class IRI="#OWLClass_59851879_88be_4cf3_bd27_3b185fc2046a"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#OWLClass_5a9540f3_9f42_46c1_9cff_227fa5323efb"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#OWLClass_624c0561_eda6_4035_9f2a_47d4b8de3ee9"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_69062b9e_235e_4977_877f_0021effc2dfc"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OWLClass_6c46bd74_4881_488e_b461_603592bc3426"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_70533b01_01ad_4c16_92d7_d37ff183d561"/>
@@ -144,9 +147,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_771335d1_185e_465d_b779_165e6f384353"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#OWLClass_7b7dbebc_426b_4198_868e_2b0dcd598cf3"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_7bb468f6_ab61_4585_a9cb_522371c20b9d"/>
@@ -207,6 +207,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_ba7850fa_6664_4b14_91d4_b8307ae8481d"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315"/>
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_bf972a40_26a4_451a_b104_ea993da94716"/>
@@ -279,9 +282,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#OWLClass_fdf49ad5_3967_4c7f_b6dc_e8de56c976b2"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Principle"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#OWLObjectProperty_077c98dc_e4f1_4fa4_82f1_4d5d6bac1a11"/>
@@ -498,11 +498,11 @@
         <ObjectIntersectionOf>
             <ObjectExactCardinality cardinality="1">
                 <ObjectProperty IRI="#OWLObjectProperty_43a932bd_d72f_4cd9_8aef_a2b60603224f"/>
-                <Class IRI="#DataSubject"/>
+                <Class IRI="#OWLClass_413e4c1b_7d3b_4fc1_98c0_b782b533aae8"/>
             </ObjectExactCardinality>
             <ObjectExactCardinality cardinality="1">
                 <ObjectProperty IRI="#OWLObjectProperty_43a932bd_d72f_4cd9_8aef_a2b60603224f"/>
-                <Class IRI="#OWLClass_413e4c1b_7d3b_4fc1_98c0_b782b533aae8"/>
+                <Class IRI="#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315"/>
             </ObjectExactCardinality>
         </ObjectIntersectionOf>
     </EquivalentClasses>
@@ -566,8 +566,8 @@
     <EquivalentClasses>
         <Class IRI="#OWLClass_b937960f_e255_4bcf_aff6_f362c905a8b8"/>
         <ObjectOneOf>
-            <NamedIndividual IRI="#OWLNamedIndividual_d54a634e_1259_4078_928b_3a630491f3c3"/>
             <NamedIndividual IRI="#OWLNamedIndividual_9383a976_2f15_4a41_8d61_e43b5694658f"/>
+            <NamedIndividual IRI="#OWLNamedIndividual_d54a634e_1259_4078_928b_3a630491f3c3"/>
         </ObjectOneOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -625,15 +625,15 @@
         <ObjectUnionOf>
             <Class IRI="#OWLClass_ea967b60_4d4f_41e0_97fe_8d7dd514619c"/>
             <ObjectOneOf>
+                <NamedIndividual IRI="#OWLNamedIndividual_ad6121f2_bdc0_4ea7_a67e_372f70b08f9a"/>
+                <NamedIndividual IRI="#OWLNamedIndividual_f39efa62_7202_46d8_9736_7be3966f2ee4"/>
+                <NamedIndividual IRI="#OWLNamedIndividual_8de904ed_c312_4b94_8936_21ff4dc59afc"/>
+                <NamedIndividual IRI="#OWLNamedIndividual_2f06aa66_4ab7_41c6_9b94_c2cb13e9691f"/>
                 <NamedIndividual IRI="#OWLNamedIndividual_e572ffb6_feda_492a_83c1_2ab982d3af11"/>
                 <NamedIndividual IRI="#OWLNamedIndividual_f7438c24_0ad0_44ee_a402_760d6d3aaa99"/>
-                <NamedIndividual IRI="#OWLNamedIndividual_f39efa62_7202_46d8_9736_7be3966f2ee4"/>
-                <NamedIndividual IRI="#OWLNamedIndividual_2f06aa66_4ab7_41c6_9b94_c2cb13e9691f"/>
-                <NamedIndividual IRI="#OWLNamedIndividual_a91304fc_bb35_41cd_a8f0_8cf07c096e4a"/>
                 <NamedIndividual IRI="#OWLNamedIndividual_55e57984_3d3c_4ba0_8321_6c74aaf17d36"/>
-                <NamedIndividual IRI="#OWLNamedIndividual_8de904ed_c312_4b94_8936_21ff4dc59afc"/>
                 <NamedIndividual IRI="#OWLNamedIndividual_80f23d4a_5825_4858_af79_1c67c5289684"/>
-                <NamedIndividual IRI="#OWLNamedIndividual_ad6121f2_bdc0_4ea7_a67e_372f70b08f9a"/>
+                <NamedIndividual IRI="#OWLNamedIndividual_a91304fc_bb35_41cd_a8f0_8cf07c096e4a"/>
             </ObjectOneOf>
         </ObjectUnionOf>
     </EquivalentClasses>
@@ -652,10 +652,6 @@
             <Class IRI="#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
         </ObjectSomeValuesFrom>
     </EquivalentClasses>
-    <SubClassOf>
-        <Class IRI="#DataSubject"/>
-        <Class IRI="#OWLClass_99a373a5_bae0_4769_a675_7bf1a8467f00"/>
-    </SubClassOf>
     <SubClassOf>
         <Class IRI="#OWLClass_02b07422_386e_4a70_8c4a_c2534b513fb5"/>
         <Class IRI="#OWLClass_f91e368a_9e61_4616_85d2_d24ff9c08ab2"/>
@@ -837,6 +833,10 @@
         <Class IRI="#OWLClass_c750844c_48fa_4fbd_8619_b8b9b1e967db"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#OWLClass_5a9540f3_9f42_46c1_9cff_227fa5323efb"/>
+        <Class IRI="#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#OWLClass_624c0561_eda6_4035_9f2a_47d4b8de3ee9"/>
         <Class IRI="#OWLClass_bf972a40_26a4_451a_b104_ea993da94716"/>
     </SubClassOf>
@@ -857,16 +857,12 @@
         <Class IRI="#OWLClass_31ba96e6_a8e7_4d61_9af2_25280e70bb8f"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#OWLClass_7b7dbebc_426b_4198_868e_2b0dcd598cf3"/>
-        <Class IRI="#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#OWLClass_7bb468f6_ab61_4585_a9cb_522371c20b9d"/>
         <Class IRI="#OWLClass_2da92369_af57_4fc1_b84a_a35658cb88cf"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OWLClass_7e0df94b_e1c3_4a97_b19d_d9320b921f84"/>
-        <Class IRI="#Principle"/>
+        <Class IRI="#OWLClass_6c46bd74_4881_488e_b461_603592bc3426"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OWLClass_7ef6aaee_8d1b_4e22_bee2_f64f4332c477"/>
@@ -878,7 +874,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OWLClass_801beed0_2387_4a31_a5f1_6636c3558cb7"/>
-        <Class IRI="#DataSubject"/>
+        <Class IRI="#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OWLClass_83eaae05_ab01_4df1_b8ed_a203cfec5a08"/>
@@ -930,7 +926,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OWLClass_b491c951_2363_4eab_a32f_0fc922d48adc"/>
-        <Class IRI="#Principle"/>
+        <Class IRI="#OWLClass_6c46bd74_4881_488e_b461_603592bc3426"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OWLClass_b628f28a_bd8c_471e_9c61_9548ff8cfd58"/>
@@ -942,11 +938,15 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OWLClass_b841fd2e_162d_4f1a_8c2c_05dc948e63a0"/>
-        <Class IRI="#Principle"/>
+        <Class IRI="#OWLClass_6c46bd74_4881_488e_b461_603592bc3426"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OWLClass_b937960f_e255_4bcf_aff6_f362c905a8b8"/>
-        <Class IRI="#Principle"/>
+        <Class IRI="#OWLClass_6c46bd74_4881_488e_b461_603592bc3426"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315"/>
+        <Class IRI="#OWLClass_99a373a5_bae0_4769_a675_7bf1a8467f00"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OWLClass_bf972a40_26a4_451a_b104_ea993da94716"/>
@@ -1006,11 +1006,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OWLClass_eba91113_47e1_4806_8b83_bd8ba94c2002"/>
-        <Class IRI="#OWLClass_7b7dbebc_426b_4198_868e_2b0dcd598cf3"/>
+        <Class IRI="#OWLClass_5a9540f3_9f42_46c1_9cff_227fa5323efb"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OWLClass_eccd3a99_0368_4293_a3d1_e344dc5bd0a1"/>
-        <Class IRI="#Principle"/>
+        <Class IRI="#OWLClass_6c46bd74_4881_488e_b461_603592bc3426"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OWLClass_efdc2be7_211a_4933_bdef_2fed334f2858"/>
@@ -1327,8 +1327,8 @@
         <ObjectProperty IRI="#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#OWLObjectProperty_e9b85247_b390_4b60_9d03_627a9bcc0a7f"/>
         <ObjectProperty IRI="#OWLObjectProperty_217a5aab_f37f_4e80_868a_6d8b6f059fa4"/>
+        <ObjectProperty IRI="#OWLObjectProperty_e9b85247_b390_4b60_9d03_627a9bcc0a7f"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#OWLObjectProperty_4233322f_cb80_4ee7_bed2_213d920c59c3"/>
@@ -1436,7 +1436,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#OWLObjectProperty_217a5aab_f37f_4e80_868a_6d8b6f059fa4"/>
-        <Class IRI="#DataSubject"/>
+        <Class IRI="#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#OWLObjectProperty_26abc84c_8c4c_458c_8605_2ffbd1590d0d"/>
@@ -1444,7 +1444,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#OWLObjectProperty_2a714588_010a_4833_ae08_09b32aa6295c"/>
-        <Class IRI="#DataSubject"/>
+        <Class IRI="#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#OWLObjectProperty_332f288f_09e9_4743_bac9_6b65ac57f10e"/>
@@ -1492,7 +1492,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769"/>
-        <Class IRI="#DataSubject"/>
+        <Class IRI="#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#OWLObjectProperty_72c09d42_4524_4808_95c4_0c9f280e3f98"/>
@@ -1523,11 +1523,11 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#OWLObjectProperty_9886111f_f601_4189_81bd_41bc65f13d4c"/>
-        <Class IRI="#DataSubject"/>
+        <Class IRI="#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#OWLObjectProperty_a13cf5b7_2210_434a_9dd1_fc46e2f85f5c"/>
-        <Class IRI="#DataSubject"/>
+        <Class IRI="#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#OWLObjectProperty_b4a56142_242b_44f5_80de_209a573b750e"/>
@@ -1579,7 +1579,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#OWLObjectProperty_f90cb5d0_29a1_41ef_a947_aa86cb69cc14"/>
-        <Class IRI="#DataSubject"/>
+        <Class IRI="#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#OWLObjectProperty_077c98dc_e4f1_4fa4_82f1_4d5d6bac1a11"/>
@@ -1637,8 +1637,8 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#OWLObjectProperty_43a932bd_d72f_4cd9_8aef_a2b60603224f"/>
         <ObjectUnionOf>
-            <Class IRI="#DataSubject"/>
             <Class IRI="#OWLClass_413e4c1b_7d3b_4fc1_98c0_b782b533aae8"/>
+            <Class IRI="#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315"/>
         </ObjectUnionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -1737,15 +1737,15 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#OWLObjectProperty_d6b379ea_fc70_4e52_8990_4b2579886200"/>
-        <Class IRI="#DataSubject"/>
+        <Class IRI="#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#OWLObjectProperty_e4459726_050d_4ba9_a9e7_56bff2354021"/>
-        <Class IRI="#DataSubject"/>
+        <Class IRI="#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#OWLObjectProperty_e9b85247_b390_4b60_9d03_627a9bcc0a7f"/>
-        <Class IRI="#DataSubject"/>
+        <Class IRI="#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#OWLObjectProperty_ede6ce89_417f_48c1_a76e_4df8ff1ad55a"/>
@@ -1769,7 +1769,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#OWLDataProperty_6fb5e412_2c48_4308_94b9_2b02c71b8004"/>
-        <Class IRI="#DataSubject"/>
+        <Class IRI="#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315"/>
     </DataPropertyDomain>
     <DataPropertyRange>
         <DataProperty IRI="#OWLDataProperty_4644d2f7_3262_4cc1_84ff_06605a549316"/>
@@ -1780,9 +1780,13 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#closeMatch"/>
-        <IRI>#DataSubject</IRI>
-        <IRI>http://www.estrellaproject.org/lkif-core/legal-action.owl#Natural_Person</IRI>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_02b07422_386e_4a70_8c4a_c2534b513fb5</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 6.1(b)
+
+Processing that is necessary for the performance of a contract to which the data
+subject is party or in order to take steps at the request of the data subject prior
+to entering into a contract.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1790,9 +1794,21 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ContractualProcessing</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_059044e8_58f0_4cd8_8014_8c5babe12c7d</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 20.1
+
+Automated processing intended to evaluate certain personal aspects relating to this natural person or to analyse or predict in particular the natural person&apos;s performance at work, economic situation, location, health, personal preferences, reliability or behaviour.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_059044e8_58f0_4cd8_8014_8c5babe12c7d</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Profiling</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_06a52543_55ee_4037_8370_dd56a165fe70</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Rule that applies only to the transfer of personal data.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1800,9 +1816,21 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">TransferRule</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 4(3)
+
+Any operation or set of operations which is performed upon personal data or sets of personal data, whether or not by automated means, such as collection, recording, organization, structuring, storage, adaptation or alteration, retrieval, consultation, use, disclosure by transmission, dissemination or otherwise making available, alignment or combination, erasure or destruction.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DataProcessing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_0b2f9b8c_8e60_4b1a_9471_9ce55bf73ae4</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Interest concerning the life or health of a subject.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1810,9 +1838,21 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">VitalInterest</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_12ed2171_63ca_4d47_afcd_b6721ac351a9</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A recipient not located within the European Union and not subject to the Regulation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_12ed2171_63ca_4d47_afcd_b6721ac351a9</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">NonEURecipient</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_12f8d2e4_932c_44b2_a152_7fb6fe4d7e7c</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 15.2
+
+The request to obtain from the controller communication of the personal data undergoing processing. Where the data subject makes the request in electronic form, the information shall be provided in electronic form, unless otherwise requested by the data subject.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1820,9 +1860,21 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Access</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_15f536e2_2946_4aca_b996_2615e37e729a</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DPH s. 3.4.2
+
+Controllers should document, to data subjects and to the general public, that they will process data in a lawful and transparent manner. Processing operations must not be performed in secret and should not have unforeseeable negative effects. Controllers should ensure that customers, clients or citizens are informed about the use of their data. Further, controllers, so far as possible, must act in a way which promptly complies with the wishes of the data subject, especially where his or her consent forms the legal basis for the data processing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_15f536e2_2946_4aca_b996_2615e37e729a</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Trust</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_1d2f3df4_e138_45ec_8434_0705d94b1c18</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The request to obtain from the controller the erasure of personal data relating to them and the abstention from further dissemination of such data.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1830,9 +1882,21 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Erasure</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_1dcad2a0_486a_4f14_8b0e_1b9e521f738e</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 6.1(d)
+
+Processing that is necessary in order to protect the vital interests of the data subject.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_1dcad2a0_486a_4f14_8b0e_1b9e521f738e</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">VitalProcessing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_2023c585_fdec_4229_8951_24f6d4639634</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Binding instrument to establish a legal relationship between two or more parties.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1840,9 +1904,25 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Contract</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_21b029c0_43d8_4ee4_aa3f_c8b91b33974f</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DPH s. 3.3.1
+
+Only such data shall be processed as are &quot;adequate, relevant and not excessive in relation to the purpose for which they are collected and/or further processed&quot;. The categories of data chosen for processing must be necessary in order to achieve the declared overall aim of the processing operations, and a controller should strictly limit collection of data to such information as is directly relevant for the specific purpose pursued by the processing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_21b029c0_43d8_4ee4_aa3f_c8b91b33974f</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Relevancy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_25b9b478_c602_4073_a790_6374ba384b42</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The actual reason for which the processing is performed. The processing is lawful if one of the lawfulness conditions apply. The lawfulness conditions have a twofold meaning:
+- they represent the legal grounds that make the processing lawful. This is an application of the lawfulness principle;
+- they define the boundaries within which the processing is allowed. This is an application of the principle of purpose limitation.
+
+The combination of these two facets makes up the processing scope.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1850,9 +1930,21 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ProcessingScope</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_27535d61_8d2c_4e2c_96bd_cabd05c9149a</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 4(14)
+
+Any natural or legal person established in the Union who, explicitly designated by the controller, acts and may be addressed by any supervisory authority and other bodies in the Union instead of the controller, with regard to the obligations of the controller under this Regulation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_27535d61_8d2c_4e2c_96bd_cabd05c9149a</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Representative</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_28125d88_ca58_40fb_bedf_8b05cc85a4ec</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Security measures that concern the organization of the controller or processor, including the division of roles and limited access rights.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1860,9 +1952,23 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">OrganisationalMeasures</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_29c82d22_60ee_4d6c_a0a3_791432cc5481</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 6.1(c)
+
+Processing that is necessary for compliance with a legal obligation to which the controller is subject.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_29c82d22_60ee_4d6c_a0a3_791432cc5481</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ObligatedProcessing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_2da92369_af57_4fc1_b84a_a35658cb88cf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 19.1
+
+The data subject shall have the right to object, on grounds relating to their particular situation, at any time to the processing of personal data which is based on points (d), (e) and (f) of Article 6(1), unless the controller demonstrates compelling legitimate grounds for the processing which override the interests or fundamental rights and freedoms of the data subject.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1870,9 +1976,21 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">RightToObject</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_301e1bec_ae1a_4601_9bea_a35fe79e4ea3</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Any processing that is not based upon the explicit consent of the data subject.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_301e1bec_ae1a_4601_9bea_a35fe79e4ea3</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">RequiredProcessing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_31ba96e6_a8e7_4d61_9af2_25280e70bb8f</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 30.1
+
+The controller and the processor shall implement appropriate technical and organisational measures to ensure a level of security appropriate to the risks represented by the processing and the nature of the personal data to be protected, having regard to the state of the art and the costs of their implementation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1880,9 +1998,21 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Security</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_336f5c83_c4cc_4889_8cbc_2c07562155a2</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 40
+
+Any transfer of personal data which are undergoing processing or are intended for processing after transfer to a third country or to an international organisation may only take place if, subject to the other provisions of this Regulation, the conditions laid down in Chapter V are complied with by the controller and processor, including for onward transfers of personal data from the third country or an international organisation to another third country or to another international organisation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_336f5c83_c4cc_4889_8cbc_2c07562155a2</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">LawfulTransfer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_37cc24cc_e8cc_4ac2_8594_7aa5cc97f129</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The means by which the controller and the processor tries to avoid data breaches.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1890,9 +2020,21 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Measures</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_38c37e49_92a4_4bbc_9780_9eed89158298</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Personal data should be collected only when, and to the extent to which, a given purpose cannot be reached without using anonymous or statistical data or data that do not allow identification of the data subject.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_38c37e49_92a4_4bbc_9780_9eed89158298</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DataMinimization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_3c5113eb_0923_4946_86cf_f5a83de7f9bb</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 4(6)
+
+A natural or legal person, public authority, agency or any other body which processes personal data on behalf of the controller.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1900,9 +2042,21 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Processor</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_3c993f72_4546_4509_b66b_425999f0118d</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 42.1
+
+Where the Commission has taken no decision pursuant to Article 41, a controller or processor may transfer personal data to a third country or an international organisation only if the controller or processor has adduced appropriate safeguards with respect to the protection of personal data in a legally binding instrument.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_3c993f72_4546_4509_b66b_425999f0118d</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">AppropriateSafeguards</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_411a42e7_c0a2_483e_b2ce_ebc85160fe33</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Security measures introduced in the technical infrastructure of the controller or processor, such as secure protocols, access control systems or encryption.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1910,9 +2064,23 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">TechnicalMeasures</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_413e4c1b_7d3b_4fc1_98c0_b782b533aae8</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 4(5)
+
+the natural or legal person, public authority, agency or any other body which alone or jointly with others determines the purposes, conditions and means of the processing of personal data; where the purposes, conditions and means of processing are determined by Union law or Member State law, the controller or the specific criteria for his nomination may be designated by Union law or by Member State law.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_413e4c1b_7d3b_4fc1_98c0_b782b533aae8</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Controller</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_43574c52_adab_4ef9_807a_68f850c65a04</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 16
+
+The data subject shall have the right to obtain from the controller the rectification of personal data relating to them which are inaccurate. The data subject shall have the right to obtain completion of incomplete personal data, including by way of supplementing a corrective statement.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1920,9 +2088,23 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">RightToRectification</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_48029399_9b67_4460_9eec_db9c7f55752c</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DPH s. 3.3.3
+
+Article 6 (1) (e) of the Data Protection Directive and, likewise, Article 5 (e) of Convention 108 require Member States to ensure that personal data are &quot;kept in a form which permits identification of data subjects for no longer than is necessary for the The key principles of European data protection law purposes for which the data were collected or for which they are further processed.&quot; The data must therefore be erased when those purposes have been served.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_48029399_9b67_4460_9eec_db9c7f55752c</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Retention</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_49185c12_e790_4177_ba61_944b1fc3b8ce</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 39.1
+
+The Member States and the Commission shall encourage, in particular at European level, the establishment of data protection certification mechanisms and of data protection seals and marks, allowing data subjects to quickly assess the level of data protection provided by controllers and processors. The data protection certifications mechanisms shall contribute to the proper application of this Regulation, taking account of the specific features of the various sectors and different processing operations.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1930,9 +2112,25 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Certification</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_4a286d0b_f129_4976_be2b_9c7ab71beb24</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 11
+
+The controller shall have transparent and easily accessible policies with regard to the processing of personal data and for the exercise of data subjects&apos; rights.
+
+The controller shall provide any information and any communication relating to the processing of personal data to the data subject in an intelligible form, using clear and plain language, adapted to the data subject, in particular for any information addressed specifically to a child.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_4a286d0b_f129_4976_be2b_9c7ab71beb24</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">TransparentInformation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_52a03e03_fa27_4f76_8af1_059dd1af4f90</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 23.1
+
+Having regard to the state of the art and the cost of implementation, the controller shall, both at the time of the determination of the means for processing and at the time of the processing itself, implement appropriate technical and organisational measures and procedures in such a way that the processing will meet the requirements of this Regulation and ensure the protection of the rights of the data subject.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1940,9 +2138,31 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">PrivacyByDesign</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_573ba052_e830_419f_9c33_bee5251b8043</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 15.1
+
+The data subject shall have the right to obtain from the controller at any time, on request, confirmation as to whether or not personal data relating to the data subject are being processed. Where such personal data are being processed, the controller shall provide the following information:
+(a) the purposes of the processing;
+(b) the categories of personal data concerned;
+(c) the recipients or categories of recipients to whom the personal data are to be or have been disclosed, in particular to recipients in third countries;
+(d) the period for which the personal data will be stored;
+(e) the existence of the right to request from the controller rectification or erasure of personal data concerning the data subject or to object to the processing of such personal data;
+(f) the right to lodge a complaint to the supervisory authority and the contact details of the supervisory authority;
+(g) communication of the personal data undergoing processing and of any available information as to their source;
+(h) the significance and envisaged consequences of such processing, at least in the case of measures referred to in Article 20.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_573ba052_e830_419f_9c33_bee5251b8043</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">RightOfAccess</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_57b79a8d_ad1a_4ace_9892_affeb548ba0d</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 6.1(e)
+
+Processing that is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1950,9 +2170,31 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">PublicInterestProcessing</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_583cd6c2_76ad_4b1c_b11b_60373af28e5b</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 38.1
+
+The Member States, the supervisory authorities and the Commission shall encourage the drawing up of codes of conduct intended to contribute to the proper application of this Regulation, taking account of the specific features of the various data processing sectors, in particular in relation to:
+(a) fair and transparent data processing;
+(b) the collection of data;
+(c) the information of the public and of data subjects;
+(d) requests of data subjects in exercise of their rights;
+(e) information and protection of children;
+(f) transfer of data to third countries or international organisations;
+(g) mechanisms for monitoring and ensuring compliance with the code by the controllers adherent to it;
+(h) out-of-court proceedings and other dispute resolution procedures for resolving disputes between controllers and data subjects with respect to the processing of personal data, without prejudice to the rights of the data subjects pursuant to Articles 73 and 75.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_583cd6c2_76ad_4b1c_b11b_60373af28e5b</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">CodeOfConduct</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_59851879_88be_4cf3_bd27_3b185fc2046a</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 5(f)
+
+Personal data must be processed under the responsibility and liability of the controller, who shall ensure and demonstrate for each processing operation the compliance with the provisions of this Regulation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1960,9 +2202,29 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Compliance</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_5a9540f3_9f42_46c1_9cff_227fa5323efb</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">A specific operation which is performed upon personal data or sets of personal data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLClass_5a9540f3_9f42_46c1_9cff_227fa5323efb</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ProcessingActivity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_624c0561_eda6_4035_9f2a_47d4b8de3ee9</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A recipient located within the European Union, or subject to the Regulation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_624c0561_eda6_4035_9f2a_47d4b8de3ee9</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">EURecipient</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_69062b9e_235e_4977_877f_0021effc2dfc</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Consent to the processing of personal data of a child below the age of 13 years given or authorised by the child&apos;s parent or custodian.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1970,9 +2232,42 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ParentConsent</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_6c46bd74_4881_488e_b461_603592bc3426</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DPH ch. 3
+
+The principles set out in Article 5 of Convention 108 enshrine the essence of European data protection law. They appear also in Article 6 of the Data Protection Directive as the starting point for more detailed provisions in the subsequent articles of the directive. All later data protection legislation at the CoE or EU level must comply with these principles and they must be kept in mind when interpreting such legislation.
+Any exemptions from and restrictions to these key principles may be provided for at national level;107 they must be provided for by law, pursue a legitimate aim and be necessary in a democratic society. All three conditions must be fulfilled.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLClass_6c46bd74_4881_488e_b461_603592bc3426</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Principle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#broadMatch"/>
+        <IRI>#OWLClass_6c46bd74_4881_488e_b461_603592bc3426</IRI>
+        <IRI>http://www.estrellaproject.org/lkif-core/norm.owl</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_70533b01_01ad_4c16_92d7_d37ff183d561</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 43.1
+
+A supervisory authority shall in accordance with the consistency mechanism set out in Article 58 approve binding corporate rules, provided that they:
+(a) are legally binding and apply to and are enforced by every member within the controller’s or processor&apos;s group of undertakings, and include their employees;
+(b) expressly confer enforceable rights on data subjects;
+(c) fulfil the requirements laid down in paragraph 2.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_70533b01_01ad_4c16_92d7_d37ff183d561</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">BindingCorporateRules</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_75dd7417_421b_47d5_b6cd_daf3b328ca3b</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Processing that requires human activity.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1980,14 +2275,21 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ManualProcessing</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_771335d1_185e_465d_b779_165e6f384353</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 23.2
+
+The controller shall implement mechanisms for ensuring that, by default, only those personal data are processed which are necessary for each specific purpose of the processing and are especially not collected or retained beyond the minimum necessary for those purposes, both in terms of the amount of the data and the time of their storage. In particular, those mechanisms shall ensure that by default personal data are not made accessible to an indefinite number of individuals.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_771335d1_185e_465d_b779_165e6f384353</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">PrivacyByDefault</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#OWLClass_7b7dbebc_426b_4198_868e_2b0dcd598cf3</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ProcessingActivity</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_7bb468f6_ab61_4585_a9cb_522371c20b9d</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The data subjects&apos; objection to the processing of personal data, on grounds relating to their particular situation, at any time to the processing of personal data which is based on points (d), (e) and (f) of Article 6(1).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1995,9 +2297,23 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Objection</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_7e0df94b_e1c3_4a97_b19d_d9320b921f84</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DPH s. 3.5
+
+The Organisation for Economic Co-operation and Development (OECD) adopted privacy guidelines in 2013 that highlighted that controllers have an important role in making data protection work in practice. The guidelines develop an accountability principle to the effect that &quot;a data controller should be accountable for complying with measures which give effect to the [material] principles stated above.&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_7e0df94b_e1c3_4a97_b19d_d9320b921f84</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Accountability</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_7ef6aaee_8d1b_4e22_bee2_f64f4332c477</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DPH s. 4.1.1
+
+Chapter II of Directive 95/46, entitled ‘General rules on the lawfulness of the processing of personal data’, provides that, subject to the exceptions permitted under Article 13, all processing of personal data must comply, first, with the principles relating to data quality set out in Article 6 of the Data Protection Directive and, secondly, with one of the criteria for making data processing legitimate, listed in Article 7. This explains the cases which legitimise the processing of non-sensitive personal data.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2005,9 +2321,21 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Lawfulness_Rule</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_801beed0_2387_4a31_a5f1_6636c3558cb7</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A data subject under the age of 13 years.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_801beed0_2387_4a31_a5f1_6636c3558cb7</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ChildDataSubject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_83eaae05_ab01_4df1_b8ed_a203cfec5a08</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DPH s. 3.4.1
+
+This principle establishes an obligation for the controller to keep the data subjects informed about how their data are being used.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2015,9 +2343,21 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Transparency</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_847950cb_b447_4f15_bb85_ed45f878d760</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The specific way in which the processing is performed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_847950cb_b447_4f15_bb85_ed45f878d760</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ProcessingMode</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_8fd1b241_6e73_4771_9cf7_4a995dd8311b</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DPH s. 5.1
+
+The effectiveness of legal rules in general and data subjects’ rights in particular, depends to a considerable extent on the existence of appropriate mechanisms to enforce them. In European data protection law, the data subject must be empowered by national law to protect his or her data. Independent supervisory authorities must also be established by national law to assist the data subjects in exercising their rights and to supervise the processing of personal data. Additionally, the right to an effective remedy, as guaranteed under the ECHR and the Charter, demands that judicial remedies be available to every person.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2030,9 +2370,25 @@
         <IRI>http://www.estrellaproject.org/lkif-core/norm.owl#Right</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_91a1bac2_859c_446e_86c7_0f32f12470ac</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The parent or custodian of a child below the age of 13 years.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_91a1bac2_859c_446e_86c7_0f32f12470ac</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Parent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_931c3eee_c583_4adb_9af9_e0891ea43f2b</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 17.1
+
+The data subject shall have the right to obtain from the controller the erasure of personal data relating to them and the abstention from further dissemination of such data, especially in relation to personal data which are made available by the data subject while he or she was a child, where one of the following grounds applies:
+(a) the data are no longer necessary in relation to the purposes for which they were collected or otherwise processed;
+(b) the data subject withdraws consent on which the processing is based according to point (a) of Article 6(1), or when the storage period consented to has expired, and where there is no other legal ground for the processing of the data;
+(c) the data subject objects to the processing of personal data pursuant to Article 19;
+(d) the processing of the data does not comply with this Regulation for other reasons.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2040,9 +2396,27 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">RightToErasure</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_99a373a5_bae0_4769_a675_7bf1a8467f00</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An individual or organization involved in the processing of personal data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_99a373a5_bae0_4769_a675_7bf1a8467f00</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_a2ccd29b_a341_4659_919a_977a6a81d4d1</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 7
+
+The controller shall bear the burden of proof for the data subject&apos;s consent to the processing of their personal data for specified purposes.
+
+If the data subject&apos;s consent is to be given in the context of a written declaration which also concerns another matter, the requirement to give consent must be presented distinguishable in its appearance from this other matter.
+
+The data subject shall have the right to withdraw his or her consent at any time. The withdrawal of consent shall not affect the lawfulness of processing based on consent before its withdrawal.
+
+Consent shall not provide a legal basis for the processing, where there is a significant imbalance between the position of the data subject and the controller.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2050,14 +2424,39 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Consent</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_a42fde83_5051_4cc3_b86c_b1981b6b6500</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Objective that a subject can legally pursue.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_a42fde83_5051_4cc3_b86c_b1981b6b6500</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">LegitimateInterest</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_a6bd38e0_dcde_48be_812b_8c785619187b</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 14.1
+
+Where personal data relating to a data subject are collected, the controller shall provide the data subject with at least the following information:
+(a) the identity and the contact details of the controller and, if any, of the controller&apos;s representative and of the data protection officer;
+(b) the purposes of the processing for which the personal data are intended, including the contract terms and general conditions where the processing is based on point (b) of Article 6(1) and the legitimate interests pursued by the controller where the processing is based on point (f) of Article 6(1);
+(c) the period for which the personal data will be stored;
+(d) the existence of the right to request from the controller access to and rectification or erasure of the personal data concerning the data subject or to object to the processing of such personal data;
+(e) the right to lodge a complaint to the supervisory authority and the contact details of the supervisory authority;
+(f) the recipients or categories of recipients of the personal data;
+(g) where applicable, that the controller intends to transfer to a third country or international organisation and on the level of protection afforded by that third country or international organisation by reference to an adequacy decision by the Commission;
+(h) any further information necessary to guarantee fair processing in respect of the data subject, having regard to the specific circumstances in which the personal data are collected.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_a6bd38e0_dcde_48be_812b_8c785619187b</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">RightToInformation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_af4ae221_0c41_4b82_8ff9_7561e9d9c6cd</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Requirement that the controller or processor must fulfill to be compliant with the Regulation.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2070,6 +2469,21 @@
         <IRI>http://www.estrellaproject.org/lkif-core/norm.owl#Obligation</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_b3ce5053_8b0c_41d5_81ba_36f3ccbd5642</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 37.1
+
+The controller or the processor shall entrust the data protection officer at least with the following tasks:
+(a) to inform and advise the controller or the processor of their obligations pursuant to this Regulation and to document this activity and the responses received;
+(b) to monitor the implementation and application of the policies of the controller or processor in relation to the protection of personal data, including the assignment of responsibilities, the training of staff involved in the processing operations, and the related audits;
+(c) to monitor the implementation and application of this Regulation, in particular as to the requirements related to data protection by design, data protection by default and data security and to the information of data subjects and their requests in exercising their rights under this Regulation;
+(d) to ensure that the documentation referred to in Article 28 is maintained;
+(e) to monitor the documentation, notification and communication of personal data breaches pursuant to Articles 31 and 32;
+(f) to monitor the performance of the data protection impact assessment by the controller or processor and the application for prior authorisation or prior consultation, if required pursuant Articles 33 and 34;
+(g) to monitor the response to requests from the supervisory authority, and, within the sphere of the data protection officer&apos;s competence, co-operating with the supervisory authority at the latter&apos;s request or on the data protection officer&apos;s own initiative;
+(h) to act as the contact point for the supervisory authority on issues related to the processing and consult with the supervisory authority, if appropriate, on his/her own initiative.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_b3ce5053_8b0c_41d5_81ba_36f3ccbd5642</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DataProtectionOfficer</Literal>
@@ -2080,9 +2494,23 @@
         <IRI>http://www.estrellaproject.org/lkif-core/legal-action.owl#Legal_Person</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_b491c951_2363_4eab_a32f_0fc922d48adc</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DPH s. 3.2
+
+In essence, the principle of purpose specification and limitation means that the legitimacy of processing personal data will depend on the purpose of the processing. The purpose must have been specified and made manifest by the controller before the processing of data starts. Under EU law, this must be done either by declaration, in other words by notification, to the appropriate supervisory authority or, at the least, by internal documentation which must be made available by the controller for inspection by the supervisory authorities and access by the data subject.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_b491c951_2363_4eab_a32f_0fc922d48adc</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Purpose</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_b628f28a_bd8c_471e_9c61_9548ff8cfd58</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 20.1
+
+Every natural person shall have the right not to be subject to a measure which produces legal effects concerning this natural person or significantly affects this natural person, and which is based solely on automated processing intended to evaluate certain personal aspects relating to this natural person or to analyse or predict in particular the natural person&apos;s performance at work, economic situation, location, health, personal preferences, reliability or behaviour.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2090,9 +2518,25 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">RightToNoProfiling</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_b841fd2e_162d_4f1a_8c2c_05dc948e63a0</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DPH s. 3.3
+
+The principles of data quality must be implemented by the controller in all processing operations.
+The principle of limited retention of data makes it necessary to delete data as soon as they are no longer needed for the purposes for which they were collected.
+Exemptions from the principle of limited retention must be set out by law and need special safeguards for the protection of data subjects.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_b841fd2e_162d_4f1a_8c2c_05dc948e63a0</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DataQuality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_b937960f_e255_4bcf_aff6_f362c905a8b8</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DPH s. 3.1.1
+
+The processing of personal data may constitute an interference with the right to respect for private life of the data subject. The right to respect for private life is, however, not an absolute right but must be balanced against and reconciled with other legitimate interests, be they of other persons (private interests) or of society as a whole (public interests).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2100,9 +2544,38 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Lawfulness_Principle</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_ba7850fa_6664_4b14_91d4_b8307ae8481d</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Reason to perform the processing, such as the interest of the data controller.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_ba7850fa_6664_4b14_91d4_b8307ae8481d</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Justification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 4(1)
+
+An identified natural person or a natural person who can be identified, directly or indirectly, by means reasonably likely to be used by the controller or by any other natural or legal person, in particular by reference to an identification number, location data, online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that person.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DataSubject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+        <IRI>#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315</IRI>
+        <IRI>http://www.estrellaproject.org/lkif-core/legal-action.owl#Natural_Person</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_bf972a40_26a4_451a_b104_ea993da94716</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 4(7)
+
+A natural or legal person, public authority, agency or any other body to which the personal data are disclosed</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2110,9 +2583,23 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Recipient</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_bfbcc9ac_862a_454f_8a67_a52f688d75ca</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 41.1
+
+A transfer may take place where the Commission has decided that the third country, or a territory or a processing sector within that third country, or the international organisation in question ensures an adequate level of protection. Such transfer shall not require any further authorisation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_bfbcc9ac_862a_454f_8a67_a52f688d75ca</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">AdequacyDecision</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_c37e1def_c49d_4171_94ca_7d6912ef2acf</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 6.1(a)
+
+Processing of personal data to which the data subject has given consent for one or more specific purposes.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2120,9 +2607,21 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ConsensualProcessing</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_c544c98a_ea80_4638_94c2_47fe7985c5b9</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A violation of the security measures of the data controller that exposes personal data to unintended subjects.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_c544c98a_ea80_4638_94c2_47fe7985c5b9</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DataBreach</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_c61c5125_09a3_46f0_9369_2288f8f41a1b</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 28.1
+
+Each controller and processor and, if any, the controller&apos;s representative, shall maintain documentation of all processing operations under its responsibility.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2130,9 +2629,23 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Documentation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_c750844c_48fa_4fbd_8619_b8b9b1e967db</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DPH ch. 4
+
+Principles are necessarily of a general nature. Their application to concrete situations leaves a certain margin of interpretation and choice of means. Under CoE law, it is left to the Parties to Convention 108 to clarify this margin of interpretation in their domestic law. The situation in EU law is different: for the establishment of data protection in the internal market, it was deemed necessary to have more detailed rules already at the EU level in order to harmonise the level of data protection of the national laws of the Member States. The Data Protection Directive establishes, under the principles set out in its Article 6, a layer of detailed rules which must be faithfully implemented in national law. The following remarks on detailed data protection rules at the European level deal, therefore, predominantly with EU law.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_c750844c_48fa_4fbd_8619_b8b9b1e967db</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ProcessingRule</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_cd736f6b_2897_46b3_af1e_89e318585b0a</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 33.1
+
+Where processing operations present specific risks to the rights and freedoms of data subjects by virtue of their nature, their scope or their purposes, the controller or the processor acting on the controller&apos;s behalf shall carry out an assessment of the impact of the envisaged processing operations on the protection of personal data.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2140,14 +2653,33 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ImpactAssessment</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_d6d8fedc_ca29_4852_bc9d_fe4abf2707e0</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The request to obtain from the controller the rectification of personal data relating to them which are inaccurate.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_d6d8fedc_ca29_4852_bc9d_fe4abf2707e0</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Rectification</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_dd11ad3d_8e96_4fd6_9646_b1fa4799b296</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 4(19)
+
+A public authority which is established by a Member State in accordance with Article 46.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_dd11ad3d_8e96_4fd6_9646_b1fa4799b296</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Authority</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SupervisoryAuthority</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_df7e7536_7235_4e30_b042_4e8a8b5852a5</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 6.1(f)
+
+Processing that is necessary for the purposes of the legitimate interests pursued by a controller, except where such interests are overridden by the interests or fundamental rights and freedoms of the data subject which require protection of personal data, in particular where the data subject is a child. This shall not apply to processing carried out by public authorities in the performance of their tasks.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2155,9 +2687,19 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">LegitimateInterestProcessing</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_e7e707fc_dc05_4f59_973d_771a0e393117</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Behaviour that is legally required of a subject by means of a contract or law.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_e7e707fc_dc05_4f59_973d_771a0e393117</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">LegalObligation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_ea967b60_4d4f_41e0_97fe_8d7dd514619c</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Personal data pertaining to a data subject under the age of 13 years.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2165,9 +2707,24 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ChildData</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_eba91113_47e1_4806_8b83_bd8ba94c2002</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 4(3)
+
+Disclosure of personal data by transmission, dissemination or otherwise
+making available.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_eba91113_47e1_4806_8b83_bd8ba94c2002</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DataTransfer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_eccd3a99_0368_4293_a3d1_e344dc5bd0a1</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DPH s. 3.4
+
+The principle of fair processing governs primarily the relationship between the controller and the data subject.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2175,9 +2732,27 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Fairness</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_ed8bdd2f_f171_49c2_9386_576fe410d791</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 4(2)
+
+Any information relating to a data subject.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_ed8bdd2f_f171_49c2_9386_576fe410d791</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">PersonalData</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_efdc2be7_211a_4933_bdef_2fed334f2858</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 31.1
+
+In the case of a personal data breach, the controller shall without undue delay and, where feasible, not later than 24 hours after having become aware of it, notify the personal data breach to the supervisory authority. The notification to the supervisory authority shall be accompanied by a reasoned justification in cases where it is not made within 24 hours.
+
+Article 32.1
+
+When the personal data breach is likely to adversely affect the protection of the personal data or privacy of the data subject, the controller shall, after the notification referred to in Article 31, communicate the personal data breach to the data subject without undue delay.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2185,9 +2760,21 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">BreachNotification</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_f0877852_cd4f_4338_bd33_7a11b7f3677d</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An interest beneficial to a general community of undetermined individuals.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_f0877852_cd4f_4338_bd33_7a11b7f3677d</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">PublicInterest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_f234596c_9040_4f87_bd51_49ec017fd3d5</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 9.1
+
+Personal data revealing race or ethnic origin, political opinions, religion or beliefs, trade-union membership, and the processing of genetic data or data concerning health or sex life or criminal convictions or related security measures.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2195,9 +2782,27 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SensitiveData</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_f9140510_7d3e_441d_a8cf_a67da4fb19c4</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Processing that does not require human activity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_f9140510_7d3e_441d_a8cf_a67da4fb19c4</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">AutomatedProcessing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_f91e368a_9e61_4616_85d2_d24ff9c08ab2</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 6.1
+
+Processing of personal data shall be lawful only if and to the extent that at least one of the following applies:
+(a) the data subject has given consent to the processing of their personal data for one or more specific purposes;
+(b) processing is necessary for the performance of a contract to which the data subject is party or in order to take steps at the request of the data subject prior to entering into a contract;
+(c) processing is necessary for compliance with a legal obligation to which the controller is subject;
+(d) processing is necessary in order to protect the vital interests of the data subject;
+(e) processing is necessary for the performance of a task carried out in the public interest or in the exercise of official authority vested in the controller;
+(f) processing is necessary for the purposes of the legitimate interests pursued by a controller, except where such interests are overridden by the interests or fundamental rights and freedoms of the data subject which require protection of personal data, in particular where the data subject is a child. This shall not apply to processing carried out by public authorities in the performance of their tasks.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2205,9 +2810,21 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">LawfulProcessing</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_f993be7a_344f_4fee_9a35_75f1e3b367c5</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Reason to perform the processing which is based on legal grounds, such as an legitimate interest of the data controller.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_f993be7a_344f_4fee_9a35_75f1e3b367c5</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">LegalJustification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_fa3d54a9_5ad4_4240_b021_815d980dcda6</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Article 18
+
+The data subject shall have the right, where personal data are processed by electronic means and in a structured and commonly used format, to obtain from the controller a copy of data undergoing processing in an electronic and structured format which is commonly used and allows for further use by the data subject.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2215,9 +2832,21 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">RightToPortability</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_fccddccc_e1c5_425a_9e67_99ea9c2dfa55</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Consent given under special circumstances, such as to the processing of personal data of a child or to the processing of sensitive data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLClass_fccddccc_e1c5_425a_9e67_99ea9c2dfa55</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SpecialConsent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OWLClass_fdf49ad5_3967_4c7f_b6dc_e8de56c976b2</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DPH s. 3.3.2
+
+A controller holding personal information shall not use that information without taking steps to ensure with reasonable certainty that the data are accurate and up to date.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2520,9 +3149,54 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">performAccess</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#broadMatch"/>
-        <IRI>#Principle</IRI>
-        <IRI>http://www.estrellaproject.org/lkif-core/norm.owl</IRI>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>rdf:PlainLiteral</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">rdf:PlainLiteral</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>rdfs:comment</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">rdfs:comment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>rdfs:label</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">rdfs:label</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">xsd:string</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>owl:topDataProperty</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">owl:topDataProperty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>owl:topObjectProperty</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">owl:topObjectProperty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2004/02/skos/core#OWLAnnotationPropertyImpl_2890e030_22b0_4257_9668_d20f259a369b</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">exactMatch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2004/02/skos/core#OWLAnnotationPropertyImpl_5da093f8_3d86_4481_b13f_bfb4f4ca603e</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">closeMatch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2004/02/skos/core#OWLAnnotationPropertyImpl_87608b6e_854c_44fc_9546_1d090053b511</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">broaderTransitive</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2004/02/skos/core#OWLAnnotationPropertyImpl_b79dea85_da38_4371_96dc_30a639826a63</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">broadMatch</Literal>
     </AnnotationAssertion>
     <SubAnnotationPropertyOf>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#exactMatch"/>

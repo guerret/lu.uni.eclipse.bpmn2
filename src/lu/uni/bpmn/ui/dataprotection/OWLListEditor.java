@@ -109,9 +109,10 @@ public class OWLListEditor extends ObjectEditor {
 		Button button = getToolkit().createButton(compositeButtons, "Add...", SWT.PUSH);
 		button.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent e) {
-				OWLInputDialog inputDlg = new OWLInputDialog(shell, "Add Entry", "New value", "", null);
+				OWLInputDialog inputDlg = new OWLInputDialog(shell, "Add Entry", "");
 				if (inputDlg.open() == InputDialog.OK) {
-					addValue(inputDlg.getValue());
+					for (String s : inputDlg.getResult())
+						addValue(s);
 					updateTable();
 				}
 			}
@@ -121,9 +122,9 @@ public class OWLListEditor extends ObjectEditor {
 		button = getToolkit().createButton(compositeButtons, "Remove", SWT.PUSH);
 		button.addSelectionListener(new SelectionAdapter() {
 			public void widgetSelected(SelectionEvent e) {
-				int iCurrent = table.getSelectionIndex();
-				if (iCurrent >= 0) {
-					String sCurrent = table.getItems()[iCurrent].getText();
+				int[] iCurrents = table.getSelectionIndices();
+				for (int i : iCurrents) {
+					String sCurrent = table.getItems()[i].getText();
 					removeValue(sCurrent);
 					updateTable();
 				}
@@ -136,11 +137,11 @@ public class OWLListEditor extends ObjectEditor {
 			public void widgetSelected(SelectionEvent e) {
 				int iCurrent = table.getSelectionIndex();
 				if (iCurrent >= 0) {
-					TableItem tabelItem = table.getItem(iCurrent);
-					String sOldValue = tabelItem.getText();
-					InputDialog inputDlg = new InputDialog(shell, "Edit Entry", "New value", sOldValue, null);
+					TableItem tableItem = table.getItem(iCurrent);
+					String sOldValue = tableItem.getText();
+					OWLInputDialog inputDlg = new OWLInputDialog(shell, "Edit Entry", sOldValue);
 					if (inputDlg.open() == InputDialog.OK) {
-						String sNewValue = inputDlg.getValue();
+						String sNewValue = inputDlg.getResult()[0];
 						replaceValue(sOldValue, sNewValue);
 						updateTable();
 					}
