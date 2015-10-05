@@ -40,3 +40,5 @@ model, the runtime MUST be set at "Data protection annotations".
 At this point, when creating a BPMN2 diagram, the palette will contain
 a new category called "Data Protection", which contains the new
 element supporting the data protection annotations.
+
+The OWL file with the ontology is in the "resources" folder.
