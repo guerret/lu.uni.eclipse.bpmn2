@@ -1,0 +1,42 @@
+This plugin has been created using Eclipse 4.5 (Mars).
+
+Before installing the plugin, the following dependencies are needed:
+
+- Eclipse Plug-in Development Environment (PDE)
+- BPMN2 Modeler
+
+Both are available in the official repository. If you are using a
+standard installation of Eclipse/Java, you can install the
+dependencies by doing the following:
+
+1. Go to Help menu -> Install new software
+2. Select the repository "Mars" (or according to your version of Eclipse)
+3. In the "General Purpose Tools" category, select "Eclipse Plug-in
+   Development Environment"
+4. In the "SOA Development" category, select "BPMN2 Modeled - Diagram
+   Editor"
+5. Finish the installation
+
+The BPMN2 data protection extension is under development and not
+released as a finalized plugin, so it must be run from its sources. To
+do so, you should open the plugin.xml file and run it (Run -> Run As
+-> Eclipse Application). This will open a new instance of Eclipse
+which supports the extended model. You can now create a new project to
+use the extended BPMN2 notation.
+
+IMPORTANT!!! The following step is mandatory, otherwise it won't be
+possible to use the extended notation.
+
+Before creating a diagram, the project properties must be
+modified. After creating a new project, right-click on the project
+name, and select the "BPMN2" category. This will display some options
+on the right side of the window; among these is a "Target Runtime"
+selection box. Natively, this is set to "None", meaning that the BPMN2
+modeled uses the standard BPMN2 runtime. This is because the native
+BPMN2 model has not been modified, but an additional runtime has been
+created which supports the extended notation. To enable the extended
+model, the runtime MUST be set at "Data protection annotations".
+
+At this point, when creating a BPMN2 diagram, the palette will contain
+a new category called "Data Protection", which contains the new
+element supporting the data protection annotations.
