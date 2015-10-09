@@ -20,7 +20,7 @@ public class Ontology {
 
 	private OWLOntology ontology;
 
-	Ontology(String fileName, boolean local) {
+	public Ontology(String fileName, boolean local) {
 		if (local)
 			ontology = getLocalOntology(fileName);
 		else
