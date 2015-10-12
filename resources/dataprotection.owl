@@ -401,9 +401,6 @@
         <ObjectProperty IRI="#OWLObjectProperty_ede6ce89_417f_48c1_a76e_4df8ff1ad55a"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#OWLObjectProperty_ef5ed911_8458_4e79_9db4_fda0ed917c05"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#OWLObjectProperty_f90cb5d0_29a1_41ef_a947_aa86cb69cc14"/>
     </Declaration>
     <Declaration>
@@ -1375,9 +1372,6 @@
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#OWLObjectProperty_e9b85247_b390_4b60_9d03_627a9bcc0a7f"/>
     </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
-        <ObjectProperty IRI="#OWLObjectProperty_ef5ed911_8458_4e79_9db4_fda0ed917c05"/>
-    </FunctionalObjectProperty>
     <InverseFunctionalObjectProperty>
         <ObjectProperty IRI="#OWLObjectProperty_1001ed7a_4f36_4975_8879_de174ef82e70"/>
     </InverseFunctionalObjectProperty>
@@ -1574,10 +1568,6 @@
         <Class IRI="#OWLClass_eba91113_47e1_4806_8b83_bd8ba94c2002"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#OWLObjectProperty_ef5ed911_8458_4e79_9db4_fda0ed917c05"/>
-        <Class IRI="#OWLClass_eba91113_47e1_4806_8b83_bd8ba94c2002"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#OWLObjectProperty_f90cb5d0_29a1_41ef_a947_aa86cb69cc14"/>
         <Class IRI="#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315"/>
     </ObjectPropertyDomain>
@@ -1750,10 +1740,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#OWLObjectProperty_ede6ce89_417f_48c1_a76e_4df8ff1ad55a"/>
         <Class IRI="#OWLClass_06a52543_55ee_4037_8370_dd56a165fe70"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#OWLObjectProperty_ef5ed911_8458_4e79_9db4_fda0ed917c05"/>
-        <Class IRI="#OWLClass_bf972a40_26a4_451a_b104_ea993da94716"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#OWLObjectProperty_f90cb5d0_29a1_41ef_a947_aa86cb69cc14"/>
@@ -3137,11 +3123,6 @@ A controller holding personal information shall not use that information without
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLObjectProperty_ede6ce89_417f_48c1_a76e_4df8ff1ad55a</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">transferHasRequirement</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#OWLObjectProperty_ef5ed911_8458_4e79_9db4_fda0ed917c05</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasRecipient</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
