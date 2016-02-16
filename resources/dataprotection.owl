@@ -17,11 +17,17 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.uni.lu/dataprotection">
     <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="skos" IRI="http://www.w3.org/TR/skos-reference#"/>
+    <Import>http://purl.org/dc/elements/1.1/</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dc:rights"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/).</Literal>
+    </Annotation>
     <Declaration>
         <Class IRI="#OWLClassImpl_58cf8e1b_e912_4f83_bdbe_0214e093bd4c"/>
     </Declaration>
@@ -293,9 +299,6 @@
         <ObjectProperty IRI="#OWLObjectProperty_077c98dc_e4f1_4fa4_82f1_4d5d6bac1a11"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#OWLObjectProperty_0fda3859_5206_4e3d_89a7_cf4efbc8804f"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#OWLObjectProperty_1001ed7a_4f36_4975_8879_de174ef82e70"/>
     </Declaration>
     <Declaration>
@@ -320,9 +323,6 @@
         <ObjectProperty IRI="#OWLObjectProperty_33c92211_3b91_4b7c_8cfd_9165c3d7629c"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#OWLObjectProperty_4233322f_cb80_4ee7_bed2_213d920c59c3"/>
     </Declaration>
     <Declaration>
@@ -345,9 +345,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#OWLObjectProperty_6eaca250_d77d_4df4_b978_8dcbb84e6a50"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#OWLObjectProperty_72c09d42_4524_4808_95c4_0c9f280e3f98"/>
@@ -462,6 +459,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#OWLNamedIndividual_f7d3f3e2_c07d_4ef0_a56b_a99a5af25e6b"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="dc:rights"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#broadMatch"/>
@@ -1262,84 +1262,28 @@
         <ObjectProperty IRI="#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#OWLObjectProperty_0fda3859_5206_4e3d_89a7_cf4efbc8804f"/>
-        <ObjectProperty IRI="#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#OWLObjectProperty_1c8dcaa8_9f93_4cbb_9523_b4884a29a9b8"/>
-        <ObjectProperty IRI="#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#OWLObjectProperty_217a5aab_f37f_4e80_868a_6d8b6f059fa4"/>
-        <ObjectProperty IRI="#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="#OWLObjectProperty_26abc84c_8c4c_458c_8605_2ffbd1590d0d"/>
         <ObjectProperty IRI="#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#OWLObjectProperty_2a714588_010a_4833_ae08_09b32aa6295c"/>
-        <ObjectProperty IRI="#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#OWLObjectProperty_332f288f_09e9_4743_bac9_6b65ac57f10e"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#OWLObjectProperty_4233322f_cb80_4ee7_bed2_213d920c59c3"/>
-        <ObjectProperty IRI="#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#OWLObjectProperty_4ae39feb_b852_4059_b66a_758628b01402"/>
-        <ObjectProperty IRI="#OWLObjectProperty_0fda3859_5206_4e3d_89a7_cf4efbc8804f"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="#OWLObjectProperty_50f8f0ef_9504_4ceb_b566_8fcb583ab045"/>
         <ObjectProperty IRI="#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
-        <ObjectProperty IRI="#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#OWLObjectProperty_5d457280_4325_44df_8083_ad7b53c0dfca"/>
-        <ObjectProperty IRI="#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#OWLObjectProperty_6eaca250_d77d_4df4_b978_8dcbb84e6a50"/>
         <ObjectProperty IRI="#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#OWLObjectProperty_72c09d42_4524_4808_95c4_0c9f280e3f98"/>
-        <ObjectProperty IRI="#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#OWLObjectProperty_7ac248aa_2d24_4e6a_912a_6f9519c698c1"/>
-        <ObjectProperty IRI="#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="#OWLObjectProperty_86442676_0100_49b3_991c_504d7c89a49a"/>
         <ObjectProperty IRI="#OWLObjectProperty_bcd48dd9_79f1_4a6c_98ba_fdd5748312dc"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#OWLObjectProperty_963fc55c_8a6d_48eb_a7b5_0d111603003a"/>
-        <ObjectProperty IRI="#OWLObjectProperty_0fda3859_5206_4e3d_89a7_cf4efbc8804f"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#OWLObjectProperty_9886111f_f601_4189_81bd_41bc65f13d4c"/>
-        <ObjectProperty IRI="#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#OWLObjectProperty_a13cf5b7_2210_434a_9dd1_fc46e2f85f5c"/>
-        <ObjectProperty IRI="#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="#OWLObjectProperty_bcd48dd9_79f1_4a6c_98ba_fdd5748312dc"/>
         <ObjectProperty IRI="#OWLObjectProperty_d279ae3c_1c63_4a0c_8f33_f6f347fb911a"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#OWLObjectProperty_c2d389de_7681_40df_b3e8_00982e1ae1f2"/>
-        <ObjectProperty IRI="#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#OWLObjectProperty_cb6a55ce_5777_4d29_b15d_6be3845259a3"/>
@@ -1349,21 +1293,9 @@
         <ObjectProperty IRI="#OWLObjectProperty_e4459726_050d_4ba9_a9e7_56bff2354021"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#OWLObjectProperty_ede6ce89_417f_48c1_a76e_4df8ff1ad55a"/>
-        <ObjectProperty IRI="#OWLObjectProperty_0fda3859_5206_4e3d_89a7_cf4efbc8804f"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#OWLObjectProperty_f90cb5d0_29a1_41ef_a947_aa86cb69cc14"/>
-        <ObjectProperty IRI="#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769"/>
-    </SubObjectPropertyOf>
     <InverseObjectProperties>
         <ObjectProperty IRI="#OWLObjectProperty_217a5aab_f37f_4e80_868a_6d8b6f059fa4"/>
         <ObjectProperty IRI="#OWLObjectProperty_e9b85247_b390_4b60_9d03_627a9bcc0a7f"/>
-    </InverseObjectProperties>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#OWLObjectProperty_4233322f_cb80_4ee7_bed2_213d920c59c3"/>
-        <ObjectProperty IRI="#OWLObjectProperty_2a714588_010a_4833_ae08_09b32aa6295c"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#OWLObjectProperty_d279ae3c_1c63_4a0c_8f33_f6f347fb911a"/>
@@ -1451,10 +1383,6 @@
         <Class IRI="#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#OWLObjectProperty_0fda3859_5206_4e3d_89a7_cf4efbc8804f"/>
-        <Class IRI="#OWLClass_eba91113_47e1_4806_8b83_bd8ba94c2002"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#OWLObjectProperty_1001ed7a_4f36_4975_8879_de174ef82e70"/>
         <Class IRI="#OWLClass_413e4c1b_7d3b_4fc1_98c0_b782b533aae8"/>
     </ObjectPropertyDomain>
@@ -1487,10 +1415,6 @@
         <Class IRI="#OWLClass_dd11ad3d_8e96_4fd6_9646_b1fa4799b296"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d"/>
-        <Class IRI="#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#OWLObjectProperty_4233322f_cb80_4ee7_bed2_213d920c59c3"/>
         <Class IRI="#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
     </ObjectPropertyDomain>
@@ -1521,10 +1445,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#OWLObjectProperty_6eaca250_d77d_4df4_b978_8dcbb84e6a50"/>
         <Class IRI="#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769"/>
-        <Class IRI="#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#OWLObjectProperty_72c09d42_4524_4808_95c4_0c9f280e3f98"/>
@@ -1710,14 +1630,13 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#OWLObjectProperty_86442676_0100_49b3_991c_504d7c89a49a"/>
-        <Class IRI="#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#OWLObjectProperty_86442676_0100_49b3_991c_504d7c89a49a"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#OWLObjectProperty_1c8dcaa8_9f93_4cbb_9523_b4884a29a9b8"/>
-            <Class IRI="#OWLClass_f234596c_9040_4f87_bd51_49ec017fd3d5"/>
-        </ObjectSomeValuesFrom>
+        <ObjectIntersectionOf>
+            <Class IRI="#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#OWLObjectProperty_1c8dcaa8_9f93_4cbb_9523_b4884a29a9b8"/>
+                <Class IRI="#OWLClass_f234596c_9040_4f87_bd51_49ec017fd3d5"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#OWLObjectProperty_86608510_836e_4b41_a785_adb447d6ddd0"/>
@@ -2278,7 +2197,7 @@ Any exemptions from and restrictions to these key principles may be provided for
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Principle</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#broadMatch"/>
+        <AnnotationProperty abbreviatedIRI="skos:broadMatch"/>
         <IRI>#OWLClass_6c46bd74_4881_488e_b461_603592bc3426</IRI>
         <IRI>http://www.estrellaproject.org/lkif-core/norm.owl</IRI>
     </AnnotationAssertion>
@@ -2398,7 +2317,7 @@ The effectiveness of legal rules in general and data subjects’ rights in parti
         <Literal datatypeIRI="&rdf;PlainLiteral">DataSubjectRight</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+        <AnnotationProperty abbreviatedIRI="skos:closeMatch"/>
         <IRI>#OWLClass_8fd1b241_6e73_4771_9cf7_4a995dd8311b</IRI>
         <IRI>http://www.estrellaproject.org/lkif-core/norm.owl#Right</IRI>
     </AnnotationAssertion>
@@ -2497,7 +2416,7 @@ Where personal data relating to a data subject are collected, the controller sha
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Rule</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#broadMatch"/>
+        <AnnotationProperty abbreviatedIRI="skos:broadMatch"/>
         <IRI>#OWLClass_af4ae221_0c41_4b82_8ff9_7561e9d9c6cd</IRI>
         <IRI>http://www.estrellaproject.org/lkif-core/norm.owl#Obligation</IRI>
     </AnnotationAssertion>
@@ -2522,7 +2441,7 @@ The controller or the processor shall entrust the data protection officer at lea
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DataProtectionOfficer</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#broadMatch"/>
+        <AnnotationProperty abbreviatedIRI="skos:broadMatch"/>
         <IRI>#OWLClass_b3ce5053_8b0c_41d5_81ba_36f3ccbd5642</IRI>
         <IRI>http://www.estrellaproject.org/lkif-core/legal-action.owl#Legal_Person</IRI>
     </AnnotationAssertion>
@@ -2599,7 +2518,7 @@ An identified natural person or a natural person who can be identified, directly
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">DataSubject</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+        <AnnotationProperty abbreviatedIRI="skos:closeMatch"/>
         <IRI>#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315</IRI>
         <IRI>http://www.estrellaproject.org/lkif-core/legal-action.owl#Natural_Person</IRI>
     </AnnotationAssertion>
@@ -2988,11 +2907,6 @@ A controller holding personal information shall not use that information without
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#OWLObjectProperty_0fda3859_5206_4e3d_89a7_cf4efbc8804f</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">transferProperty</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLObjectProperty_1001ed7a_4f36_4975_8879_de174ef82e70</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">mustProvide</Literal>
     </AnnotationAssertion>
@@ -3033,11 +2947,6 @@ A controller holding personal information shall not use that information without
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">processingProperty</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLObjectProperty_4233322f_cb80_4ee7_bed2_213d920c59c3</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isObjected</Literal>
     </AnnotationAssertion>
@@ -3075,11 +2984,6 @@ A controller holding personal information shall not use that information without
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLObjectProperty_6eaca250_d77d_4df4_b978_8dcbb84e6a50</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">requiredByLegitimateInterest</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">dataSubjectProperty</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

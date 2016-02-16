@@ -3,6 +3,7 @@
 
 <!DOCTYPE rdf:RDF [
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY skos "http://www.w3.org/TR/skos-reference#" >
@@ -17,8 +18,12 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:skos="http://www.w3.org/TR/skos-reference#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <Ontology rdf:about="http://www.uni.lu/dataprotection"/>
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <Ontology rdf:about="http://www.uni.lu/dataprotection">
+        <dc:rights>This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/).</dc:rights>
+        <imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </Ontology>
     
 
 
@@ -30,6 +35,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <AnnotationProperty rdf:about="&dc;rights"/>
     
 
 
@@ -72,6 +83,18 @@
     <AnnotationProperty rdf:about="&skos;exactMatch">
         <rdfs:subPropertyOf rdf:resource="&rdfs;comment"/>
     </AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/TR/skos-reference#broadMatch -->
+
+    <AnnotationProperty rdf:about="&skos;broadMatch"/>
+    
+
+
+    <!-- http://www.w3.org/TR/skos-reference#closeMatch -->
+
+    <AnnotationProperty rdf:about="&skos;closeMatch"/>
     
 
 
@@ -134,16 +157,6 @@
     
 
 
-    <!-- http://www.uni.lu/dataprotection#OWLObjectProperty_0fda3859_5206_4e3d_89a7_cf4efbc8804f -->
-
-    <ObjectProperty rdf:about="http://www.uni.lu/dataprotection#OWLObjectProperty_0fda3859_5206_4e3d_89a7_cf4efbc8804f">
-        <rdfs:label xml:lang="en">transferProperty</rdfs:label>
-        <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClass_eba91113_47e1_4806_8b83_bd8ba94c2002"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d"/>
-    </ObjectProperty>
-    
-
-
     <!-- http://www.uni.lu/dataprotection#OWLObjectProperty_1001ed7a_4f36_4975_8879_de174ef82e70 -->
 
     <ObjectProperty rdf:about="http://www.uni.lu/dataprotection#OWLObjectProperty_1001ed7a_4f36_4975_8879_de174ef82e70">
@@ -172,7 +185,6 @@
         <rdfs:label xml:lang="en">processingAppliesTo</rdfs:label>
         <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
         <rdfs:range rdf:resource="http://www.uni.lu/dataprotection#OWLClass_ed8bdd2f_f171_49c2_9386_576fe410d791"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d"/>
     </ObjectProperty>
     
 
@@ -184,7 +196,6 @@
         <rdfs:label xml:lang="en">hasPersonalData</rdfs:label>
         <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315"/>
         <rdfs:range rdf:resource="http://www.uni.lu/dataprotection#OWLClass_ed8bdd2f_f171_49c2_9386_576fe410d791"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769"/>
         <inverseOf rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_e9b85247_b390_4b60_9d03_627a9bcc0a7f"/>
     </ObjectProperty>
     
@@ -208,7 +219,6 @@
         <rdfs:label xml:lang="en">objectTo</rdfs:label>
         <rdfs:range rdf:resource="http://www.uni.lu/dataprotection#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
         <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769"/>
     </ObjectProperty>
     
 
@@ -257,15 +267,6 @@
     
 
 
-    <!-- http://www.uni.lu/dataprotection#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d -->
-
-    <ObjectProperty rdf:about="http://www.uni.lu/dataprotection#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d">
-        <rdfs:label xml:lang="en">processingProperty</rdfs:label>
-        <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
-    </ObjectProperty>
-    
-
-
     <!-- http://www.uni.lu/dataprotection#OWLObjectProperty_4233322f_cb80_4ee7_bed2_213d920c59c3 -->
 
     <ObjectProperty rdf:about="http://www.uni.lu/dataprotection#OWLObjectProperty_4233322f_cb80_4ee7_bed2_213d920c59c3">
@@ -273,8 +274,6 @@
         <rdfs:label xml:lang="en">isObjected</rdfs:label>
         <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
         <rdfs:range rdf:resource="http://www.uni.lu/dataprotection#OWLClass_7bb468f6_ab61_4585_a9cb_522371c20b9d"/>
-        <inverseOf rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_2a714588_010a_4833_ae08_09b32aa6295c"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d"/>
     </ObjectProperty>
     
 
@@ -302,7 +301,6 @@
         <rdfs:label xml:lang="en">transferContent</rdfs:label>
         <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClass_eba91113_47e1_4806_8b83_bd8ba94c2002"/>
         <rdfs:range rdf:resource="http://www.uni.lu/dataprotection#OWLClass_ed8bdd2f_f171_49c2_9386_576fe410d791"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_0fda3859_5206_4e3d_89a7_cf4efbc8804f"/>
     </ObjectProperty>
     
 
@@ -325,7 +323,6 @@
         <rdfs:label xml:lang="en">processingHasRequirement</rdfs:label>
         <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
         <rdfs:range rdf:resource="http://www.uni.lu/dataprotection#OWLClass_c750844c_48fa_4fbd_8619_b8b9b1e967db"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d"/>
     </ObjectProperty>
     
 
@@ -337,7 +334,6 @@
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:label xml:lang="en">processingPerformedBy</rdfs:label>
         <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d"/>
         <rdfs:range>
             <Class>
                 <unionOf rdf:parseType="Collection">
@@ -372,15 +368,6 @@
     
 
 
-    <!-- http://www.uni.lu/dataprotection#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769 -->
-
-    <ObjectProperty rdf:about="http://www.uni.lu/dataprotection#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769">
-        <rdfs:label xml:lang="en">dataSubjectProperty</rdfs:label>
-        <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315"/>
-    </ObjectProperty>
-    
-
-
     <!-- http://www.uni.lu/dataprotection#OWLObjectProperty_72c09d42_4524_4808_95c4_0c9f280e3f98 -->
 
     <ObjectProperty rdf:about="http://www.uni.lu/dataprotection#OWLObjectProperty_72c09d42_4524_4808_95c4_0c9f280e3f98">
@@ -388,7 +375,6 @@
         <rdfs:label xml:lang="en">usesProcessingMode</rdfs:label>
         <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
         <rdfs:range rdf:resource="http://www.uni.lu/dataprotection#OWLClass_847950cb_b447_4f15_bb85_ed45f878d760"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d"/>
     </ObjectProperty>
     
 
@@ -399,7 +385,6 @@
         <rdfs:label xml:lang="en">hasParent</rdfs:label>
         <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClass_801beed0_2387_4a31_a5f1_6636c3558cb7"/>
         <rdfs:range rdf:resource="http://www.uni.lu/dataprotection#OWLClass_91a1bac2_859c_446e_86c7_0f32f12470ac"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769"/>
     </ObjectProperty>
     
 
@@ -409,14 +394,18 @@
     <ObjectProperty rdf:about="http://www.uni.lu/dataprotection#OWLObjectProperty_86442676_0100_49b3_991c_504d7c89a49a">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:label xml:lang="en">specialConsentAppliesTo</rdfs:label>
-        <rdfs:range rdf:resource="http://www.uni.lu/dataprotection#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
         <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClass_a2ccd29b_a341_4659_919a_977a6a81d4d1"/>
         <rdfs:subPropertyOf rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_bcd48dd9_79f1_4a6c_98ba_fdd5748312dc"/>
         <rdfs:range>
-            <Restriction>
-                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_1c8dcaa8_9f93_4cbb_9523_b4884a29a9b8"/>
-                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_f234596c_9040_4f87_bd51_49ec017fd3d5"/>
-            </Restriction>
+            <Class>
+                <intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.uni.lu/dataprotection#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_1c8dcaa8_9f93_4cbb_9523_b4884a29a9b8"/>
+                        <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_f234596c_9040_4f87_bd51_49ec017fd3d5"/>
+                    </Restriction>
+                </intersectionOf>
+            </Class>
         </rdfs:range>
     </ObjectProperty>
     
@@ -455,7 +444,6 @@
         <rdfs:label xml:lang="en">hasRecipient</rdfs:label>
         <rdfs:range rdf:resource="http://www.uni.lu/dataprotection#OWLClass_bf972a40_26a4_451a_b104_ea993da94716"/>
         <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClass_eba91113_47e1_4806_8b83_bd8ba94c2002"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_0fda3859_5206_4e3d_89a7_cf4efbc8804f"/>
     </ObjectProperty>
     
 
@@ -467,7 +455,6 @@
         <rdfs:label xml:lang="en">hasVitalInterest</rdfs:label>
         <rdfs:range rdf:resource="http://www.uni.lu/dataprotection#OWLClass_0b2f9b8c_8e60_4b1a_9471_9ce55bf73ae4"/>
         <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769"/>
     </ObjectProperty>
     
 
@@ -479,7 +466,6 @@
         <rdfs:label xml:lang="en">hasGrantedConsent</rdfs:label>
         <rdfs:range rdf:resource="http://www.uni.lu/dataprotection#OWLClass_a2ccd29b_a341_4659_919a_977a6a81d4d1"/>
         <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769"/>
         <inverseOf rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_d6b379ea_fc70_4e52_8990_4b2579886200"/>
     </ObjectProperty>
     
@@ -525,7 +511,6 @@
         <rdfs:label xml:lang="en">processingGrantsRight</rdfs:label>
         <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
         <rdfs:range rdf:resource="http://www.uni.lu/dataprotection#OWLClass_8fd1b241_6e73_4771_9cf7_4a995dd8311b"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_369072bd_c5b4_4d4b_aa5e_df8bd1cc8d1d"/>
     </ObjectProperty>
     
 
@@ -603,7 +588,6 @@
         <rdfs:label xml:lang="en">transferHasRequirement</rdfs:label>
         <rdfs:range rdf:resource="http://www.uni.lu/dataprotection#OWLClass_06a52543_55ee_4037_8370_dd56a165fe70"/>
         <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClass_eba91113_47e1_4806_8b83_bd8ba94c2002"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_0fda3859_5206_4e3d_89a7_cf4efbc8804f"/>
     </ObjectProperty>
     
 
@@ -615,7 +599,6 @@
         <rdfs:label xml:lang="en">performAccess</rdfs:label>
         <rdfs:range rdf:resource="http://www.uni.lu/dataprotection#OWLClass_12f8d2e4_932c_44b2_a152_7fb6fe4d7e7c"/>
         <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_6f39a1dc_8a01_4a7a_9d61_978ed31b3769"/>
     </ObjectProperty>
     
 
@@ -1306,14 +1289,14 @@ The controller shall implement mechanisms for ensuring that, by default, only th
         <rdfs:label xml:lang="en">Objection</rdfs:label>
         <equivalentClass>
             <Restriction>
-                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_2a714588_010a_4833_ae08_09b32aa6295c"/>
-                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectPropertyImpl_9679a244_6762_4da7_9aaa_c89f96e6f22c"/>
+                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_2da92369_af57_4fc1_b84a_a35658cb88cf"/>
             </Restriction>
         </equivalentClass>
         <equivalentClass>
             <Restriction>
-                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectPropertyImpl_9679a244_6762_4da7_9aaa_c89f96e6f22c"/>
-                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_2da92369_af57_4fc1_b84a_a35658cb88cf"/>
+                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_2a714588_010a_4833_ae08_09b32aa6295c"/>
+                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
             </Restriction>
         </equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.uni.lu/dataprotection#OWLClassImpl_58cf8e1b_e912_4f83_bdbe_0214e093bd4c"/>
@@ -1918,10 +1901,14 @@ Personal data revealing race or ethnic origin, political opinions, religion or b
         </equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.uni.lu/dataprotection#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
         <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_c2d389de_7681_40df_b3e8_00982e1ae1f2"/>
-                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_12f8d2e4_932c_44b2_a152_7fb6fe4d7e7c"/>
-            </Restriction>
+            <Class>
+                <complementOf>
+                    <Restriction>
+                        <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_4233322f_cb80_4ee7_bed2_213d920c59c3"/>
+                        <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_7bb468f6_ab61_4585_a9cb_522371c20b9d"/>
+                    </Restriction>
+                </complementOf>
+            </Class>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
@@ -1931,14 +1918,14 @@ Personal data revealing race or ethnic origin, political opinions, religion or b
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
-                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_4a286d0b_f129_4976_be2b_9c7ab71beb24"/>
+                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_c2d389de_7681_40df_b3e8_00982e1ae1f2"/>
+                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_2da92369_af57_4fc1_b84a_a35658cb88cf"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
-                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_31ba96e6_a8e7_4d61_9af2_25280e70bb8f"/>
+                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_c61c5125_09a3_46f0_9369_2288f8f41a1b"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1955,19 +1942,27 @@ Personal data revealing race or ethnic origin, political opinions, religion or b
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
-                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_cd736f6b_2897_46b3_af1e_89e318585b0a"/>
+                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_c2d389de_7681_40df_b3e8_00982e1ae1f2"/>
+                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_931c3eee_c583_4adb_9af9_e0891ea43f2b"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
-            <Class>
-                <complementOf>
-                    <Restriction>
-                        <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_4233322f_cb80_4ee7_bed2_213d920c59c3"/>
-                        <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_7bb468f6_ab61_4585_a9cb_522371c20b9d"/>
-                    </Restriction>
-                </complementOf>
-            </Class>
+            <Restriction>
+                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
+                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_31ba96e6_a8e7_4d61_9af2_25280e70bb8f"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
+                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_4a286d0b_f129_4976_be2b_9c7ab71beb24"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
+                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_cd736f6b_2897_46b3_af1e_89e318585b0a"/>
+            </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
@@ -1978,25 +1973,13 @@ Personal data revealing race or ethnic origin, political opinions, religion or b
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_c2d389de_7681_40df_b3e8_00982e1ae1f2"/>
-                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_2da92369_af57_4fc1_b84a_a35658cb88cf"/>
+                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_12f8d2e4_932c_44b2_a152_7fb6fe4d7e7c"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
                 <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_59851879_88be_4cf3_bd27_3b185fc2046a"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
-                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_c61c5125_09a3_46f0_9369_2288f8f41a1b"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_c2d389de_7681_40df_b3e8_00982e1ae1f2"/>
-                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_931c3eee_c583_4adb_9af9_e0891ea43f2b"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Article 6.1
