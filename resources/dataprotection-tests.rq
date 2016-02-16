@@ -1,0 +1,55 @@
+prefix : <http://www.uni.lu/dataprotection#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+SELECT DISTINCT ?label
+WHERE {
+	?x rdfs:subClassOf* [
+		rdfs:label "Rule"@en] .
+	?x rdfs:label ?label .
+	FILTER (?label != "Rule"@en && ?label != "ProcessingRule"@en && ?label != "TransferRule"@en)
+}
+
+prefix : <http://www.uni.lu/dataprotection#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+SELECT DISTINCT ?label
+WHERE {
+	?x owl:equivalentClass [
+		owl:onProperty [
+			rdfs:label "exerciseRight"@en ] ;
+		owl:someValuesFrom [
+			rdf:type owl:Class ;
+			rdfs:label ?label ] ] .
+	?x rdfs:label "Access"@en .
+}
+
+prefix : <http://www.uni.lu/dataprotection#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+SELECT DISTINCT ?label
+WHERE {
+	?x rdfs:subClassOf* [
+		rdfs:label "Rule"@en] .
+	?x rdfs:label ?label
+	MINUS {
+		?x rdfs:subClassOf* [
+			rdfs:label "TransferRule"@en ] .
+		?x rdfs:label ?label .
+	} .
+	FILTER (?label != "Rule"@en && ?label != "ProcessingRule"@en && ?label != "TransferRule"@en)
+}
+
+prefix : <http://www.uni.lu/dataprotection#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+SELECT DISTINCT ?label
+WHERE {
+	?y rdf:type owl:ObjectProperty .
+	?y rdfs:label "appoints"@en .
+	?y rdfs:domain [
+		rdfs:label ?label ] .
+}

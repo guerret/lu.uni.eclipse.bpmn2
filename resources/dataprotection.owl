@@ -23,6 +23,9 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="skos" IRI="http://www.w3.org/TR/skos-reference#"/>
     <Declaration>
+        <Class IRI="#OWLClassImpl_58cf8e1b_e912_4f83_bdbe_0214e093bd4c"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#OWLClass_02b07422_386e_4a70_8c4a_c2534b513fb5"/>
     </Declaration>
     <Declaration>
@@ -284,6 +287,9 @@
         <Class IRI="#OWLClass_fdf49ad5_3967_4c7f_b6dc_e8de56c976b2"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#OWLObjectPropertyImpl_9679a244_6762_4da7_9aaa_c89f96e6f22c"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#OWLObjectProperty_077c98dc_e4f1_4fa4_82f1_4d5d6bac1a11"/>
     </Declaration>
     <Declaration>
@@ -479,8 +485,22 @@
     <EquivalentClasses>
         <Class IRI="#OWLClass_12f8d2e4_932c_44b2_a152_7fb6fe4d7e7c"/>
         <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#OWLObjectPropertyImpl_9679a244_6762_4da7_9aaa_c89f96e6f22c"/>
+            <Class IRI="#OWLClass_573ba052_e830_419f_9c33_bee5251b8043"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#OWLClass_12f8d2e4_932c_44b2_a152_7fb6fe4d7e7c"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#OWLObjectProperty_332f288f_09e9_4743_bac9_6b65ac57f10e"/>
             <Class IRI="#OWLClass_ed8bdd2f_f171_49c2_9386_576fe410d791"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#OWLClass_1d2f3df4_e138_45ec_8434_0705d94b1c18"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#OWLObjectPropertyImpl_9679a244_6762_4da7_9aaa_c89f96e6f22c"/>
+            <Class IRI="#OWLClass_931c3eee_c583_4adb_9af9_e0891ea43f2b"/>
         </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -556,6 +576,13 @@
     <EquivalentClasses>
         <Class IRI="#OWLClass_7bb468f6_ab61_4585_a9cb_522371c20b9d"/>
         <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#OWLObjectPropertyImpl_9679a244_6762_4da7_9aaa_c89f96e6f22c"/>
+            <Class IRI="#OWLClass_2da92369_af57_4fc1_b84a_a35658cb88cf"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#OWLClass_7bb468f6_ab61_4585_a9cb_522371c20b9d"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#OWLObjectProperty_2a714588_010a_4833_ae08_09b32aa6295c"/>
             <Class IRI="#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
         </ObjectSomeValuesFrom>
@@ -609,6 +636,13 @@
                 </ObjectExactCardinality>
             </ObjectIntersectionOf>
         </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#OWLClass_d6d8fedc_ca29_4852_bc9d_fe4abf2707e0"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#OWLObjectPropertyImpl_9679a244_6762_4da7_9aaa_c89f96e6f22c"/>
+            <Class IRI="#OWLClass_43574c52_adab_4ef9_807a_68f850c65a04"/>
+        </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#OWLClass_df7e7536_7235_4e30_b042_4e8a8b5852a5"/>
@@ -671,7 +705,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OWLClass_12f8d2e4_932c_44b2_a152_7fb6fe4d7e7c"/>
-        <Class IRI="#OWLClass_573ba052_e830_419f_9c33_bee5251b8043"/>
+        <Class IRI="#OWLClassImpl_58cf8e1b_e912_4f83_bdbe_0214e093bd4c"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OWLClass_15f536e2_2946_4aca_b996_2615e37e729a"/>
@@ -679,7 +713,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OWLClass_1d2f3df4_e138_45ec_8434_0705d94b1c18"/>
-        <Class IRI="#OWLClass_931c3eee_c583_4adb_9af9_e0891ea43f2b"/>
+        <Class IRI="#OWLClassImpl_58cf8e1b_e912_4f83_bdbe_0214e093bd4c"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OWLClass_1dcad2a0_486a_4f14_8b0e_1b9e521f738e"/>
@@ -855,7 +889,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OWLClass_7bb468f6_ab61_4585_a9cb_522371c20b9d"/>
-        <Class IRI="#OWLClass_2da92369_af57_4fc1_b84a_a35658cb88cf"/>
+        <Class IRI="#OWLClassImpl_58cf8e1b_e912_4f83_bdbe_0214e093bd4c"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OWLClass_7e0df94b_e1c3_4a97_b19d_d9320b921f84"/>
@@ -983,7 +1017,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OWLClass_d6d8fedc_ca29_4852_bc9d_fe4abf2707e0"/>
-        <Class IRI="#OWLClass_43574c52_adab_4ef9_807a_68f850c65a04"/>
+        <Class IRI="#OWLClassImpl_58cf8e1b_e912_4f83_bdbe_0214e093bd4c"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#OWLClass_dd11ad3d_8e96_4fd6_9646_b1fa4799b296"/>
@@ -1409,6 +1443,10 @@
         <ObjectProperty IRI="#OWLObjectProperty_f90cb5d0_29a1_41ef_a947_aa86cb69cc14"/>
     </InverseFunctionalObjectProperty>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#OWLObjectPropertyImpl_9679a244_6762_4da7_9aaa_c89f96e6f22c"/>
+        <Class IRI="#OWLClassImpl_58cf8e1b_e912_4f83_bdbe_0214e093bd4c"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#OWLObjectProperty_077c98dc_e4f1_4fa4_82f1_4d5d6bac1a11"/>
         <Class IRI="#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
     </ObjectPropertyDomain>
@@ -1571,6 +1609,10 @@
         <ObjectProperty IRI="#OWLObjectProperty_f90cb5d0_29a1_41ef_a947_aa86cb69cc14"/>
         <Class IRI="#OWLClass_be0e1d3c_0330_4bd1_994f_919bb4962315"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#OWLObjectPropertyImpl_9679a244_6762_4da7_9aaa_c89f96e6f22c"/>
+        <Class IRI="#OWLClass_8fd1b241_6e73_4771_9cf7_4a995dd8311b"/>
+    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#OWLObjectProperty_077c98dc_e4f1_4fa4_82f1_4d5d6bac1a11"/>
         <Class IRI="#OWLClass_f0877852_cd4f_4338_bd33_7a11b7f3677d"/>
@@ -1765,6 +1807,11 @@
         <DataProperty IRI="#OWLDataProperty_6fb5e412_2c48_4308_94b9_2b02c71b8004"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLClassImpl_58cf8e1b_e912_4f83_bdbe_0214e093bd4c</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Action</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#OWLClass_02b07422_386e_4a70_8c4a_c2534b513fb5</IRI>
@@ -2931,6 +2978,11 @@ A controller holding personal information shall not use that information without
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLObjectPropertyImpl_9679a244_6762_4da7_9aaa_c89f96e6f22c</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">exerciseRight</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#OWLObjectProperty_077c98dc_e4f1_4fa4_82f1_4d5d6bac1a11</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">requiredByPublicInterest</Literal>
     </AnnotationAssertion>
@@ -3166,8 +3218,28 @@ A controller holding personal information shall not use that information without
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2004/02/skos/core#OWLAnnotationPropertyImpl_38110948_dcd5_49af_922f_30825fe9be37</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">broaderTransitive</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2004/02/skos/core#OWLAnnotationPropertyImpl_516a3db6_58db_47e7_8141_323dd51a05d0</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">broadMatch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>http://www.w3.org/2004/02/skos/core#OWLAnnotationPropertyImpl_5da093f8_3d86_4481_b13f_bfb4f4ca603e</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">closeMatch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2004/02/skos/core#OWLAnnotationPropertyImpl_711a0657_ad17_4cc2_a4a4_7ab3e31d9fe9</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">closeMatch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://www.w3.org/2004/02/skos/core#OWLAnnotationPropertyImpl_7a410669_92a6_4856_bdac_587b87b50592</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">exactMatch</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

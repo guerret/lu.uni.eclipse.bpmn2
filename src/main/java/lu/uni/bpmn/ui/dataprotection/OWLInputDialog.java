@@ -1,5 +1,8 @@
 package lu.uni.bpmn.ui.dataprotection;
 
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Arrays;
 import java.util.Set;
 
@@ -11,7 +14,8 @@ import org.semanticweb.owlapi.model.OWLClass;
 public class OWLInputDialog extends ElementListSelectionDialog {
 
 	protected static boolean localExec = true;
-	protected static final String OWL_FILE = "/resources/dataprotection.owl";
+	public static final String OWL_PATH = "/resources";
+	public static final String OWL_FILE = OWL_PATH + File.separator + "dataprotection.owl";
 	protected static String[] lines;
 	protected static Ontology ontology;
 
@@ -31,12 +35,22 @@ public class OWLInputDialog extends ElementListSelectionDialog {
 	}
 
 	private static String[] parseOLines(String fileName, boolean local) {
+		URL url = null;
 		if (local)
-			fileName = System.getProperty("user.dir") + fileName;
-		ontology = new Ontology(fileName, local);
-		OWLClass ruleClass = ontology.findByLabel("Rule");
+			try {
+				url = new File(System.getProperty("user.dir") + fileName).toURI().toURL();
+			} catch (MalformedURLException e) {
+				e.printStackTrace();
+			}
+		else
+			url = OWLInputDialog.class.getResource(fileName);
+		ontology = new Ontology(url);
+		OWLClass ruleClass = null;
+		for (OWLClass c : ontology.getClasses())
+			if (ontology.getLabel(c).equals("Rule"))
+				ruleClass = c;
 		Set<OWLClass> subClasses = ontology.getSubClasses(ruleClass);
-		return ontology.getClassLabels(subClasses);
+		return ontology.getLabels(subClasses);
 	}
 
 	public static void main(String[] args) {

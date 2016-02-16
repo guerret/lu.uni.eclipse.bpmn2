@@ -25,5 +25,12 @@
 			<artifactId>owlapi-distribution</artifactId>
 			<version>4.0.2</version>
 		</dependency>
+		<dependency>
+			<groupId>org.apache.jena</groupId>
+			<artifactId>apache-jena-libs</artifactId>
+			<version>3.0.0</version>
+			<scope>runtime</scope>
+			<type>pom</type>
+		</dependency>
 	</dependencies>
 </project>
