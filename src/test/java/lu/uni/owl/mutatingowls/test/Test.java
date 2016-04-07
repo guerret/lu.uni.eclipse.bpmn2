@@ -12,7 +12,6 @@ import org.apache.jena.query.Query;
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
 import org.apache.jena.query.QueryFactory;
-import org.apache.jena.query.ResultSet;
 import org.apache.jena.query.ResultSetFactory;
 import org.apache.jena.query.ResultSetFormatter;
 import org.apache.jena.query.ResultSetRewindable;
@@ -31,7 +30,7 @@ public class Test {
 
 	private OntModel model;
 
-	private List<ResultSetRewindable> groundResults = new ArrayList<ResultSetRewindable>();
+	private List<ResultSetRewindable> results = new ArrayList<ResultSetRewindable>();
 
 	private String[] queryStrings;
 
@@ -60,10 +59,10 @@ public class Test {
 		for (int i = 0; i < queryStrings.length; i++) {
 			queries[i] = QueryFactory.create(queryStrings[i]);
 			qes[i] = QueryExecutionFactory.create(queries[i], model);
-			ResultSet rSet = qes[i].execSelect();
-			groundResults.add(ResultSetFactory.copyResults(rSet));
+			ResultSetRewindable rSet = ResultSetFactory.copyResults(qes[i].execSelect());
+			results.add(ResultSetFactory.copyResults(rSet));
 		}
-		for (ResultSet rSet : groundResults) {
+		for (ResultSetRewindable rSet : results) {
 			System.out.println(ResultSetFormatter.asText(rSet));
 		}
 		for (QueryExecution qe : qes)
