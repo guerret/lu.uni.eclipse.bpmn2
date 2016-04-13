@@ -1,55 +1,135 @@
+# 1. What are the duties of the data controller?
 prefix : <http://www.uni.lu/dataprotection#>
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
-SELECT DISTINCT ?label
+SELECT DISTINCT ?duty
 WHERE {
 	?x rdfs:subClassOf* [
-		rdfs:label "Rule"@en] .
-	?x rdfs:label ?label .
-	FILTER (?label != "Rule"@en && ?label != "ProcessingRule"@en && ?label != "TransferRule"@en)
+		rdfs:label "Rule"@en ] .
+	?x rdfs:label ?duty .
+	FILTER (?duty != "Rule"@en && ?duty != "ProcessingRule"@en && ?duty != "TransferRule"@en)
 }
 
+# 2. What are the functions of the processor?
 prefix : <http://www.uni.lu/dataprotection#>
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
-SELECT DISTINCT ?label
+SELECT DISTINCT ?function ?target
+WHERE {
+	[ rdf:type owl:ObjectProperty ;
+		rdfs:label ?function ;
+		rdfs:domain [
+			rdfs:label "Processor"@en ] ;
+		rdfs:range [
+			rdfs:label ?target ] ] .
+}
+
+# 3. What are the rights of the data subject?
+prefix : <http://www.uni.lu/dataprotection#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+SELECT DISTINCT ?right
+WHERE {
+	[ rdfs:subClassOf* [
+			rdfs:label "DataSubjectRight"@en ] ;
+		rdfs:label ?right ] .
+	FILTER (?right != "DataSubjectRight"@en)
+}
+
+# 4. How do the data subject's rights relate to the data processing requirements?
+prefix : <http://www.uni.lu/dataprotection#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+SELECT DISTINCT ?action ?requirement
+WHERE {
+	?x rdfs:label ?action .
+	?x owl:equivalentClass [
+		owl:onProperty [
+			rdfs:label "exerciseRight"@en ] ;
+		owl:someValuesFrom [
+			rdf:type owl:Class ;
+			rdfs:label ?label2 ] ] .
+	?y rdfs:label ?label2 .
+	?y rdfs:subClassOf ?z .
+	?z rdfs:label ?requirement .
+	FILTER (?z != ?y && ?requirement != "Principle"@en && ?requirement != "DataSubjectRight"@en)
+}
+
+# 5. How can a data subject enforce their rights against a data controller?
+prefix : <http://www.uni.lu/dataprotection#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+SELECT DISTINCT ?action ?right
 WHERE {
 	?x owl:equivalentClass [
 		owl:onProperty [
 			rdfs:label "exerciseRight"@en ] ;
 		owl:someValuesFrom [
 			rdf:type owl:Class ;
-			rdfs:label ?label ] ] .
-	?x rdfs:label "Access"@en .
+			rdfs:label ?action ] ] .
+	?x rdfs:label ?right .
 }
 
+# 7. Who is in charge of overseeing the controller's activities?
 prefix : <http://www.uni.lu/dataprotection#>
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
-SELECT DISTINCT ?label
+SELECT DISTINCT ?overseer
 WHERE {
-	?x rdfs:subClassOf* [
-		rdfs:label "Rule"@en] .
-	?x rdfs:label ?label
-	MINUS {
-		?x rdfs:subClassOf* [
-			rdfs:label "TransferRule"@en ] .
-		?x rdfs:label ?label .
-	} .
-	FILTER (?label != "Rule"@en && ?label != "ProcessingRule"@en && ?label != "TransferRule"@en)
+	?y rdf:type owl:ObjectProperty .
+	?y rdfs:label "supervises"@en .
+	?y rdfs:domain ?x .
+	?x rdfs:label ?overseer .
 }
+LIMIT 1
 
+# Who is reponsible for appointing the Data Protection Officer?
 prefix : <http://www.uni.lu/dataprotection#>
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
-SELECT DISTINCT ?label
+SELECT DISTINCT ?appointer
 WHERE {
 	?y rdf:type owl:ObjectProperty .
 	?y rdfs:label "appoints"@en .
 	?y rdfs:domain [
-		rdfs:label ?label ] .
+		rdfs:label ?appointer ] .
+}
+LIMIT 1
+
+# What are the actions that a data subject can perform with respect to data processing?
+prefix : <http://www.uni.lu/dataprotection#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+SELECT DISTINCT ?action
+WHERE {
+	?x rdfs:subClassOf* ?y .
+	?y rdfs:label "Action"@en .
+	?x rdfs:label ?action .
+	FILTER (?x != ?y)
+}
+
+# What are the duties of the data controller that do not concern the transfer?
+prefix : <http://www.uni.lu/dataprotection#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+SELECT DISTINCT ?duty
+WHERE {
+	?x rdfs:subClassOf* [
+		rdfs:label "Rule"@en] .
+	?x rdfs:label ?duty
+	MINUS {
+		?x rdfs:subClassOf* [
+			rdfs:label "TransferRule"@en ] .
+		?x rdfs:label ?duty .
+	} .
+	FILTER (?duty != "Rule"@en && ?duty != "ProcessingRule"@en && ?duty != "TransferRule"@en)
 }

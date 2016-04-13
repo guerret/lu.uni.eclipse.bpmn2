@@ -2,6 +2,7 @@
 
 
 <!DOCTYPE rdf:RDF [
+    <!ENTITY terms "http://purl.org/dc/terms/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
@@ -15,6 +16,7 @@
 <rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3.org/2002/07/owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:skos="http://www.w3.org/TR/skos-reference#"
@@ -22,7 +24,6 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <Ontology rdf:about="http://www.uni.lu/dataprotection">
         <dc:rights>This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/).</dc:rights>
-        <imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
     </Ontology>
     
 
@@ -40,7 +41,52 @@
 
     <!-- http://purl.org/dc/elements/1.1/rights -->
 
-    <AnnotationProperty rdf:about="&dc;rights"/>
+    <AnnotationProperty rdf:about="&dc;rights">
+        <rdfs:label xml:lang="en">Rights</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">Information about rights held in and over the resource.</rdfs:comment>
+        <terms:description xml:lang="en">Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#rights-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <AnnotationProperty rdf:about="&terms;description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/hasVersion -->
+
+    <AnnotationProperty rdf:about="&terms;hasVersion"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <AnnotationProperty rdf:about="&terms;issued"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <AnnotationProperty rdf:about="&terms;modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <AnnotationProperty rdf:about="&terms;publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <AnnotationProperty rdf:about="&terms;title"/>
     
 
 
@@ -52,10 +98,26 @@
     
 
 
+    <!-- http://www.w3.org/2000/01/rdf-schema#isDefinedBy -->
+
+    <rdf:Description rdf:about="&rdfs;isDefinedBy">
+        <rdfs:label xml:lang="en">rdfs:isDefinedBy</rdfs:label>
+    </rdf:Description>
+    
+
+
     <!-- http://www.w3.org/2000/01/rdf-schema#label -->
 
     <rdf:Description rdf:about="&rdfs;label">
         <rdfs:label xml:lang="en">rdfs:label</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#seeAlso -->
+
+    <rdf:Description rdf:about="&rdfs;seeAlso">
+        <rdfs:label xml:lang="en">rdfs:seeAlso</rdfs:label>
     </rdf:Description>
     
 
@@ -86,6 +148,12 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+    <AnnotationProperty rdf:about="&skos;note"/>
+    
+
+
     <!-- http://www.w3.org/TR/skos-reference#broadMatch -->
 
     <AnnotationProperty rdf:about="&skos;broadMatch"/>
@@ -95,6 +163,12 @@
     <!-- http://www.w3.org/TR/skos-reference#closeMatch -->
 
     <AnnotationProperty rdf:about="&skos;closeMatch"/>
+    
+
+
+    <!-- http://www.w3.org/TR/skos-reference#note -->
+
+    <AnnotationProperty rdf:about="&skos;note"/>
     
 
 
@@ -117,6 +191,12 @@
     
 
 
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="&xsd;date"/>
+    
+
+
     <!-- http://www.w3.org/2001/XMLSchema#string -->
 
     <rdf:Description rdf:about="&xsd;string">
@@ -136,12 +216,41 @@
     
 
 
+    <!-- http://www.uni.lu/dataprotection#OWLObjectPropertyImpl_4bf9eaca_1040_4861_8e69_2eb6cfe40e83 -->
+
+    <ObjectProperty rdf:about="http://www.uni.lu/dataprotection#OWLObjectPropertyImpl_4bf9eaca_1040_4861_8e69_2eb6cfe40e83">
+        <rdfs:label xml:lang="en">supervises</rdfs:label>
+        <rdfs:range rdf:resource="http://www.uni.lu/dataprotection#OWLClass_413e4c1b_7d3b_4fc1_98c0_b782b533aae8"/>
+        <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClass_dd11ad3d_8e96_4fd6_9646_b1fa4799b296"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/dataprotection#OWLObjectPropertyImpl_95cdd11f_2c25_48df_9f74_ca2878b7eac4 -->
+
+    <ObjectProperty rdf:about="http://www.uni.lu/dataprotection#OWLObjectPropertyImpl_95cdd11f_2c25_48df_9f74_ca2878b7eac4">
+        <rdfs:label xml:lang="en">performProcessing</rdfs:label>
+        <rdfs:range rdf:resource="http://www.uni.lu/dataprotection#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+        <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClass_3c5113eb_0923_4946_86cf_f5a83de7f9bb"/>
+        <inverseOf rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_5d457280_4325_44df_8083_ad7b53c0dfca"/>
+    </ObjectProperty>
+    
+
+
     <!-- http://www.uni.lu/dataprotection#OWLObjectPropertyImpl_9679a244_6762_4da7_9aaa_c89f96e6f22c -->
 
     <ObjectProperty rdf:about="http://www.uni.lu/dataprotection#OWLObjectPropertyImpl_9679a244_6762_4da7_9aaa_c89f96e6f22c">
         <rdfs:label xml:lang="en">exerciseRight</rdfs:label>
         <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClassImpl_58cf8e1b_e912_4f83_bdbe_0214e093bd4c"/>
         <rdfs:range rdf:resource="http://www.uni.lu/dataprotection#OWLClass_8fd1b241_6e73_4771_9cf7_4a995dd8311b"/>
+    </ObjectProperty>
+    
+
+
+    <!-- http://www.uni.lu/dataprotection#OWLObjectPropertyImpl_9d75d818_a66f_4e92_8400_6990cb686671 -->
+
+    <ObjectProperty rdf:about="http://www.uni.lu/dataprotection#OWLObjectPropertyImpl_9d75d818_a66f_4e92_8400_6990cb686671">
+        <rdfs:label xml:lang="en">implements</rdfs:label>
     </ObjectProperty>
     
 
@@ -334,14 +443,7 @@
         <rdf:type rdf:resource="&owl;InverseFunctionalProperty"/>
         <rdfs:label xml:lang="en">processingPerformedBy</rdfs:label>
         <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
-        <rdfs:range>
-            <Class>
-                <unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.uni.lu/dataprotection#OWLClass_3c5113eb_0923_4946_86cf_f5a83de7f9bb"/>
-                    <rdf:Description rdf:about="http://www.uni.lu/dataprotection#OWLClass_413e4c1b_7d3b_4fc1_98c0_b782b533aae8"/>
-                </unionOf>
-            </Class>
-        </rdfs:range>
+        <rdfs:range rdf:resource="http://www.uni.lu/dataprotection#OWLClass_3c5113eb_0923_4946_86cf_f5a83de7f9bb"/>
     </ObjectProperty>
     
 
@@ -415,15 +517,9 @@
 
     <ObjectProperty rdf:about="http://www.uni.lu/dataprotection#OWLObjectProperty_86608510_836e_4b41_a785_adb447d6ddd0">
         <rdfs:label xml:lang="en">cooperateWith</rdfs:label>
+        <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClass_3c5113eb_0923_4946_86cf_f5a83de7f9bb"/>
+        <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClass_413e4c1b_7d3b_4fc1_98c0_b782b533aae8"/>
         <rdfs:range rdf:resource="http://www.uni.lu/dataprotection#OWLClass_dd11ad3d_8e96_4fd6_9646_b1fa4799b296"/>
-        <rdfs:domain>
-            <Class>
-                <unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.uni.lu/dataprotection#OWLClass_3c5113eb_0923_4946_86cf_f5a83de7f9bb"/>
-                    <rdf:Description rdf:about="http://www.uni.lu/dataprotection#OWLClass_413e4c1b_7d3b_4fc1_98c0_b782b533aae8"/>
-                </unionOf>
-            </Class>
-        </rdfs:domain>
     </ObjectProperty>
     
 
@@ -486,7 +582,7 @@
 
     <ObjectProperty rdf:about="http://www.uni.lu/dataprotection#OWLObjectProperty_b8c0f954_156f_427f_80e3_0cd915a259e3">
         <rdf:type rdf:resource="&owl;FunctionalProperty"/>
-        <rdfs:label xml:lang="en">onBehalfOf</rdfs:label>
+        <rdfs:label xml:lang="en">processOnBehalfOf</rdfs:label>
         <rdfs:domain rdf:resource="http://www.uni.lu/dataprotection#OWLClass_3c5113eb_0923_4946_86cf_f5a83de7f9bb"/>
         <rdfs:range rdf:resource="http://www.uni.lu/dataprotection#OWLClass_413e4c1b_7d3b_4fc1_98c0_b782b533aae8"/>
     </ObjectProperty>
@@ -762,6 +858,12 @@ Any operation or set of operations which is performed upon personal data or sets
                 <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_ed8bdd2f_f171_49c2_9386_576fe410d791"/>
             </Restriction>
         </equivalentClass>
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectPropertyImpl_9d75d818_a66f_4e92_8400_6990cb686671"/>
+                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_83eaae05_ab01_4df1_b8ed_a203cfec5a08"/>
+            </Restriction>
+        </equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.uni.lu/dataprotection#OWLClassImpl_58cf8e1b_e912_4f83_bdbe_0214e093bd4c"/>
         <rdfs:comment xml:lang="en">Article 15.2
 
@@ -790,6 +892,18 @@ Controllers should document, to data subjects and to the general public, that th
             <Restriction>
                 <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectPropertyImpl_9679a244_6762_4da7_9aaa_c89f96e6f22c"/>
                 <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_931c3eee_c583_4adb_9af9_e0891ea43f2b"/>
+            </Restriction>
+        </equivalentClass>
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectPropertyImpl_9d75d818_a66f_4e92_8400_6990cb686671"/>
+                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_48029399_9b67_4460_9eec_db9c7f55752c"/>
+            </Restriction>
+        </equivalentClass>
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectPropertyImpl_9d75d818_a66f_4e92_8400_6990cb686671"/>
+                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_b841fd2e_162d_4f1a_8c2c_05dc948e63a0"/>
             </Restriction>
         </equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.uni.lu/dataprotection#OWLClassImpl_58cf8e1b_e912_4f83_bdbe_0214e093bd4c"/>
@@ -1289,14 +1403,20 @@ The controller shall implement mechanisms for ensuring that, by default, only th
         <rdfs:label xml:lang="en">Objection</rdfs:label>
         <equivalentClass>
             <Restriction>
-                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectPropertyImpl_9679a244_6762_4da7_9aaa_c89f96e6f22c"/>
-                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_2da92369_af57_4fc1_b84a_a35658cb88cf"/>
+                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectPropertyImpl_9d75d818_a66f_4e92_8400_6990cb686671"/>
+                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_15f536e2_2946_4aca_b996_2615e37e729a"/>
             </Restriction>
         </equivalentClass>
         <equivalentClass>
             <Restriction>
                 <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_2a714588_010a_4833_ae08_09b32aa6295c"/>
                 <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
+            </Restriction>
+        </equivalentClass>
+        <equivalentClass>
+            <Restriction>
+                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectPropertyImpl_9679a244_6762_4da7_9aaa_c89f96e6f22c"/>
+                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_2da92369_af57_4fc1_b84a_a35658cb88cf"/>
             </Restriction>
         </equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.uni.lu/dataprotection#OWLClassImpl_58cf8e1b_e912_4f83_bdbe_0214e093bd4c"/>
@@ -1320,7 +1440,7 @@ The Organisation for Economic Co-operation and Development (OECD) adopted privac
     <!-- http://www.uni.lu/dataprotection#OWLClass_7ef6aaee_8d1b_4e22_bee2_f64f4332c477 -->
 
     <Class rdf:about="http://www.uni.lu/dataprotection#OWLClass_7ef6aaee_8d1b_4e22_bee2_f64f4332c477">
-        <rdfs:label xml:lang="en">Lawfulness_Rule</rdfs:label>
+        <rdfs:label xml:lang="en">LawfulnessRule</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.uni.lu/dataprotection#OWLClass_b937960f_e255_4bcf_aff6_f362c905a8b8"/>
         <rdfs:subClassOf rdf:resource="http://www.uni.lu/dataprotection#OWLClass_c750844c_48fa_4fbd_8619_b8b9b1e967db"/>
         <rdfs:comment xml:lang="en">DPH s. 4.1.1
@@ -1365,7 +1485,7 @@ This principle establishes an obligation for the controller to keep the data sub
     <!-- http://www.uni.lu/dataprotection#OWLClass_8fd1b241_6e73_4771_9cf7_4a995dd8311b -->
 
     <Class rdf:about="http://www.uni.lu/dataprotection#OWLClass_8fd1b241_6e73_4771_9cf7_4a995dd8311b">
-        <rdfs:label>DataSubjectRight</rdfs:label>
+        <rdfs:label xml:lang="en">DataSubjectRight</rdfs:label>
         <rdfs:comment xml:lang="en">DPH s. 5.1
 
 The effectiveness of legal rules in general and data subjects’ rights in particular, depends to a considerable extent on the existence of appropriate mechanisms to enforce them. In European data protection law, the data subject must be empowered by national law to protect his or her data. Independent supervisory authorities must also be established by national law to assist the data subjects in exercising their rights and to supervise the processing of personal data. Additionally, the right to an effective remedy, as guaranteed under the ECHR and the Charter, demands that judicial remedies be available to every person.</rdfs:comment>
@@ -1535,7 +1655,7 @@ Exemptions from the principle of limited retention must be set out by law and ne
     <!-- http://www.uni.lu/dataprotection#OWLClass_b937960f_e255_4bcf_aff6_f362c905a8b8 -->
 
     <Class rdf:about="http://www.uni.lu/dataprotection#OWLClass_b937960f_e255_4bcf_aff6_f362c905a8b8">
-        <rdfs:label xml:lang="en">Lawfulness_Principle</rdfs:label>
+        <rdfs:label xml:lang="en">LawfulnessPrinciple</rdfs:label>
         <equivalentClass>
             <Class>
                 <oneOf rdf:parseType="Collection">
@@ -1722,6 +1842,12 @@ Where processing operations present specific risks to the rights and freedoms of
         <rdfs:label xml:lang="en">Rectification</rdfs:label>
         <equivalentClass>
             <Restriction>
+                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectPropertyImpl_9d75d818_a66f_4e92_8400_6990cb686671"/>
+                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_fdf49ad5_3967_4c7f_b6dc_e8de56c976b2"/>
+            </Restriction>
+        </equivalentClass>
+        <equivalentClass>
+            <Restriction>
                 <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectPropertyImpl_9679a244_6762_4da7_9aaa_c89f96e6f22c"/>
                 <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_43574c52_adab_4ef9_807a_68f850c65a04"/>
             </Restriction>
@@ -1901,6 +2027,12 @@ Personal data revealing race or ethnic origin, political opinions, religion or b
         </equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.uni.lu/dataprotection#OWLClass_080c5ed8_aa3c_4bfd_af54_dc6e2a546d8b"/>
         <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_c2d389de_7681_40df_b3e8_00982e1ae1f2"/>
+                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_fa3d54a9_5ad4_4240_b021_815d980dcda6"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <Class>
                 <complementOf>
                     <Restriction>
@@ -1912,20 +2044,8 @@ Personal data revealing race or ethnic origin, political opinions, religion or b
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_c2d389de_7681_40df_b3e8_00982e1ae1f2"/>
-                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_43574c52_adab_4ef9_807a_68f850c65a04"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_c2d389de_7681_40df_b3e8_00982e1ae1f2"/>
-                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_2da92369_af57_4fc1_b84a_a35658cb88cf"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
                 <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
-                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_c61c5125_09a3_46f0_9369_2288f8f41a1b"/>
+                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_59851879_88be_4cf3_bd27_3b185fc2046a"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1937,37 +2057,19 @@ Personal data revealing race or ethnic origin, political opinions, religion or b
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_c2d389de_7681_40df_b3e8_00982e1ae1f2"/>
-                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_fa3d54a9_5ad4_4240_b021_815d980dcda6"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_c2d389de_7681_40df_b3e8_00982e1ae1f2"/>
-                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_931c3eee_c583_4adb_9af9_e0891ea43f2b"/>
+                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_43574c52_adab_4ef9_807a_68f850c65a04"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
-                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_31ba96e6_a8e7_4d61_9af2_25280e70bb8f"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
-                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_4a286d0b_f129_4976_be2b_9c7ab71beb24"/>
+                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_c61c5125_09a3_46f0_9369_2288f8f41a1b"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
                 <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_cd736f6b_2897_46b3_af1e_89e318585b0a"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
-                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_f993be7a_344f_4fee_9a35_75f1e3b367c5"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1979,7 +2081,31 @@ Personal data revealing race or ethnic origin, political opinions, religion or b
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
-                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_59851879_88be_4cf3_bd27_3b185fc2046a"/>
+                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_31ba96e6_a8e7_4d61_9af2_25280e70bb8f"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
+                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_f993be7a_344f_4fee_9a35_75f1e3b367c5"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_c2d389de_7681_40df_b3e8_00982e1ae1f2"/>
+                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_2da92369_af57_4fc1_b84a_a35658cb88cf"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_c2d389de_7681_40df_b3e8_00982e1ae1f2"/>
+                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_931c3eee_c583_4adb_9af9_e0891ea43f2b"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://www.uni.lu/dataprotection#OWLObjectProperty_570763f7_9a02_4787_bf15_dea159241d52"/>
+                <someValuesFrom rdf:resource="http://www.uni.lu/dataprotection#OWLClass_4a286d0b_f129_4976_be2b_9c7ab71beb24"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Article 6.1
@@ -2206,29 +2332,261 @@ A controller holding personal information shall not use that information without
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_87608b6e_854c_44fc_9546_1d090053b511">
-        <rdfs:label xml:lang="en">broaderTransitive</rdfs:label>
-    </rdf:Description>
     <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_b79dea85_da38_4371_96dc_30a639826a63">
         <rdfs:label xml:lang="en">broadMatch</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_c5686ee0_cc44_43c5_9a6a_6ab8920fc3ec">
+        <rdfs:label xml:lang="en">closeMatch</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_3ed8c3e4_2c43_433d_9f65_50e97949d2d2">
+        <rdfs:label xml:lang="en">broadMatch</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;contributor">
+        <rdfs:label xml:lang="en">Contributor</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">An entity responsible for making contributions to the resource.</rdfs:comment>
+        <terms:description xml:lang="en">Examples of a Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#contributor-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&xsd;OWLDatatypeImpl_7c27e6b5_f4d1_4113_9831_bf9431834ff0">
+        <rdfs:label xml:lang="en">date</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&terms;OWLAnnotationPropertyImpl_f8098115_1cfa_4ef6_836a_aafff9252f73">
+        <rdfs:label xml:lang="en">issued</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;title">
+        <rdfs:label xml:lang="en">Title</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A name given to the resource.</rdfs:comment>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#title-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_1fa18f57_a790_40e8_aff1_a6c6867fce1d">
+        <rdfs:label xml:lang="en">closeMatch</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;coverage">
+        <rdfs:label xml:lang="en">Coverage</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended best practice is to use a controlled vocabulary such as the Thesaurus of Geographic Names [TGN]. Where appropriate, named places or time periods can be used in preference to numeric identifiers such as sets of coordinates or date ranges.</terms:description>
+        <rdfs:comment xml:lang="en">The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#coverage-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&terms;OWLAnnotationPropertyImpl_6484f224_f4f8_4a07_a482_826fe83cbd44">
+        <rdfs:label xml:lang="en">hasVersion</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_e74ebdb2_a910_41a0_969c_e935d0ffc343">
+        <rdfs:label xml:lang="en">broadMatch</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;description">
+        <rdfs:label xml:lang="en">Description</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">An account of the resource.</rdfs:comment>
+        <terms:description xml:lang="en">Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#description-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_fa87fc96_35fe_461f_81e5_078e57b36db0">
+        <rdfs:label xml:lang="en">note</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;creator">
+        <rdfs:label xml:lang="en">Creator</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">An entity primarily responsible for making the resource.</rdfs:comment>
+        <terms:description xml:lang="en">Examples of a Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#creator-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&terms;OWLAnnotationPropertyImpl_094d13a0_a651_46ab_b8a7_47dcb7dfa1bf">
+        <rdfs:label xml:lang="en">title</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_711a0657_ad17_4cc2_a4a4_7ab3e31d9fe9">
         <rdfs:label xml:lang="en">closeMatch</rdfs:label>
     </rdf:Description>
+    <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_ae522acd_b4c3_4dff_bb8e_9fb5565e241b">
+        <rdfs:label xml:lang="en">exactMatch</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&terms;OWLAnnotationPropertyImpl_21550cd8_2fc0_4dfb_b77d_ff4ba1e9429d">
+        <rdfs:label xml:lang="en">hasVersion</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;publisher">
+        <rdfs:label xml:lang="en">Publisher</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">An entity responsible for making the resource available.</rdfs:comment>
+        <terms:description xml:lang="en">Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#publisher-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&xsd;OWLDatatypeImpl_9008e7cb_da51_4d30_b7fb_63978d2d9e63">
+        <rdfs:label xml:lang="en">date</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&terms;OWLAnnotationPropertyImpl_acd6846e_699d_4935_8f24_a67c94c61ee2">
+        <rdfs:label xml:lang="en">description</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;date">
+        <rdfs:label xml:lang="en">Date</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A point or period of time associated with an event in the lifecycle of the resource.</rdfs:comment>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF].</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#date-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;subject">
+        <rdfs:label xml:lang="en">Subject</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2012-06-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">The topic of the resource.</rdfs:comment>
+        <terms:description xml:lang="en">Typically, the subject will be represented using keywords, key phrases, or classification codes. Recommended best practice is to use a controlled vocabulary.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#subject-007"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_40db4dea_1f00_4cdc_8c2c_e0b261b4b818">
+        <rdfs:label xml:lang="en">exactMatch</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_f0470b65_d715_4fa8_a03f_3e48d32d3a26">
+        <rdfs:label xml:lang="en">broaderTransitive</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;format">
+        <rdfs:label xml:lang="en">Format</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">Examples of dimensions include size and duration. Recommended best practice is to use a controlled vocabulary such as the list of Internet Media Types [MIME].</terms:description>
+        <rdfs:comment xml:lang="en">The file format, physical medium, or dimensions of the resource.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#format-007"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_38110948_dcd5_49af_922f_30825fe9be37">
+        <rdfs:label xml:lang="en">broaderTransitive</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&terms;OWLAnnotationPropertyImpl_d9c73075_acd8_4732_bff4_91367fea6a54">
+        <rdfs:label xml:lang="en">modified</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;relation">
+        <rdfs:label xml:lang="en">Relation</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A related resource.</rdfs:comment>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system. </terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#relation-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;source">
+        <rdfs:label xml:lang="en">Source</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A related resource from which the described resource is derived.</rdfs:comment>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system.</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#source-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;language">
+        <rdfs:label xml:lang="en">Language</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <rdfs:comment xml:lang="en">A language of the resource.</rdfs:comment>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as RFC 4646 [RFC4646].</terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#language-007"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+        <rdfs:seeAlso rdf:resource="http://www.ietf.org/rfc/rfc4646.txt"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_e64a6883_ac97_40d6_b82d_8f68134fe756">
+        <rdfs:label xml:lang="en">broadMatch</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&terms;OWLAnnotationPropertyImpl_f7bc73c6_9706_48d7_b53b_bc253d6d58b1">
+        <rdfs:label xml:lang="en">description</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/">
+        <terms:modified rdf:datatype="&xsd;date">2012-06-14</terms:modified>
+        <terms:title xml:lang="en">Dublin Core Metadata Element Set, Version 1.1</terms:title>
+        <terms:publisher rdf:resource="http://purl.org/dc/aboutdcmi#DCMI"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;type">
+        <rdfs:label xml:lang="en">Type</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <terms:description xml:lang="en">Recommended best practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [DCMITYPE]. To describe the file format, physical medium, or dimensions of the resource, use the Format element.</terms:description>
+        <rdfs:comment xml:lang="en">The nature or genre of the resource.</rdfs:comment>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#type-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="&dc;identifier">
+        <rdfs:label xml:lang="en">Identifier</rdfs:label>
+        <terms:issued rdf:datatype="&xsd;date">1999-07-02</terms:issued>
+        <terms:modified rdf:datatype="&xsd;date">2008-01-14</terms:modified>
+        <skos:note xml:lang="en">A second property with the same name as this property has been declared in the dcterms: namespace (http://purl.org/dc/terms/).  See the Introduction to the document &quot;DCMI Metadata Terms&quot; (http://dublincore.org/documents/dcmi-terms/) for an explanation.</skos:note>
+        <rdfs:comment xml:lang="en">An unambiguous reference to the resource within a given context.</rdfs:comment>
+        <terms:description xml:lang="en">Recommended best practice is to identify the resource by means of a string conforming to a formal identification system. </terms:description>
+        <terms:hasVersion rdf:resource="http://dublincore.org/usage/terms/history/#identifier-006"/>
+        <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/elements/1.1/"/>
+    </rdf:Description>
     <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_7a410669_92a6_4856_bdac_587b87b50592">
         <rdfs:label xml:lang="en">exactMatch</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&terms;OWLAnnotationPropertyImpl_76987ca1_c69f_4650_88b1_b285af3b2c38">
+        <rdfs:label xml:lang="en">modified</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_516a3db6_58db_47e7_8141_323dd51a05d0">
+        <rdfs:label xml:lang="en">broadMatch</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&terms;OWLAnnotationPropertyImpl_87e29aff_89c9_4baa_91fc_88d476659b44">
+        <rdfs:label xml:lang="en">issued</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_87608b6e_854c_44fc_9546_1d090053b511">
+        <rdfs:label xml:lang="en">broaderTransitive</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_08c1407d_ec6c_4b17_8edf_4abb17f039cb">
+        <rdfs:label xml:lang="en">closeMatch</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_23de5b25_d99d_4053_8491_90ac4f1b01f9">
+        <rdfs:label xml:lang="en">note</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_5da093f8_3d86_4481_b13f_bfb4f4ca603e">
         <rdfs:label xml:lang="en">closeMatch</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_38110948_dcd5_49af_922f_30825fe9be37">
+    <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_d5664569_69fe_4586_b6af_7b6c11c4e26a">
         <rdfs:label xml:lang="en">broaderTransitive</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_2890e030_22b0_4257_9668_d20f259a369b">
         <rdfs:label xml:lang="en">exactMatch</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_516a3db6_58db_47e7_8141_323dd51a05d0">
+    <rdf:Description rdf:about="&terms;OWLAnnotationPropertyImpl_5e0543e5_f52b_4e59_bc14_3abe0452b009">
+        <rdfs:label xml:lang="en">publisher</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_80ac4966_b94b_447e_9a9f_4dbff877fd89">
+        <rdfs:label xml:lang="en">closeMatch</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&terms;OWLAnnotationPropertyImpl_242990ac_580d_4bd6_a814_1d136830b4e3">
+        <rdfs:label xml:lang="en">title</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&terms;OWLAnnotationPropertyImpl_417511b0_2394_41dd_a770_4bbd6d5b9d58">
+        <rdfs:label xml:lang="en">publisher</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_b8cc2e2d_f9ef_40ef_9107_4b247d7787b8">
         <rdfs:label xml:lang="en">broadMatch</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&skos;OWLAnnotationPropertyImpl_3617d7e2_276e_4ead_8ab6_765572cf6007">
+        <rdfs:label xml:lang="en">note</rdfs:label>
     </rdf:Description>
     
 
