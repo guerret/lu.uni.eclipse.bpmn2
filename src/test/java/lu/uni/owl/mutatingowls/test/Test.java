@@ -26,7 +26,7 @@ public class Test {
 
 	private static String OWL_PATH = System.getProperty("user.dir") + OWLInputDialog.OWL_PATH;
 	private static String ontologyFile = OWL_PATH + "/" + DEFAULT_ONTOLOGY + "-rdf.owl";
-	private static String testFile = OWL_PATH + "/" + DEFAULT_ONTOLOGY + "-tests.rq";
+	private static String testFile = OWL_PATH + "/" + DEFAULT_ONTOLOGY + "-tests-split.rq";
 
 	private OntModel model;
 
