@@ -1,0 +1,81 @@
+# 1. What are the duties of the data controller?
+SELECT DISTINCT (COUNT(DISTINCT ?x) AS ?count)
+WHERE {
+{
+	?x a <http://www.w3.org/2002/07/owl#Class> .
+	?x <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://www.uni.lu/dataprotection#OWLClass_af4ae221_0c41_4b82_8ff9_7561e9d9c6cd> .
+	?x <http://www.w3.org/2000/01/rdf-schema#label> ?label .
+} UNION {
+	?p a <http://www.w3.org/2002/07/owl#ObjectProperty> .
+	?p <http://www.w3.org/2000/01/rdf-schema#label> ?function .
+	?p <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.uni.lu/dataprotection#OWLClass_3c5113eb_0923_4946_86cf_f5a83de7f9bb> .
+	?p <http://www.w3.org/2000/01/rdf-schema#range> ?x .
+	?x <http://www.w3.org/2000/01/rdf-schema#label> ?label .
+} UNION {
+	?x a <http://www.w3.org/2002/07/owl#Class> .
+	?x <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://www.uni.lu/dataprotection#OWLClass_8fd1b241_6e73_4771_9cf7_4a995dd8311b> .
+	?x <http://www.w3.org/2000/01/rdf-schema#label> ?label .
+} UNION {
+	{
+		?x a <http://www.w3.org/2002/07/owl#Class> .
+		?x <http://www.w3.org/2000/01/rdf-schema#label> ?label .
+		?x <http://www.w3.org/2002/07/owl#equivalentClass> [
+			<http://www.w3.org/2002/07/owl#onProperty> <http://www.uni.lu/dataprotection#OWLObjectPropertyImpl_9679a244_6762_4da7_9aaa_c89f96e6f22c> ;
+			<http://www.w3.org/2002/07/owl#someValuesFrom> ?y ] .
+		?y a <http://www.w3.org/2002/07/owl#Class> .
+		?y <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?z .
+		?z a <http://www.w3.org/2002/07/owl#Class> .
+		?z <http://www.w3.org/2000/01/rdf-schema#label> ?l .
+	} UNION {
+		?p a <http://www.w3.org/2002/07/owl#Class> .
+		?p <http://www.w3.org/2000/01/rdf-schema#label> ?l .
+		?p <http://www.w3.org/2002/07/owl#equivalentClass> [
+			<http://www.w3.org/2002/07/owl#onProperty> <http://www.uni.lu/dataprotection#OWLObjectPropertyImpl_9679a244_6762_4da7_9aaa_c89f96e6f22c> ;
+			<http://www.w3.org/2002/07/owl#someValuesFrom> ?y ] .
+		?y a <http://www.w3.org/2002/07/owl#Class> .
+		?y <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?x .
+		?x a <http://www.w3.org/2002/07/owl#Class> .
+		?x <http://www.w3.org/2000/01/rdf-schema#label> ?label .
+	}
+} UNION {
+	{
+		?p a <http://www.w3.org/2002/07/owl#Class> .
+		?p <http://www.w3.org/2000/01/rdf-schema#label> ?right .
+		?p <http://www.w3.org/2002/07/owl#equivalentClass> ?c .
+		?c <http://www.w3.org/2002/07/owl#onProperty> <http://www.uni.lu/dataprotection#OWLObjectPropertyImpl_9679a244_6762_4da7_9aaa_c89f96e6f22c> .
+		?c <http://www.w3.org/2002/07/owl#someValuesFrom> ?x .
+		?x a <http://www.w3.org/2002/07/owl#Class> .
+		?x <http://www.w3.org/2000/01/rdf-schema#label> ?label .
+	} UNION {
+		?x a <http://www.w3.org/2002/07/owl#Class> .
+		?x <http://www.w3.org/2000/01/rdf-schema#label> ?label .
+		?x <http://www.w3.org/2002/07/owl#equivalentClass> ?c .
+		?c <http://www.w3.org/2002/07/owl#onProperty> <http://www.uni.lu/dataprotection#OWLObjectPropertyImpl_9679a244_6762_4da7_9aaa_c89f96e6f22c> .
+		?c <http://www.w3.org/2002/07/owl#someValuesFrom> ?y .
+		?y a <http://www.w3.org/2002/07/owl#Class> .
+		?y <http://www.w3.org/2000/01/rdf-schema#label> ?action .
+	}
+} UNION {
+	?x a <http://www.w3.org/2002/07/owl#Class> .
+	<http://www.uni.lu/dataprotection#OWLObjectPropertyImpl_4bf9eaca_1040_4861_8e69_2eb6cfe40e83> <http://www.w3.org/2000/01/rdf-schema#domain> ?x .
+	?x <http://www.w3.org/2000/01/rdf-schema#label> ?label .
+} UNION {
+	?x a <http://www.w3.org/2002/07/owl#Class> .
+	<http://www.uni.lu/dataprotection#OWLObjectProperty_16ef80bb_336f_4678_b647_aa3ce5c02e49> <http://www.w3.org/2000/01/rdf-schema#domain> ?x .
+	?x <http://www.w3.org/2000/01/rdf-schema#label> ?label .
+} UNION {
+	?x a <http://www.w3.org/2002/07/owl#Class> .
+	?x <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://www.uni.lu/dataprotection#OWLClassImpl_58cf8e1b_e912_4f83_bdbe_0214e093bd4c> .
+	?x <http://www.w3.org/2000/01/rdf-schema#label> ?label .
+} UNION {
+	{
+		?x a <http://www.w3.org/2002/07/owl#Class> .
+		?x <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://www.uni.lu/dataprotection#OWLClass_af4ae221_0c41_4b82_8ff9_7561e9d9c6cd> .
+		?x <http://www.w3.org/2000/01/rdf-schema#label> ?label
+	} MINUS {
+		?x a <http://www.w3.org/2002/07/owl#Class> .
+		?x <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://www.uni.lu/dataprotection#OWLClass_06a52543_55ee_4037_8370_dd56a165fe70> .
+		?x <http://www.w3.org/2000/01/rdf-schema#label> ?label .
+	} .
+}
+}
