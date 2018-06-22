@@ -1,4 +1,4 @@
-package lu.uni.owl.mutatingowls.test;
+package lu.uni.bpmn.test;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
