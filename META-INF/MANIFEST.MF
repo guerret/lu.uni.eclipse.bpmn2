@@ -44,3 +44,4 @@ Export-Package: lu.uni.bpmn.model,
  lu.uni.bpmn.model.impl,
  lu.uni.bpmn.model.util
 Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: lu.uni.eclipse.bpmn2
