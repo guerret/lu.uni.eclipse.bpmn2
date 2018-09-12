@@ -4,14 +4,7 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: lu.uni.eclipse.bpmn2;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .,
- lib/aopalliance-1.0.jar,
- lib/guava-18.0.jar,
- lib/guice-4.0-beta.jar,
- lib/guice-multibindings-4.0-beta.jar,
- lib/openrdf-sesame-2.8.5-onejar.jar,
- lib/owlapi-distribution-4.0.2.jar,
- lib/slf4j-api-1.7.7.jar,
- lib/slf4j-simple-1.7.12.jar
+ lib/dapreco-bpmn2-parser.jar
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-Activator: lu.uni.bpmn.DataProtectionBPMNPlugin
@@ -40,8 +33,23 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.swt,
  org.apache.commons.io
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: lu.uni.bpmn.model,
- lu.uni.bpmn.model.impl,
- lu.uni.bpmn.model.util
+Export-Package: lu.uni.bpmn.model;uses:="org.eclipse.emf.ecore,org.eclipse.emf.common.util,org.eclipse.emf.ecore.util",
+ lu.uni.bpmn.model.impl;
+  uses:="org.eclipse.emf.ecore,
+   org.eclipse.emf.ecore.impl,
+   lu.uni.bpmn.model,
+   org.eclipse.emf.common.util,
+   org.eclipse.emf.common.notify,
+   org.eclipse.emf.ecore.util",
+ lu.uni.bpmn.model.util;
+  uses:="org.eclipse.emf.ecore,
+   org.eclipse.emf.ecore.xmi.util,
+   lu.uni.bpmn.model,
+   org.eclipse.emf.common.util,
+   org.eclipse.bpmn2.modeler.core.model,
+   org.eclipse.emf.common.notify,
+   org.eclipse.emf.common.notify.impl,
+   org.eclipse.emf.ecore.resource,
+   org.eclipse.emf.ecore.util"
 Bundle-ActivationPolicy: lazy
 Automatic-Module-Name: lu.uni.eclipse.bpmn2

@@ -16,6 +16,7 @@ import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Display;
@@ -23,7 +24,6 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
-
 import lu.uni.bpmn.DataProtectionBPMNPlugin;
 import lu.uni.bpmn.model.Item;
 import lu.uni.bpmn.model.ModelFactory;
@@ -36,6 +36,8 @@ public class OWLListEditor extends ObjectEditor {
 	boolean sortable = false;
 	Table table;
 	Item item = null;
+	public static final String[] ITEMS = { "Generic Data Protection Task", "Transmit" };
+	Combo combo;
 
 	/**
 	 * Initialize the default values...
@@ -65,14 +67,8 @@ public class OWLListEditor extends ObjectEditor {
 		this.sortable = sortable;
 	}
 
-	/**
-	 * This method creates a composite with a separate CheckBox for each Element
-	 * form the OpitonList. The selection is managed by the valueListAdapter
-	 * class.
-	 */
 	protected Control createControl(Composite parentcomposite, String label, int style) {
 
-		// create a separate label to the LEFT of the checkbox set
 		if (label != null) {
 			Label labelWidget = getToolkit().createLabel(parentcomposite, label);
 			labelWidget.setLayoutData(new GridData(SWT.RIGHT, SWT.TOP, false, false, 1, 1));
@@ -103,6 +99,14 @@ public class OWLListEditor extends ObjectEditor {
 		fillLayoutButtons.spacing = 2;
 		fillLayoutButtons.type = SWT.VERTICAL;
 		compositeButtons.setLayout(fillLayoutButtons);
+
+		getToolkit().createLabel(editorComposite, "Processing type");
+		getToolkit().createLabel(editorComposite, "");
+
+		// ProntoParser p = new ProntoParser();
+		combo = new Combo(editorComposite, SWT.NONE);
+		combo.setItems(new PrOntoParser().getActions()); // ITEMS deve essere preso da PrOnto
+		combo.select(0);
 
 		final Shell shell = parent.getShell();
 

@@ -15,7 +15,7 @@ public class OWLInputDialog extends ElementListSelectionDialog {
 
 	protected static boolean localExec = true;
 	public static final String OWL_PATH = "/resources";
-	public static final String OWL_FILE = OWL_PATH + File.separator + "dataprotection.owl";
+	public static final String OWL_FILE = OWL_PATH + "/dataprotection.owl";
 	protected static String[] lines;
 	protected static Ontology ontology;
 
@@ -44,11 +44,8 @@ public class OWLInputDialog extends ElementListSelectionDialog {
 			}
 		else
 			url = OWLInputDialog.class.getResource(fileName);
-		ontology = new Ontology(url);
-		OWLClass ruleClass = null;
-		for (OWLClass c : ontology.getClasses())
-			if (ontology.getLabel(c).equals("Rule"))
-				ruleClass = c;
+		ontology = new Ontology(url, "http://www.uni.lu/dataprotection#");
+		OWLClass ruleClass = ontology.getClassByFullLabel("Rule", "http://www.uni.lu/dataprotection#");
 		Set<OWLClass> subClasses = ontology.getSubClasses(ruleClass);
 		return ontology.getLabels(subClasses);
 	}

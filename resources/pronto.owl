@@ -1,0 +1,188 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/ontology/pronto#"
+     xml:base="https://w3id.org/ontology/pronto"
+     xmlns:pronto="https://w3id.org/ontology/pronto#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:pwo="http://purl.org/spar/pwo/"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owlapi="http://www.semanticweb.org/owlapi#">
+    <owl:Ontology rdf:about="https://w3id.org/ontology/pronto">
+        <owl:imports rdf:resource="https://w3id.org/akn/ontology/allot/2017-04-21"/>
+        <owl:imports rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-top.owl"/>
+        <owl:imports rdf:resource="http://www.estrellaproject.org/lkif-core/mereology.owl"/>
+        <owl:imports rdf:resource="http://purl.org/spar/pwo/2017-06-01"/>
+        <owl:imports rdf:resource="http://www.estrellaproject.org/lkif-core/action.owl"/>
+        <owl:imports rdf:resource="http://www.estrellaproject.org/lkif-core/relative-places.owl"/>
+        <owl:imports rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl"/>
+        <owl:imports rdf:resource="http://www.estrellaproject.org/lkif-core/legal-role.owl"/>
+        <owl:imports rdf:resource="http://www.estrellaproject.org/lkif-core/lkif-core.owl"/>
+        <owl:imports rdf:resource="http://www.estrellaproject.org/lkif-core/process.owl"/>
+        <owl:imports rdf:resource="http://www.estrellaproject.org/lkif-core/time.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/ontology/pronto#defines -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/ontology/pronto#defines">
+        <rdfs:domain rdf:resource="https://w3id.org/akn/ontology/allot/Event"/>
+        <rdfs:range rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#Role"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/spar/pwo/Action -->
+
+    <owl:Class rdf:about="http://purl.org/spar/pwo/Action">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/akn/ontology/allot/Event"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontology/pronto#Anonymise -->
+
+    <owl:Class rdf:about="https://w3id.org/ontology/pronto#Anonymise">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontology/pronto#Delete"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontology/pronto#Communicate -->
+
+    <owl:Class rdf:about="https://w3id.org/ontology/pronto#Communicate">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/pwo/Action"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontology/pronto#Consent -->
+
+    <owl:Class rdf:about="https://w3id.org/ontology/pronto#Consent">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/pwo/Action"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontology/pronto#DataSubject -->
+
+    <owl:Class rdf:about="https://w3id.org/ontology/pronto#DataSubject">
+        <rdfs:subClassOf rdf:resource="http://www.estrellaproject.org/lkif-core/role.owl#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontology/pronto#Delete -->
+
+    <owl:Class rdf:about="https://w3id.org/ontology/pronto#Delete">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/pwo/Action"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontology/pronto#Derive -->
+
+    <owl:Class rdf:about="https://w3id.org/ontology/pronto#Derive">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/pwo/Action"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontology/pronto#Destroy -->
+
+    <owl:Class rdf:about="https://w3id.org/ontology/pronto#Destroy">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontology/pronto#Delete"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontology/pronto#Infer -->
+
+    <owl:Class rdf:about="https://w3id.org/ontology/pronto#Infer">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/pwo/Action"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontology/pronto#Observe -->
+
+    <owl:Class rdf:about="https://w3id.org/ontology/pronto#Observe">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/pwo/Action"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontology/pronto#PermanentErase -->
+
+    <owl:Class rdf:about="https://w3id.org/ontology/pronto#PermanentErase">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontology/pronto#Delete"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontology/pronto#Provide -->
+
+    <owl:Class rdf:about="https://w3id.org/ontology/pronto#Provide">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/pwo/Action"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontology/pronto#Pseudonymise -->
+
+    <owl:Class rdf:about="https://w3id.org/ontology/pronto#Pseudonymise">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/ontology/pronto#Derive"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontology/pronto#Store -->
+
+    <owl:Class rdf:about="https://w3id.org/ontology/pronto#Store">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/pwo/Action"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/ontology/pronto#Transmit -->
+
+    <owl:Class rdf:about="https://w3id.org/ontology/pronto#Transmit">
+        <rdfs:subClassOf rdf:resource="http://purl.org/spar/pwo/Action"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

@@ -12,6 +12,7 @@ import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLAnnotation;
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLClassExpression;
+import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLDataProperty;
 import org.semanticweb.owlapi.model.OWLDataRange;
 import org.semanticweb.owlapi.model.OWLDatatype;
@@ -25,7 +26,10 @@ import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyID;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
+import org.semanticweb.owlapi.model.PrefixManager;
 import org.semanticweb.owlapi.search.EntitySearcher;
+import org.semanticweb.owlapi.util.AutoIRIMapper;
+import org.semanticweb.owlapi.util.DefaultPrefixManager;
 
 /**
  * Wrapper class for an OWL ontology. This class is similar to the
@@ -43,37 +47,39 @@ public class Ontology {
 	public OWLOntologyManager manager;
 
 	/**
-	 * The ontology in OWL API format. This is protected because it is also used
-	 * by the {@link Mutant} subclass.
+	 * The prefix manager of the OWL API library.
+	 */
+	public PrefixManager pm;
+
+	/**
+	 * The ontology in OWL API format. This is protected because it is also used by
+	 * the {@link Mutant} subclass.
 	 */
 	protected OWLOntology ontology;
 
+	OWLDataFactory factory;
+
 	/**
-	 * Parses a file into a new ontology. The file must be OWL in any syntax,
-	 * but if there are imports it must be OWL/XML or RDF/XML.
+	 * Parses a file into a new ontology. The file must be OWL in any syntax, but if
+	 * there are imports it must be OWL/XML or RDF/XML.
 	 * 
 	 * Ontology files must be stored in the resources directory.
 	 * 
 	 * @param url
 	 *            The URL representing the OWL file containing the ontology
+	 * @param prefix
+	 *            TODO
 	 */
-	public Ontology(URL url) {
+	public Ontology(URL url, String prefix) {
 		manager = OWLManager.createOWLOntologyManager();
+		manager.getIRIMappers().add(new AutoIRIMapper(new File(System.getProperty("user.dir") + "/resources"), false));
+		factory = manager.getOWLDataFactory();
+		pm = new DefaultPrefixManager();
+		if (prefix != null)
+			pm.setDefaultPrefix(prefix);
 		ontology = load(url);
 		System.out.println("Number of axioms: " + ontology.getAxiomCount());
 		System.out.println("IRI: " + ontology.getOntologyID().getOntologyIRI().get());
-	}
-
-	/**
-	 * Creates a new ontology from an OWL mutant.
-	 * 
-	 * @param owlMutant
-	 *            The mutated (modified) ontology
-	 */
-	public Ontology(OWLOntology owlMutant) {
-		manager = OWLManager.createOWLOntologyManager();
-		manager.getOWLDataFactory();
-		ontology = owlMutant;
 	}
 
 	/**
@@ -160,15 +166,28 @@ public class Ontology {
 	}
 
 	/**
+	 * Returns the prefix for a given OWL entity.
+	 * 
+	 * In case more than one label is present, only the first one encountered is
+	 * returned.
+	 * 
+	 * @param e
+	 *            the OWL entity whose label is requested
+	 * @return the first OWL annotation containing a label for the entity
+	 */
+	public String getPrefix(OWLEntity e) {
+		return e.getIRI().getNamespace();
+	}
+
+	/**
 	 * Returns all labels associated with a given entity. The labels are not
-	 * returned as strings but as OWL API {@link OWLAnnotation} objects, thus
-	 * they also contain additional information such as the language. However,
-	 * only label annotations are returned.
+	 * returned as strings but as OWL API {@link OWLAnnotation} objects, thus they
+	 * also contain additional information such as the language. However, only label
+	 * annotations are returned.
 	 * 
 	 * @param e
 	 *            the OWL entity whose labels are requested
-	 * @return a set containing all the label annotations associated to the
-	 *         entity
+	 * @return a set containing all the label annotations associated to the entity
 	 */
 	public Set<OWLAnnotation> getLabels(OWLEntity e) {
 		Set<OWLAnnotation> ret = new HashSet<OWLAnnotation>();
@@ -192,6 +211,34 @@ public class Ontology {
 		for (OWLEntity c : entities)
 			labels[i++] = getLabel(c);
 		return labels;
+	}
+
+	/**
+	 * Helper function that returns the an OWL class identified by name and
+	 * namespace.
+	 * 
+	 * @param name
+	 *            the OWL class whose name or label is requested
+	 * @param ns
+	 *            the namespace of the requested class
+	 * @return the first OWL annotation containing a label for the entity
+	 */
+	public OWLClass getClassByFullLabel(String name, String ns) {
+		for (OWLClass c : ontology.getClassesInSignature()) {
+			String p = c.getIRI().getNamespace();
+			if (p.equals(ns)) {
+				if (c.getIRI().getShortForm().equals(name))
+					return c;
+				for (OWLAnnotation a : EntitySearcher.getAnnotations(c, ontology)) {
+					if (a.getProperty().isLabel()) {
+						OWLLiteral label = (OWLLiteral) a.getValue();
+						if (label.getLiteral().equals(name))
+							return c;
+					}
+				}
+			}
+		}
+		return null;
 	}
 
 	/**
@@ -234,9 +281,8 @@ public class Ontology {
 	}
 
 	/**
-	 * Helper method to fetch all classes of which a given class is a subclass.
-	 * Note that the superclass is not returned if it
-	 * {@link OWLClass#isTopEntity()}.
+	 * Helper method to fetch all classes of which a given class is a subclass. Note
+	 * that the superclass is not returned if it {@link OWLClass#isTopEntity()}.
 	 * 
 	 * @param cls
 	 *            the class whose superclasses are needed
@@ -266,8 +312,26 @@ public class Ontology {
 	}
 
 	/**
-	 * Helper method to fetch all classes that are types of a given individual.
-	 * Note that the class is not returned if it {@link OWLClass#isTopEntity()}.
+	 * Helper method to fetch all classes that are direct subclasses of a given
+	 * class.
+	 * 
+	 * @param cls
+	 *            the class whose subclasses are needed
+	 * @return all direct subclasses of the given class
+	 */
+	public Set<OWLClass> getDirectSubClasses(OWLClass cls) {
+		Set<OWLClass> ret = new HashSet<OWLClass>();
+		for (OWLClassExpression s : EntitySearcher.getSubClasses(cls, ontology)) {
+			OWLClass child = s.asOWLClass();
+			if (child != cls)
+				ret.add(child);
+		}
+		return ret;
+	}
+
+	/**
+	 * Helper method to fetch all classes that are types of a given individual. Note
+	 * that the class is not returned if it {@link OWLClass#isTopEntity()}.
 	 * 
 	 * @param individual
 	 *            the individual whose class types are needed
@@ -290,8 +354,8 @@ public class Ontology {
 	}
 
 	/**
-	 * Helper method to fetch the range of a given object property (unless the
-	 * class {@link OWLClass#isTopEntity()}).
+	 * Helper method to fetch the range of a given object property (unless the class
+	 * {@link OWLClass#isTopEntity()}).
 	 * 
 	 * @param property
 	 *            the property whose domains are requested
@@ -302,8 +366,8 @@ public class Ontology {
 	}
 
 	/**
-	 * Helper method to fetch the domains of a given data property (unless the
-	 * class {@link OWLClass#isTopEntity()}).
+	 * Helper method to fetch the domains of a given data property (unless the class
+	 * {@link OWLClass#isTopEntity()}).
 	 * 
 	 * @param property
 	 *            the property whose domains are requested
@@ -314,8 +378,8 @@ public class Ontology {
 	}
 
 	/**
-	 * Helper method to fetch the domains of a given data property (unless the
-	 * class {@link OWLDatatype#isTopDatatype()}).
+	 * Helper method to fetch the domains of a given data property (unless the class
+	 * {@link OWLDatatype#isTopDatatype()}).
 	 * 
 	 * @param property
 	 *            the property whose domains are requested
