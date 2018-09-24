@@ -29,7 +29,6 @@
 			<groupId>org.apache.jena</groupId>
 			<artifactId>apache-jena-libs</artifactId>
 			<version>3.0.0</version>
-			<scope>runtime</scope>
 			<type>pom</type>
 		</dependency>
 	</dependencies>
