@@ -39,9 +39,10 @@ Require-Bundle: org.eclipse.core.runtime,
  org.junit,
  org.eclipse.swt,
  org.apache.commons.io
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: lu.uni.bpmn.model,
  lu.uni.bpmn.model.impl,
  lu.uni.bpmn.model.util
 Bundle-ActivationPolicy: lazy
 Automatic-Module-Name: lu.uni.eclipse.bpmn2
+Bundle-RequiredExecutionEnvironment: JavaSE-10,
+ JavaSE-1.8
