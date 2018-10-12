@@ -24,7 +24,7 @@ public class OWLInputDialog extends ElementListSelectionDialog {
 		setMultipleSelection(true);
 		lines = parseOLines(OWL_FILE, false);
 		setElements(lines);
-		String[] selection = { initialValue };
+		Object[] selection = { initialValue };
 		setInitialSelections(selection);
 		setTitle(dialogTitle);
 	}

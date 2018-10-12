@@ -1,8 +1,8 @@
 package lu.uni.bpmn.test;
 
 import lu.uni.bpmn.ui.dataprotection.PrOntoParser;
-import lu.uni.dapreco.bpmn2.AKNParser;
-import lu.uni.dapreco.bpmn2.LRMLParser;
+import lu.uni.dapreco.parser.akn.AKNParser;
+import lu.uni.dapreco.parser.lrml.LRMLParser;
 // import lu.uni.dapreco.bpmn2.PrOntoParser;
 
 public class TestParsing {

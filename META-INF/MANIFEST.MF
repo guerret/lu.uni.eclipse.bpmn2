@@ -3,8 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: lu.uni.eclipse.bpmn2;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-ClassPath: .,
- lib/dapreco-bpmn2-parser.jar
+Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-Activator: lu.uni.bpmn.DataProtectionBPMNPlugin
@@ -32,7 +31,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.junit,
  org.eclipse.swt,
  org.apache.commons.io
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-10
 Export-Package: lu.uni.bpmn.model;uses:="org.eclipse.emf.ecore,org.eclipse.emf.common.util,org.eclipse.emf.ecore.util",
  lu.uni.bpmn.model.impl;
   uses:="org.eclipse.emf.ecore,
