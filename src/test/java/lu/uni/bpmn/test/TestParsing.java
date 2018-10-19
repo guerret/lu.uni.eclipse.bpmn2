@@ -1,6 +1,6 @@
 package lu.uni.bpmn.test;
 
-import lu.uni.bpmn.ui.dataprotection.PrOntoParser;
+import lu.uni.bpmn.ui.dataprotection.OldPrOntoParser;
 import lu.uni.dapreco.parser.akn.AKNParser;
 import lu.uni.dapreco.parser.lrml.LRMLParser;
 // import lu.uni.dapreco.bpmn2.PrOntoParser;
@@ -23,7 +23,7 @@ public class TestParsing {
 	// private static String predicate = "Transmit";
 
 	public static void main(String[] args) {
-		PrOntoParser p = new PrOntoParser(true);
+		OldPrOntoParser p = new OldPrOntoParser(true);
 		LRMLParser lParser = new LRMLParser(lrmlURI);
 		AKNParser aParser = new AKNParser(aknURI);
 		String[] actions = p.getActions();

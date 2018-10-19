@@ -3,7 +3,16 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
 Bundle-SymbolicName: lu.uni.eclipse.bpmn2;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-ClassPath: .
+Bundle-ClassPath: .,
+ lib/aopalliance-1.0.jar,
+ lib/guava-18.0.jar,
+ lib/guice-4.0-beta.jar,
+ lib/guice-multibindings-4.0-beta.jar,
+ lib/openrdf-sesame-2.8.5-onejar.jar,
+ lib/owlapi-osgidistribution-4.0.2.jar,
+ lib/slf4j-api-1.7.7.jar,
+ lib/slf4j-simple-1.7.12.jar,
+ lib/lu.uni.dapreco.parser.jar
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-Activator: lu.uni.bpmn.DataProtectionBPMNPlugin

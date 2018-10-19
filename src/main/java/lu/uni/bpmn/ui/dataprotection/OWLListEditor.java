@@ -28,6 +28,10 @@ import lu.uni.bpmn.DataProtectionBPMNPlugin;
 import lu.uni.bpmn.model.Item;
 import lu.uni.bpmn.model.ModelFactory;
 import lu.uni.bpmn.model.Value;
+import lu.uni.dapreco.parser.PrOntoParser;
+import lu.uni.dapreco.parser.akn.AKNParser;
+import lu.uni.dapreco.parser.lrml.LRMLParser;
+import lu.uni.dapreco.parser.lrml.LRMLParser.RuleType;
 
 public class OWLListEditor extends ObjectEditor {
 	protected Composite editorComposite;
@@ -36,8 +40,25 @@ public class OWLListEditor extends ObjectEditor {
 	boolean sortable = false;
 	Table table;
 	Item item = null;
-	public static final String[] ITEMS = { "Generic Data Protection Task", "Transmit" };
 	Combo combo;
+	Table table2;
+	Table table3;
+
+	private final static String resDir = "resources";
+
+	private static final String aknPrefix = "GDPR";
+	private final static String ontoPrefix = "prOnto";
+
+	private final static String aknName = "akn-act-gdpr-full.xml";
+	private static final String aknURI = "https://raw.githubusercontent.com/guerret/lu.uni.dapreco.parser/master/"
+			+ resDir + "/" + aknName;
+
+	private final static String lrmlName = "rioKB_GDPR.xml";
+	private final static String lrmlURI = "https://raw.githubusercontent.com/dapreco/daprecokb/master/gdpr/" + lrmlName;
+
+	private static PrOntoParser pParser;
+	private static LRMLParser lParser;
+	private static AKNParser aParser;
 
 	/**
 	 * Initialize the default values...
@@ -49,6 +70,9 @@ public class OWLListEditor extends ObjectEditor {
 		super(parent, item, DataProtectionBPMNPlugin.DATAPROTECTION_ITEMLIST_FEATURE);
 
 		this.item = item;
+		pParser = new PrOntoParser();
+		lParser = new LRMLParser(lrmlURI);
+		aParser = new AKNParser(aknURI);
 	}
 
 	public Image getImage() {
@@ -103,10 +127,28 @@ public class OWLListEditor extends ObjectEditor {
 		getToolkit().createLabel(editorComposite, "Processing type");
 		getToolkit().createLabel(editorComposite, "");
 
-		// ProntoParser p = new ProntoParser();
 		combo = new Combo(editorComposite, SWT.NONE);
-		combo.setItems(new PrOntoParser().getActions()); // ITEMS deve essere preso da PrOnto
+		combo.setItems(pParser.getActions()); // the items must come from PrOnto
+		combo.addSelectionListener(new SelectionAdapter() {
+			public void widgetSelected(SelectionEvent e) {
+				writeProvisions(combo.getText());
+				writeFormulae(combo.getText());
+			}
+		});
 		combo.select(0);
+		getToolkit().createLabel(editorComposite, "");
+
+		table2 = getToolkit().createTable(editorComposite, SWT.MULTI | SWT.V_SCROLL | SWT.BORDER);
+		GridData table2GridData = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1);
+		table2.setLayoutData(table2GridData);
+		writeProvisions(combo.getText());
+		getToolkit().createLabel(editorComposite, "");
+
+		table3 = getToolkit().createTable(editorComposite, SWT.MULTI | SWT.V_SCROLL | SWT.BORDER);
+		GridData table3GridData = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1);
+		table3.setLayoutData(table3GridData);
+		writeFormulae(combo.getText());
+		getToolkit().createLabel(editorComposite, "");
 
 		final Shell shell = parent.getShell();
 
@@ -325,6 +367,28 @@ public class OWLListEditor extends ObjectEditor {
 
 	public Control getControl() {
 		return editorComposite;
+	}
+
+	private void writeProvisions(String text) {
+		table.removeAll();
+		String[] articles = lParser.findArticles(ontoPrefix + ":" + text);
+		for (String s : articles) {
+			s = s.substring((aknPrefix + ":").length());
+			TableItem item = new TableItem(table2, SWT.NONE);
+			item.setText(aParser.getTextFromEId(s));
+		}
+	}
+
+	private void writeFormulae(String text) {
+		table.removeAll();
+		String[] articles = lParser.findArticles(ontoPrefix + ":" + text);
+		for (String s : articles) {
+			String[] formulae = lParser.findFormulaeForArticle(s, RuleType.ALL);
+			for (String f : formulae) {
+				TableItem item = new TableItem(table3, SWT.NONE);
+				item.setText(f);
+			}
+		}
 	}
 
 }

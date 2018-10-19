@@ -2,6 +2,14 @@
 <classpath>
 	<classpathentry kind="src" path="src/test/java"/>
 	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry exported="true" kind="lib" path="lib/aopalliance-1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/guava-18.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/guice-4.0-beta.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/guice-multibindings-4.0-beta.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/openrdf-sesame-2.8.5-onejar.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/owlapi-osgidistribution-4.0.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/slf4j-api-1.7.7.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/slf4j-simple-1.7.12.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="module" value="true"/>
@@ -14,6 +22,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/lu.uni.dapreco.parser"/>
+	<classpathentry kind="lib" path="lib/lu.uni.dapreco.parser.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

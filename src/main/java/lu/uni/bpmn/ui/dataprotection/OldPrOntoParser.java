@@ -7,18 +7,18 @@ import java.util.Set;
 
 import org.semanticweb.owlapi.model.OWLClass;
 
-public class PrOntoParser {
+public class OldPrOntoParser {
 
 	public static final String OWL_PATH = "/resources";
 	public static final String OWL_FILE = OWL_PATH + "/pronto.owl";
 	protected static Ontology ontology;
 
-	public PrOntoParser() {
-		URL url = PrOntoParser.class.getResource(OWL_FILE);
+	public OldPrOntoParser() {
+		URL url = OldPrOntoParser.class.getResource(OWL_FILE);
 		ontology = new Ontology(url, "https://w3id.org/ontology/pronto#");
 	}
 
-	public PrOntoParser(boolean local) {
+	public OldPrOntoParser(boolean local) {
 		URL url = null;
 		if (local)
 			try {
@@ -27,7 +27,7 @@ public class PrOntoParser {
 				e.printStackTrace();
 			}
 		else
-			url = PrOntoParser.class.getResource(OWL_FILE);
+			url = OldPrOntoParser.class.getResource(OWL_FILE);
 		ontology = new Ontology(url, "https://w3id.org/ontology/pronto#");
 	}
 
@@ -38,7 +38,7 @@ public class PrOntoParser {
 	}
 
 	public static void main(String[] args) {
-		PrOntoParser p = new PrOntoParser(true);
+		OldPrOntoParser p = new OldPrOntoParser(true);
 		String[] actions = p.getActions();
 		for (String a : actions)
 			System.out.println(a);
