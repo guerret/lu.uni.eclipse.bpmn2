@@ -1,5 +1,9 @@
 package lu.uni.bpmn.ui.dataprotection;
 
+import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.Iterator;
 
 import org.eclipse.bpmn2.modeler.core.merrimac.clad.AbstractDetailComposite;
@@ -52,9 +56,11 @@ public class OWLListEditor extends ObjectEditor {
 	private final static String aknName = "akn-act-gdpr-full.xml";
 	private static final String aknURI = "https://raw.githubusercontent.com/guerret/lu.uni.dapreco.parser/master/"
 			+ resDir + "/" + aknName;
+	private static final String aknLocal = resDir + "/" + aknName;
 
 	private final static String lrmlName = "rioKB_GDPR.xml";
 	private final static String lrmlURI = "https://raw.githubusercontent.com/dapreco/daprecokb/master/gdpr/" + lrmlName;
+	private static final String lrmlLocal = resDir + "/" + lrmlName;
 
 	private static PrOntoParser pParser;
 	private static LRMLParser lParser;
@@ -71,8 +77,14 @@ public class OWLListEditor extends ObjectEditor {
 
 		this.item = item;
 		pParser = new PrOntoParser();
-		lParser = new LRMLParser(lrmlURI);
-		aParser = new AKNParser(aknURI);
+		try {
+			URL url = new URL("platform:/plugin/lu.uni.eclipse.bpmn2/" + lrmlLocal).toURI().toURL();
+			lParser = new LRMLParser(url.toString());
+			url = new URL("platform:/plugin/lu.uni.eclipse.bpmn2/" + aknLocal).toURI().toURL();
+			aParser = new AKNParser(url.toString());
+		} catch (MalformedURLException | URISyntaxException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public Image getImage() {
@@ -129,28 +141,37 @@ public class OWLListEditor extends ObjectEditor {
 
 		combo = new Combo(editorComposite, SWT.NONE);
 		combo.setItems(pParser.getActions()); // the items must come from PrOnto
-		combo.addSelectionListener(new SelectionAdapter() {
-			public void widgetSelected(SelectionEvent e) {
-				writeProvisions(combo.getText());
-				writeFormulae(combo.getText());
-			}
-		});
 		combo.select(0);
 		getToolkit().createLabel(editorComposite, "");
 
 		table2 = getToolkit().createTable(editorComposite, SWT.MULTI | SWT.V_SCROLL | SWT.BORDER);
 		GridData table2GridData = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1);
 		table2.setLayoutData(table2GridData);
-		writeProvisions(combo.getText());
 		getToolkit().createLabel(editorComposite, "");
 
-		table3 = getToolkit().createTable(editorComposite, SWT.MULTI | SWT.V_SCROLL | SWT.BORDER);
-		GridData table3GridData = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1);
-		table3.setLayoutData(table3GridData);
-		writeFormulae(combo.getText());
+//		table3 = getToolkit().createTable(editorComposite, SWT.MULTI | SWT.V_SCROLL | SWT.BORDER);
+//		GridData table3GridData = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1);
+//		table3.setLayoutData(table3GridData);
+//		// writeFormulae(combo.getText());
+//		getToolkit().createLabel(editorComposite, "");
+
+		Button displayProvisionsButton = getToolkit().createButton(editorComposite, "Show provisions", SWT.PUSH);
+		displayProvisionsButton.addSelectionListener(new SelectionAdapter() {
+			public void widgetSelected(SelectionEvent e) {
+				writeProvisions();
+			}
+		});
 		getToolkit().createLabel(editorComposite, "");
 
 		final Shell shell = parent.getShell();
+
+		Button displayFormulaeButton = getToolkit().createButton(editorComposite, "Show formulae", SWT.PUSH);
+		displayFormulaeButton.addSelectionListener(new SelectionAdapter() {
+			public void widgetSelected(SelectionEvent e) {
+				writeFormulae();
+			}
+		});
+		getToolkit().createLabel(editorComposite, "");
 
 		Button button = getToolkit().createButton(compositeButtons, "Add...", SWT.PUSH);
 		button.addSelectionListener(new SelectionAdapter() {
@@ -369,9 +390,9 @@ public class OWLListEditor extends ObjectEditor {
 		return editorComposite;
 	}
 
-	private void writeProvisions(String text) {
-		table.removeAll();
-		String[] articles = lParser.findArticles(ontoPrefix + ":" + text);
+	private void writeProvisions() {
+		table2.removeAll();
+		String[] articles = lParser.findArticles(ontoPrefix + ":" + combo.getText());
 		for (String s : articles) {
 			s = s.substring((aknPrefix + ":").length());
 			TableItem item = new TableItem(table2, SWT.NONE);
@@ -379,13 +400,13 @@ public class OWLListEditor extends ObjectEditor {
 		}
 	}
 
-	private void writeFormulae(String text) {
-		table.removeAll();
-		String[] articles = lParser.findArticles(ontoPrefix + ":" + text);
+	private void writeFormulae() {
+		table2.removeAll();
+		String[] articles = lParser.findArticles(ontoPrefix + ":" + combo.getText());
 		for (String s : articles) {
 			String[] formulae = lParser.findFormulaeForArticle(s, RuleType.ALL);
 			for (String f : formulae) {
-				TableItem item = new TableItem(table3, SWT.NONE);
+				TableItem item = new TableItem(table2, SWT.NONE);
 				item.setText(f);
 			}
 		}
