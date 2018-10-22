@@ -1,22 +1,25 @@
 package lu.uni.bpmn.ui.dataprotection;
 
-import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Locale;
 
 import org.eclipse.bpmn2.modeler.core.merrimac.clad.AbstractDetailComposite;
 import org.eclipse.bpmn2.modeler.core.merrimac.dialogs.ObjectEditor;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.transaction.RecordingCommand;
 import org.eclipse.emf.transaction.TransactionalEditingDomain;
-import org.eclipse.jface.dialogs.InputDialog;
+//import org.eclipse.jface.dialogs.InputDialog;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Image;
-import org.eclipse.swt.layout.FillLayout;
+//import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
@@ -25,7 +28,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.Shell;
+//import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableItem;
 import lu.uni.bpmn.DataProtectionBPMNPlugin;
@@ -48,6 +51,11 @@ public class OWLListEditor extends ObjectEditor {
 	Table table2;
 	Table table3;
 
+	private final static String[] memberStates = { "Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", "Czechia",
+			"Denmark", "Estonia", "Finland", "France", "Germany", "Greece", "Hungary", "Ireland", "Italy", "Latvia",
+			"Lithuania", "Luxembourg", "Malta", "Netherlands", "Poland", "Portugal", "Romania", "Slovakia", "Slovenia",
+			"Spain", "Sweden", "United Kingdom" };
+
 	private final static String resDir = "resources";
 
 	private static final String aknPrefix = "GDPR";
@@ -65,6 +73,8 @@ public class OWLListEditor extends ObjectEditor {
 	private static PrOntoParser pParser;
 	private static LRMLParser lParser;
 	private static AKNParser aParser;
+	private Combo countryCombo;
+	private Label destinationLabel;
 
 	/**
 	 * Initialize the default values...
@@ -121,20 +131,20 @@ public class OWLListEditor extends ObjectEditor {
 		gridlayout.numColumns = 2;
 		editorComposite.setLayout(gridlayout);
 
-		// == Table composite
-		table = getToolkit().createTable(editorComposite, SWT.MULTI | SWT.V_SCROLL | SWT.BORDER);
-		GridData tableGridData = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1);
-		table.setLayoutData(tableGridData);
-
-		// add current values
-		this.updateTable();
-
-		// == Button composite
-		Composite compositeButtons = getToolkit().createComposite(editorComposite, SWT.NONE);
-		FillLayout fillLayoutButtons = new FillLayout();
-		fillLayoutButtons.spacing = 2;
-		fillLayoutButtons.type = SWT.VERTICAL;
-		compositeButtons.setLayout(fillLayoutButtons);
+//		// == Table composite
+//		table = getToolkit().createTable(editorComposite, SWT.MULTI | SWT.V_SCROLL | SWT.BORDER);
+//		GridData tableGridData = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1);
+//		table.setLayoutData(tableGridData);
+//
+//		// add current values
+//		this.updateTable();
+//
+//		// == Button composite
+//		Composite compositeButtons = getToolkit().createComposite(editorComposite, SWT.NONE);
+//		FillLayout fillLayoutButtons = new FillLayout();
+//		fillLayoutButtons.spacing = 2;
+//		fillLayoutButtons.type = SWT.VERTICAL;
+//		compositeButtons.setLayout(fillLayoutButtons);
 
 		getToolkit().createLabel(editorComposite, "Processing type");
 		getToolkit().createLabel(editorComposite, "");
@@ -143,17 +153,29 @@ public class OWLListEditor extends ObjectEditor {
 		combo.setItems(pParser.getActions()); // the items must come from PrOnto
 		combo.select(0);
 		getToolkit().createLabel(editorComposite, "");
+		combo.addSelectionListener(new SelectionAdapter() {
+			public void widgetSelected(SelectionEvent e) {
+				updateForm();
+			}
+		});
+
+		destinationLabel = getToolkit().createLabel(editorComposite, "Destination country");
+		getToolkit().createLabel(editorComposite, "");
+		countryCombo = new Combo(editorComposite, SWT.NONE);
+		String[] locales = Locale.getISOCountries();
+		String[] countries = new String[locales.length];
+		for (int i = 0; i < locales.length; i++)
+			countries[i] = (new Locale("", locales[i])).getDisplayCountry();
+		Arrays.sort(countries);
+		countryCombo.setItems(countries);
+		getToolkit().createLabel(editorComposite, "");
+
+		updateForm();
 
 		table2 = getToolkit().createTable(editorComposite, SWT.MULTI | SWT.V_SCROLL | SWT.BORDER);
 		GridData table2GridData = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1);
 		table2.setLayoutData(table2GridData);
 		getToolkit().createLabel(editorComposite, "");
-
-//		table3 = getToolkit().createTable(editorComposite, SWT.MULTI | SWT.V_SCROLL | SWT.BORDER);
-//		GridData table3GridData = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 1);
-//		table3.setLayoutData(table3GridData);
-//		// writeFormulae(combo.getText());
-//		getToolkit().createLabel(editorComposite, "");
 
 		Button displayProvisionsButton = getToolkit().createButton(editorComposite, "Show provisions", SWT.PUSH);
 		displayProvisionsButton.addSelectionListener(new SelectionAdapter() {
@@ -163,7 +185,7 @@ public class OWLListEditor extends ObjectEditor {
 		});
 		getToolkit().createLabel(editorComposite, "");
 
-		final Shell shell = parent.getShell();
+//		final Shell shell = parent.getShell();
 
 		Button displayFormulaeButton = getToolkit().createButton(editorComposite, "Show formulae", SWT.PUSH);
 		displayFormulaeButton.addSelectionListener(new SelectionAdapter() {
@@ -173,78 +195,83 @@ public class OWLListEditor extends ObjectEditor {
 		});
 		getToolkit().createLabel(editorComposite, "");
 
-		Button button = getToolkit().createButton(compositeButtons, "Add...", SWT.PUSH);
-		button.addSelectionListener(new SelectionAdapter() {
-			public void widgetSelected(SelectionEvent e) {
-				OWLInputDialog inputDlg = new OWLInputDialog(shell, "Add Entry", "");
-				if (inputDlg.open() == InputDialog.OK) {
-					for (String s : inputDlg.getResult())
-						addValue(s);
-					updateTable();
-				}
-			}
-		});
-
-		// Remove Button
-		button = getToolkit().createButton(compositeButtons, "Remove", SWT.PUSH);
-		button.addSelectionListener(new SelectionAdapter() {
-			public void widgetSelected(SelectionEvent e) {
-				int[] iCurrents = table.getSelectionIndices();
-				for (int i : iCurrents) {
-					String sCurrent = table.getItems()[i].getText();
-					removeValue(sCurrent);
-					updateTable();
-				}
-
-			}
-		});
-
-		button = getToolkit().createButton(compositeButtons, "Edit", SWT.PUSH);
-		button.addSelectionListener(new SelectionAdapter() {
-			public void widgetSelected(SelectionEvent e) {
-				int iCurrent = table.getSelectionIndex();
-				if (iCurrent >= 0) {
-					TableItem tableItem = table.getItem(iCurrent);
-					String sOldValue = tableItem.getText();
-					OWLInputDialog inputDlg = new OWLInputDialog(shell, "Edit Entry", sOldValue);
-					if (inputDlg.open() == InputDialog.OK) {
-						String sNewValue = inputDlg.getResult()[0];
-						replaceValue(sOldValue, sNewValue);
-						updateTable();
-					}
-				}
-			}
-		});
-
-		if (sortable) {
-			// Move Up Button
-			button = getToolkit().createButton(compositeButtons, "Up", SWT.PUSH);
-			button.addSelectionListener(new SelectionAdapter() {
-				public void widgetSelected(SelectionEvent e) {
-					int iCurrent = table.getSelectionIndex();
-					if (iCurrent > 0) {
-						moveUp(iCurrent);
-						updateTable();
-						table.select(iCurrent - 1);
-					}
-				}
-			});
-
-			// Move Down Button
-			button = getToolkit().createButton(compositeButtons, "Down", SWT.PUSH);
-			button.addSelectionListener(new SelectionAdapter() {
-				public void widgetSelected(SelectionEvent e) {
-					int iCurrent = table.getSelectionIndex();
-					if (iCurrent < item.getValuelist().size() - 1) {
-						moveDown(iCurrent);
-
-						updateTable();
-						table.select(iCurrent + 1);
-					}
-				}
-			});
-		}
+//		Button button = getToolkit().createButton(compositeButtons, "Add...", SWT.PUSH);
+//		button.addSelectionListener(new SelectionAdapter() {
+//			public void widgetSelected(SelectionEvent e) {
+//				OWLInputDialog inputDlg = new OWLInputDialog(shell, "Add Entry", "");
+//				if (inputDlg.open() == InputDialog.OK) {
+//					for (String s : inputDlg.getResult())
+//						addValue(s);
+//					updateTable();
+//				}
+//			}
+//		});
+//
+//		// Remove Button
+//		button = getToolkit().createButton(compositeButtons, "Remove", SWT.PUSH);
+//		button.addSelectionListener(new SelectionAdapter() {
+//			public void widgetSelected(SelectionEvent e) {
+//				int[] iCurrents = table.getSelectionIndices();
+//				for (int i : iCurrents) {
+//					String sCurrent = table.getItems()[i].getText();
+//					removeValue(sCurrent);
+//					updateTable();
+//				}
+//
+//			}
+//		});
+//
+//		button = getToolkit().createButton(compositeButtons, "Edit", SWT.PUSH);
+//		button.addSelectionListener(new SelectionAdapter() {
+//			public void widgetSelected(SelectionEvent e) {
+//				int iCurrent = table.getSelectionIndex();
+//				if (iCurrent >= 0) {
+//					TableItem tableItem = table.getItem(iCurrent);
+//					String sOldValue = tableItem.getText();
+//					OWLInputDialog inputDlg = new OWLInputDialog(shell, "Edit Entry", sOldValue);
+//					if (inputDlg.open() == InputDialog.OK) {
+//						String sNewValue = inputDlg.getResult()[0];
+//						replaceValue(sOldValue, sNewValue);
+//						updateTable();
+//					}
+//				}
+//			}
+//		});
+//
+//		if (sortable) {
+//			// Move Up Button
+//			button = getToolkit().createButton(compositeButtons, "Up", SWT.PUSH);
+//			button.addSelectionListener(new SelectionAdapter() {
+//				public void widgetSelected(SelectionEvent e) {
+//					int iCurrent = table.getSelectionIndex();
+//					if (iCurrent > 0) {
+//						moveUp(iCurrent);
+//						updateTable();
+//						table.select(iCurrent - 1);
+//					}
+//				}
+//			});
+//
+//			// Move Down Button
+//			button = getToolkit().createButton(compositeButtons, "Down", SWT.PUSH);
+//			button.addSelectionListener(new SelectionAdapter() {
+//				public void widgetSelected(SelectionEvent e) {
+//					int iCurrent = table.getSelectionIndex();
+//					if (iCurrent < item.getValuelist().size() - 1) {
+//						moveDown(iCurrent);
+//
+//						updateTable();
+//						table.select(iCurrent + 1);
+//					}
+//				}
+//			});
+//		}
 		return editorComposite;
+	}
+
+	private void updateForm() {
+		destinationLabel.setVisible(combo.getText().equals("Transmit"));
+		countryCombo.setVisible(combo.getText().equals("Transmit"));
 	}
 
 	public void addValue(final String newvalue) {
@@ -347,19 +374,19 @@ public class OWLListEditor extends ObjectEditor {
 		}
 	}
 
-	private void updateTable() {
-
-		table.removeAll();
-		// add current values
-		for (Value avalue : item.getValuelist()) {
-			TableItem tabelItem = new TableItem(table, SWT.NONE);
-			tabelItem.setText(avalue.getValue());
-			if (image != null) {
-				tabelItem.setImage(image);
-			}
-		}
-
-	}
+//	private void updateTable() {
+//
+//		table.removeAll();
+//		// add current values
+//		for (Value avalue : item.getValuelist()) {
+//			TableItem tabelItem = new TableItem(table, SWT.NONE);
+//			tabelItem.setText(avalue.getValue());
+//			if (image != null) {
+//				tabelItem.setImage(image);
+//			}
+//		}
+//
+//	}
 
 	@Override
 	public Item getValue() {
@@ -403,13 +430,25 @@ public class OWLListEditor extends ObjectEditor {
 	private void writeFormulae() {
 		table2.removeAll();
 		String[] articles = lParser.findArticles(ontoPrefix + ":" + combo.getText());
+		List<String> exclusions = new ArrayList<String>();
 		for (String s : articles) {
-			String[] formulae = lParser.findFormulaeForArticle(s, RuleType.ALL);
+			String destination = countryCombo.getText();
+			if (isMemberState(destination))
+				exclusions.add("dapreco:ThirdCountry");
+			String[] formulae = lParser.findFormulaeForArticleNotContaining(s, RuleType.ALL,
+					exclusions.toArray(new String[exclusions.size()]));
 			for (String f : formulae) {
 				TableItem item = new TableItem(table2, SWT.NONE);
 				item.setText(f);
 			}
 		}
+	}
+
+	private boolean isMemberState(String destination) {
+		for (String ms : memberStates)
+			if (destination.equals(ms))
+				return true;
+		return false;
 	}
 
 }
